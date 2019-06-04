@@ -1,6 +1,111 @@
 \subsection*{}
+Los datos se consideran accesibles por el usuario cuando este no necesita realizar un esfuerzo desmesurado para
+poder obtenerlos, entenderlos y usarlos, es decir, aplicarlos a su situacion particular. Para lograr estos objetivos,
+es necesario que el usuario pueda acceder a ellos de una manera que le resulte familiar y en un lenguage y nomenclatura
+que pueda entender. 
 
---no plataformas de pago
+Como mencionamos al principio, los datos pueden estar disponibles en la fuente original, pero no por ello seran accesibles.
+Los retos a los que nos encontramos con los datos crudos son los siguientes:
+    
+    \begin{itemize}
+        \item \textbf{Localizacion}. Los datos se encuentran disponibles en portales de datos abiertos organizados 
+        y estructurados, normalmente se necesita una tarea de busqueda y seleccion
+        a veces complicada. Aunque las empresas ponen cada vez mas de su parte en ofrecer una interfaz 
+        agradable y funcional a los usuarios, esta tarea requiere de un trabajo de investigacion por parte del usuario,
+        ya que posiblemente, debera buscar en distintos portales.
+        \item \textbf{Accesibilidad}. Los datos suelen estan disponibles a traves de una interfaz de programacion 
+        de aplicaciones (API) no facilmente interpretable por el usuario medio. Normalmente cuenta con 
+        un documento que describe cada uno de los campos y valores que se presentan en el documento y como utilizar la API.
+        \item \textbf{Interpretabilidad}. Usualmente los datos estan representados en un formato para ser procesado por 
+        algun software, por lo que su lectura resulta complicada por el usuario medio, en el mejor de los casos, 
+        estaran representados en una tabla y aun asi, sera muy dificil de extraer informacion.
+        \item \textbf{Almacenamiento}. Los datos publicados son los mas recientes, por lo que no hay manera de obtener 
+        un historico de los datos si no son almacenados periodicamente. Una vez extraidos los datos, el usuario debera 
+        contar con una infraestructura que le permita almacenar los datos.
+        \item \textbf{Automatizacion}. Este proceso tiende a ser arduo, por lo que sera necesario automatizarlo, de otra 
+        forma el esfuerzo requerido por el usuario para extraer la informacion no le compensara.
+         
+    \end{itemize}
+    
+Por lo tanto, no podemos decir que estos datos sean accesibles de una forma util para el usuario medio. 
+Recordemos que el objetivo principal del acceso a los datos, es obtener conocimiento. Hay que tener en 
+cuenta que los datos por si solos, no tienen ningun valor, ya que carecen de sentido, una vez integrados en un contexto,
+nos aportara informacion, y analizando esta informacion, se obtendra el conocimiento.\\
+    
+    
+    \begin{tikzpicture}[thick]
+        \node[draw,rectangle,minimum size=20] (a) {Datos};
+         \node[draw,rectangle,minimum size=20,right of= a, node distance=2.5cm] (b) {Informacion};
+         \node[draw,rectangle,minimum size=20,right of=b, node distance=3cm] (c) {Conocimiento};
+         \draw[->] (a) to (b);
+        \draw[->] (b) to (c);
+     
+      \end{tikzpicture}
+    \\
+Para poder obtener este valor de los datos, es necesario que el usuario interprete correctamente los datos, por lo
+que el usuario debe contar con conocimientos en la materia o realizar una tarea de investigacion, que le permita 
+entender los valores extraidos. 
+    
+    
+Tambien es imprescindible, que el usuario se tome su tiempo para concretar la informacion que desea
+obtener, es decir, tener una base solida del conjunto de datos que necesita, los valores,
+sus unidades y como se relacionan entre si. Es decir, el diseno de un sistema que a partir de unos valores dados,
+le proporcione unos resultados.
+    
+
+El usuario se encontrara normalmente con un documento extenso, ya que como comentabamos anteriormente, se recolectan
+el mayor numero de datos posibles.Este documento contara con multiples muestras para las que
+se especifica un conjunto campos. Estos conjuntos de campos son similares entre ellos, pero no tienen por que ser identicos. 
+De estos datos, el usuario debera realizar una seleccion de las muestras relevantes, y de estas, los campos necesarios
+para su diseno y cuales no.
+
+\framebox{%
+\vbox{\begin{tabbing} 
+Document \\
+\hspace*{5mm} \= Sample 1 \\
+\hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
+\hspace*{10mm}\textit{Field B:} \hspace*{5mm} \= value B \\
+\hspace*{5mm} \= Sample 2 \\
+\hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
+\hspace*{10mm}\textit{Field C:} \hspace*{5mm} \= value C \\
+\hspace*{10mm}\textit{Field D:} \hspace*{5mm} \= value D \\
+\hspace*{5mm} \= ... 
+\hspace*{5mm} \= Sample n \\
+\hspace*{10mm} \= ... 
+ \end{tabbing}}%
+}
+
+    
+Una vez estipulados los campos que se requieren de la fuende de datos de origen, el usuario debera serciorarse que 
+cada campo y valor, cumplen las siguientes premisas:
+    \begin{itemize}
+        \item Credibilidad. La fuente de datos debe ser fiable. 
+        \item Precision. Unidades de medida en la escala correcta.
+        \item Consistencia. Valores logicos para cada tipo de campo
+        \item Interpretabilidad. Legible
+        \item Complitud. Los datos deben ser consistentes en cada uno de las muestras.
+    \end{itemize}
+    --Ejemplos de las premisas--
+    
+A continuacion, el usuario tendra que realizar una serie de procesos como son  la extraccion, transformacion y 
+limpieza de los datos, para obtener los datos que se necesitan acorde a nuestro diseno.
+    
+    
+Asi pues, para que el usuario pueda obtener la informacion de una manera directa, requiere de conocimientos tanto debera
+programacion como especificos de la materia y los recursos para crear una infraestructura que le permita implementar 
+ una representacion de los datos que le sea util.
+    
+    
+    
+    
+    
+    ----Respecto a polucion del aire 
+    Acudir a fuentes privadas
+    Instalacion de dispositivos
+    Ejemplos de bases de datos de distintas ciudades capitales
+
+
+    --no plataformas de pago
 -no instalacion de software
 -no complicaciones por parte del usuario.
 
@@ -20,4 +125,9 @@
     \item sin informacion complementaria que muestre informacion util
     \item Desperdicio
     \item \end{itemize}
+
+---Si fuera necesario, se le puede proporcionar las herramientas para que pueda entenderlo, en los 
+casos mas complicados donde se necesitan conocimientos previos sobre la materia.
+
+---Incluir concepto de muestras
     
