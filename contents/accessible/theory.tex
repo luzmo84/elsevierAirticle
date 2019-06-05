@@ -2,10 +2,14 @@
 Los datos se consideran accesibles por el usuario cuando este no necesita realizar un esfuerzo desmesurado para
 poder obtenerlos, entenderlos y usarlos, es decir, aplicarlos a su situacion particular. Para lograr estos objetivos,
 es necesario que el usuario pueda acceder a ellos de una manera que le resulte familiar y en un lenguage y nomenclatura
-que pueda entender. 
+que pueda entender.\\ 
 
-Como mencionamos al principio, los datos pueden estar disponibles en la fuente original, pero no por ello seran accesibles.
-Los retos a los que nos encontramos con los datos crudos son los siguientes:
+En este apartado veremos si es posible el acceso a los datos por un usuario medio y como optimizar la accesibilidad.
+\subsection{Accesibilidad real de un usuario medio}
+    
+Como mencionamos en la introduccion de este capitulo, los datos pueden estar disponibles en la fuente original, pero no por
+ello significa que estos sean accesibles.
+Los retos a los que nos encontramos con los datos crudos, directos de la fuente de origen, son los siguientes:
     
     \begin{itemize}
         \item \textbf{Localizacion}. Los datos se encuentran disponibles en portales de datos abiertos organizados 
@@ -27,12 +31,14 @@ Los retos a los que nos encontramos con los datos crudos son los siguientes:
          
     \end{itemize}
     
-Por lo tanto, no podemos decir que estos datos sean accesibles de una forma util para el usuario medio. 
+Por lo tanto, no podemos decir que estos datos sean accesibles de una forma util para el usuario medio.\\
+
 Recordemos que el objetivo principal del acceso a los datos, es obtener conocimiento. Hay que tener en 
 cuenta que los datos por si solos, no tienen ningun valor, ya que carecen de sentido, una vez integrados en un contexto,
-nos aportara informacion, y analizando esta informacion, se obtendra el conocimiento.\\
+nos aportara informacion, y procesando y analizando esta informacion, se obtendra el conocimiento.\\
     
-    
+\begin{figure}[h]
+    \centering 
     \begin{tikzpicture}[thick]
         \node[draw,rectangle,minimum size=20] (a) {Datos};
          \node[draw,rectangle,minimum size=20,right of= a, node distance=2.5cm] (b) {Informacion};
@@ -41,16 +47,18 @@ nos aportara informacion, y analizando esta informacion, se obtendra el conocimi
         \draw[->] (b) to (c);
      
       \end{tikzpicture}
-    \\
-Para poder obtener este valor de los datos, es necesario que el usuario interprete correctamente los datos, por lo
+      \caption{Diagrama. De datos a conocimiento}
+    \end{figure}
+ 
+Para poder obtener este conocimiento de los datos, es necesario que el usuario interprete correctamente los datos, por lo
 que el usuario debe contar con conocimientos en la materia o realizar una tarea de investigacion, que le permita 
-entender los valores extraidos. 
+entender los datos extraidos. \\
     
     
 Tambien es imprescindible, que el usuario se tome su tiempo para concretar la informacion que desea
 obtener, es decir, tener una base solida del conjunto de datos que necesita, los valores,
 sus unidades y como se relacionan entre si. Es decir, el diseno de un sistema que a partir de unos valores dados,
-le proporcione unos resultados.
+le proporcione unos resultados.\\
     
 
 El usuario se encontrara normalmente con un documento extenso, ya que como comentabamos anteriormente, se recolectan
@@ -58,8 +66,12 @@ el mayor numero de datos posibles.Este documento contara con multiples muestras 
 se especifica un conjunto campos. Estos conjuntos de campos son similares entre ellos, pero no tienen por que ser identicos. 
 De estos datos, el usuario debera realizar una seleccion de las muestras relevantes, y de estas, los campos necesarios
 para su diseno y cuales no.
+\begin{figure}[h]
+    
 
+\centering
 \framebox{%
+
 \vbox{\begin{tabbing} 
 Document \\
 \hspace*{5mm} \= Sample 1 \\
@@ -74,30 +86,40 @@ Document \\
 \hspace*{10mm} \= ... 
  \end{tabbing}}%
 }
-
-    
+\caption{Ejemplo documento de la fuente de origen}
+\end{figure}
+ 
+   
 Una vez estipulados los campos que se requieren de la fuende de datos de origen, el usuario debera serciorarse que 
 cada campo y valor, cumplen las siguientes premisas:
     \begin{itemize}
-        \item Credibilidad. La fuente de datos debe ser fiable. 
-        \item Precision. Unidades de medida en la escala correcta.
-        \item Consistencia. Valores logicos para cada tipo de campo
-        \item Interpretabilidad. Legible
-        \item Complitud. Los datos deben ser consistentes en cada uno de las muestras.
+        \item \textbf{Credibilidad}. La fuente de datos debe ser fiable. Es decir, la fuente de origen debera
+         proporcionar la informacion necesaria de como se han recogido los datos.
+        \item \textbf{Precision}. Unidades de medida en la escala correcta. Por ejemplo, si estamos mediendo la altura
+        de las personas, carecera de sentido proporcionar estas medidas en metros, ya que los posibles valores, seran 0, 1 y 2.
+        \item \textbf{Consistencia}. Valores logicos para cada tipo de campo. Un ejemplo seria un campo fecha, todos deberian
+        seguir el mismo formato.
+        \item \textbf{Interpretabilidad}. Legible. 
+        \item \textbf{Complitud}. Los datos deben ser consistentes en cada uno de las muestras. Las muestras pueden diferenciarse
+        \item unas de otras, como vemos en la Figura 2, pueden compartir algunos campos y otros no. Para un buen resultado, seria 
+        conveniente un grado de complitud alto para los datos que nos interesan en nuestro diseno.
     \end{itemize}
-    --Ejemplos de las premisas--
+
     
 A continuacion, el usuario tendra que realizar una serie de procesos como son  la extraccion, transformacion y 
-limpieza de los datos, para obtener los datos que se necesitan acorde a nuestro diseno.
+limpieza de los datos, para obtener los datos que se necesitan acorde a nuestro diseno. Estos procesos pueden llegar
+a ser muy tediosos si no se automatizan.\\
     
     
-Asi pues, para que el usuario pueda obtener la informacion de una manera directa, requiere de conocimientos tanto debera
-programacion como especificos de la materia y los recursos para crear una infraestructura que le permita implementar 
- una representacion de los datos que le sea util.
-    
-    
-    
-    
+Asi pues, para que el usuario pueda obtener la informacion de una manera directa, requiere de conocimientos tanto 
+de programacion como especificos de la materia y los recursos para crear una infraestructura que le permita implementar 
+una representacion de los datos que le sea util.\\
+
+Podemos concluir que el acceso a los datos por parte del usuario medio, no es factible.\\
+
+
+\subsection{Optimizacion la accesibilidad}
+ Una vez disenado un modelo con la informacion relevante para el usuario, como veremos en el apartado 3,    
     
     ----Respecto a polucion del aire 
     Acudir a fuentes privadas
