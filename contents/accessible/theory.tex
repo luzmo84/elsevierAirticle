@@ -63,7 +63,7 @@ una representacion de los datos que le sea util.\\
 Podemos concluir que el acceso a los datos por parte del usuario medio, no es directa.\\
 
 Para poder construir un sistema que haga los datos accesibles, es imprescindible disenar un modelo  para concretar la 
-informacion que se desea obtener. El diseno de un sistema que a partir de unos valores dados, proporcione unos resultados.
+informacion que se desea obtener. El diseno de un sistema permitira que a partir de unos valores dados, proporcione unos resultados.
 Para ello sera necesario tener un conocimiento solido del conjunto de datos que se necesita, los valores,
 sus unidades y como se relacionan entre si\\
     
@@ -115,24 +115,9 @@ y norte americano\footnote{\url{https://data.cityofnewyork.us/api/views/kku6-nxd
 \end{figure}
 
 \newpage
-Una vez estipulados los campos que se requieren de la fuende de datos de origen, hay que serciorarse de que 
-cada campo y valor, cumplen las siguientes premisas:
-    \begin{itemize}
-        \item \textbf{Credibilidad}. La fuente de datos debe ser fiable. Es decir, la fuente de origen debera
-         proporcionar la informacion necesaria de como se han recogido los datos.
-        \item \textbf{Precision}. Unidades de medida en la escala correcta. Por ejemplo, si estamos mediendo la altura
-        de las personas, carecera de sentido proporcionar estas medidas en metros, ya que los posibles valores, seran 0, 1 y 2.
-        \item \textbf{Consistencia}. Valores logicos para cada tipo de campo. Un ejemplo seria un campo fecha, todos deberian
-        seguir el mismo formato.
-        \item \textbf{Interpretabilidad}. Legible. 
-        \item \textbf{Complitud}. Los datos deben ser consistentes en cada uno de las muestras. Las muestras pueden diferenciarse
-        \item unas de otras, como vemos en la Figura 2, pueden compartir algunos campos y otros no. Para un buen resultado, seria 
-        conveniente un grado de complitud alto para los datos que nos interesan en nuestro diseno.
-    \end{itemize}
-
     
-A continuacion habra que realizar una serie de procesos como son  la extraccion, transformacion y 
-limpieza de los datos, para obtener los datos que se necesitan acorde a nuestro diseno. Estos procesos pueden llegar
+A traves de una serie de procesos como son  la extraccion, transformacion y 
+limpieza de los datos, se obtendran los datos que se necesitan acorde a nuestro diseno. Estos procesos pueden llegar
 a ser muy tediosos si no se automatizan.
 Veremos estos procesos en los siguientes apartados\\
     
@@ -140,7 +125,7 @@ Veremos estos procesos en los siguientes apartados\\
 \subsection{Optimizacion de la accesibilidad}
 
 Para ofrecer los datos a los usuarios de una manera directa, es recomendable utilizr una plataforma a la que el usuario
-este acostumbrado. Por ejemplo, es mas factible que el usuario se sienta mas atraido a acceder a los datos si no requiere
+este familiarizado. Por ejemplo, es mas factible que el usuario se sienta mas atraido a acceder a los datos si no requiere
 ninguna instalacion en sus dispositivos.
 
 \begin{comment}
