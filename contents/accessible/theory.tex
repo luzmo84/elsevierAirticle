@@ -5,7 +5,7 @@ es necesario que el usuario pueda acceder a ellos de una manera que le resulte f
 que pueda entender.\\ 
 
 En este apartado veremos si es posible el acceso a los datos por un usuario medio y como optimizar la accesibilidad.
-\subsection{Accesibilidad real de un usuario medio}
+\subsection{Disponibilidad vs Accesibilidad}
     
 Como mencionamos en la introduccion de este capitulo, los datos pueden estar disponibles en la fuente original, pero no por
 ello significa que estos sean accesibles.
@@ -33,6 +33,8 @@ Los retos a los que nos encontramos con los datos crudos, directos de la fuente 
     
 Por lo tanto, no podemos decir que estos datos sean accesibles de una forma util para el usuario medio.\\
 
+\subsection{Interpretacion de los datos}
+
 Recordemos que el objetivo principal del acceso a los datos, es obtener conocimiento. Hay que tener en 
 cuenta que los datos por si solos, no tienen ningun valor, ya que carecen de sentido, una vez integrados en un contexto,
 nos aportara informacion, y procesando y analizando esta informacion, se obtendra el conocimiento.\\
@@ -53,25 +55,30 @@ nos aportara informacion, y procesando y analizando esta informacion, se obtendr
 Para poder obtener este conocimiento de los datos, es necesario que el usuario interprete correctamente los datos, por lo
 que el usuario debe contar con conocimientos en la materia o realizar una tarea de investigacion, que le permita 
 entender los datos extraidos. \\
-    
-    
-Tambien es imprescindible, que el usuario se tome su tiempo para concretar la informacion que desea
-obtener, es decir, tener una base solida del conjunto de datos que necesita, los valores,
-sus unidades y como se relacionan entre si. Es decir, el diseno de un sistema que a partir de unos valores dados,
-le proporcione unos resultados.\\
-    
 
-El usuario se encontrara normalmente con un documento extenso, ya que como comentabamos anteriormente, se recolectan
+Asi pues, para que el usuario pueda obtener la informacion de una manera directa, requiere de conocimientos tanto 
+de programacion como especificos de la materia y los recursos para crear una infraestructura que le permita implementar 
+una representacion de los datos que le sea util.\\
+
+Podemos concluir que el acceso a los datos por parte del usuario medio, no es directa.\\
+
+Para poder construir un sistema que haga los datos accesibles, es imprescindible disenar un modelo  para concretar la 
+informacion que se desea obtener. El diseno de un sistema que a partir de unos valores dados, proporcione unos resultados.
+Para ello sera necesario tener un conocimiento solido del conjunto de datos que se necesita, los valores,
+sus unidades y como se relacionan entre si\\
+    
+\subsection{Formato}
+
+Los datos proporcionados por las plataformas tienen un gran volumen, ya que como comentabamos anteriormente, se recolectan
 el mayor numero de datos posibles.Este documento contara con multiples muestras para las que
 se especifica un conjunto campos. Estos conjuntos de campos son similares entre ellos, pero no tienen por que ser identicos. 
-De estos datos, el usuario debera realizar una seleccion de las muestras relevantes, y de estas, los campos necesarios
+De estos datos, se debera realizar una seleccion de las muestras relevantes, y de estas, los campos necesarios
 para su diseno y cuales no.
+\newpage
+\begin{comment}
 \begin{figure}[h]
-    
-
 \centering
-\framebox{%
-
+\framebox{
 \vbox{\begin{tabbing} 
 Document \\
 \hspace*{5mm} \= Sample 1 \\
@@ -84,13 +91,31 @@ Document \\
 \hspace*{5mm} \= ... 
 \hspace*{5mm} \= Sample n \\
 \hspace*{10mm} \= ... 
- \end{tabbing}}%
+\end{tabbing}}%
 }
 \caption{Ejemplo documento de la fuente de origen}
 \end{figure}
- 
+\end{comment}
+A continuacion podemos ver varios ejemplos tomados del portal de datos abiertos europeo
+\footnote{\url{https://tinyurl.com/y3d76525}} 
+y norte americano\footnote{\url{https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.json?accessType=DOWNLOAD}}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{ExampleOpenData1}
+    \caption{EEUU Open Portal.Demographic Statistics By Zip Code}
+    \end{figure}
+
+    \begin{figure}[h]
+    \centering
+    \includegraphics[width=11.5cm]{ExampleOpenData2}
+    \caption{European Open Portal. Air pollutant concentrations 2015} 
    
-Una vez estipulados los campos que se requieren de la fuende de datos de origen, el usuario debera serciorarse que 
+ 
+\end{figure}
+
+\newpage
+Una vez estipulados los campos que se requieren de la fuende de datos de origen, hay que serciorarse de que 
 cada campo y valor, cumplen las siguientes premisas:
     \begin{itemize}
         \item \textbf{Credibilidad}. La fuente de datos debe ser fiable. Es decir, la fuente de origen debera
@@ -106,29 +131,29 @@ cada campo y valor, cumplen las siguientes premisas:
     \end{itemize}
 
     
-A continuacion, el usuario tendra que realizar una serie de procesos como son  la extraccion, transformacion y 
+A continuacion habra que realizar una serie de procesos como son  la extraccion, transformacion y 
 limpieza de los datos, para obtener los datos que se necesitan acorde a nuestro diseno. Estos procesos pueden llegar
-a ser muy tediosos si no se automatizan.\\
+a ser muy tediosos si no se automatizan.
+Veremos estos procesos en los siguientes apartados\\
     
+
+\subsection{Optimizacion de la accesibilidad}
+
+Para ofrecer los datos a los usuarios de una manera directa, es recomendable utilizr una plataforma a la que el usuario
+este acostumbrado. Por ejemplo, es mas factible que el usuario se sienta mas atraido a acceder a los datos si no requiere
+ninguna instalacion en sus dispositivos.
+
+\begin{comment}
     
-Asi pues, para que el usuario pueda obtener la informacion de una manera directa, requiere de conocimientos tanto 
-de programacion como especificos de la materia y los recursos para crear una infraestructura que le permita implementar 
-una representacion de los datos que le sea util.\\
 
-Podemos concluir que el acceso a los datos por parte del usuario medio, no es factible.\\
-
-
-\subsection{Optimizacion la accesibilidad}
- Una vez disenado un modelo con la informacion relevante para el usuario, como veremos en el apartado 3,    
-    
     ----Respecto a polucion del aire 
     Acudir a fuentes privadas
     Instalacion de dispositivos
-    Ejemplos de bases de datos de distintas ciudades capitales
+  Done-  Ejemplos de bases de datos de distintas ciudades capitales
 
 
     --no plataformas de pago
--no instalacion de software
+Done -no instalacion de software
 -no complicaciones por parte del usuario.
 
 --Datos automatizados -- formato maquina
@@ -152,4 +177,5 @@ Podemos concluir que el acceso a los datos por parte del usuario medio, no es fa
 casos mas complicados donde se necesitan conocimientos previos sobre la materia.
 
 ---Incluir concepto de muestras
+\end{comment}  
     
