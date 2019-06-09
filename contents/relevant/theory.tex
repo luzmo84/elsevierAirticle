@@ -1,6 +1,6 @@
 \subsection*{}
 Una buena representacion de los datos no consiste en presentarlos todos para que el usuario tenga la mayor informacion posible,
-consiste en mostrarle los datos necesarios para que pueda hacer una lectura directa de la situacion.//
+consiste en mostrarle los datos necesarios para que pueda hacer una lectura directa de la situacion.\\
 
 En este apartado veremos el refinado de los datos para ofrecer al usuario una informacion relevante y de calidad.
 
@@ -9,44 +9,98 @@ Para realizar una buena seleccion de los datos que son relevantes o la combinaci
 conocimientos solidos sobre la materia a tratar. Por ello, es fundamental dedicarle el tiempo necesario para enter la
 importancia de los datos y que beneficios nos puede aportar.
 
---cual es el objetivo?
---Como llegar a el?
---Que se debe enfatizar?
---Buscar puntos importantes
---Contar con ayuda si es necesario
---equipo multidisciplinar
+Los puntos que deben quedar claro en la fase de diseno son:
 
+\begin{itemize}
+    \item \textbf{Objetivo}. Conceptualmente, que problema queremos solventar o clarificar.
+    \item \textbf{Puntos importantes}. Que limites o que valores de que datos son los que nos proporcinan una informacion
+    de una situacion excepcional, o los valores que estamos intentando identificar mas facilmente.
+    \item \textbf{Data workflow}. Diseno del flujo de informacion, que quede claro como se llega de un valor aparentemente
+    insignificante a una informacion representativa.
+\end{itemize}
+
+Una vez marcada una meta, deberemos estipular cuales son los campos necesarios que necesitamos para representar la informacion
+disenada. 
+Es momento de realizar un analisis de los datos proporcionados y ver en la lista de los campos que nos ofrece la fuente, si serian
+suficientes para alcanzar el objetivo marcado, si no directamente, con la combinacion de ellos.
+
+Ademas es nuestra responsabilidad, asegurarnos de que cuentan con la suficiente calidad para poder usuarlos.
 
 \subsection{Calidad de los datos}
 
-Una vez estipulados los campos que se requieren de la fuende de datos de origen, hay que serciorarse de que 
-cada campo y valor, cumplen las siguientes premisas:
+
+Una vez estipulados los campos que se requieren de la fuende de datos de origen, hay que serciorarse en primer lugar de la credibilidad
+de los datos, es decir, la fuente debe ser fiable, en la descripcion de los datos debe contar una seccion dende explique la procedencia
+de los datos. Ademas, habra que comprobar las siguientes premisas para cada unos de los campos representados en los datos de origen:
     \begin{itemize}
-        \item \textbf{Credibilidad}. La fuente de datos debe ser fiable. Es decir, la fuente de origen debera
-         proporcionar la informacion necesaria de como se han recogido los datos.
         \item \textbf{Precision}. Unidades de medida en la escala correcta. Por ejemplo, si estamos mediendo la altura
         de las personas, carecera de sentido proporcionar estas medidas en metros, ya que los posibles valores, seran 0, 1 y 2.
         \item \textbf{Consistencia}. Valores logicos para cada tipo de campo. Un ejemplo seria un campo fecha, todos deberian
         seguir el mismo formato.
-        \item \textbf{Interpretabilidad}. Legible. 
+        \item \textbf{Interpretabilidad}. Legible. Los datos deber ser claros, tantos en valores como en unidades. Por ejemplo, no podemos
+        suponer la unidad o la escala de los datos o, si los datos son dictonicos, "verdadero" o "falso", y los valores represetados son 
+        "A" o "B", no podemos suponer verdadero= A y falso=B sin que esta informacion este descrita. 
         \item \textbf{Complitud}. Los datos deben ser consistentes en cada uno de las muestras. Las muestras pueden diferenciarse
-        \item unas de otras, como vemos en la Figura 2, pueden compartir algunos campos y otros no. Para un buen resultado, seria 
+        unas de otras, como vemos en la Figura  a continuacion, pueden compartir algunos campos y otros no. Para un buen resultado, seria 
         conveniente un grado de complitud alto para los datos que nos interesan en nuestro diseno.
     \end{itemize}
 
+\begin{figure}[h]
+\centering
+\framebox{
+\vbox{\begin{tabbing} 
+Document \\
+\hspace*{5mm} \= Sample 1 \\
+\hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
+\hspace*{10mm}\textit{Field B:} \hspace*{5mm} \= value B \\
+\hspace*{5mm} \= Sample 2 \\
+\hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
+\hspace*{10mm}\textit{Field C:} \hspace*{5mm} \= value C \\
+\hspace*{10mm}\textit{Field D:} \hspace*{5mm} \= value D \\
+\hspace*{5mm} \= ... 
+\hspace*{5mm} \= Sample n \\
+\hspace*{10mm} \= ... 
+\end{tabbing}}%
+}
+\caption{Ejemplo documento de la fuente de origen}
+\end{figure}
+\begin{comment}
+    
+\end{co}
 \begin{itemize}
 
     \item Informacion precisa
     \item Datos contrastados
 \end{itemize}
+\end{comment}
+
 
 \subsection{Util}
+Como mencionamos anteriormente, huiremos de toda aquella informacion vana, que no haga ninguna aportacion
+al objetivo marcado. No queremos que el usuario se distraga o pierda en medio de una piscina de datos completa
+pero compleja que para el no tenga ningun sentido.\\
+
+Los datos deben contarnos por si, que significan.
+En caso complejos, los conceptos que no sean de uso diario para los usuario, podremos poner informacion
+complementaria a su disposicion para que el usuario pueda informarse sobre el significado de los datos 
+representados, esta practica proporcionara al usuario un mayor dominio del concepto y podra estar mas
+seguro de su lectura de los datos.
+Por otro lado, cuando dirigimos al usuario a fuentes oficiales de informacion, donde puedan obtener una explicacion veridica,
+reenforzamos la credibilidad de las representaciones que estamos realizando.
 
 \subsection{Personalizacion}
+\begin{comment}
+--relevante de manera general vs relevante personal
+--casos personales
+--aplicabilidad
+--solventar problema en particular
+
+    
 
 \begin{itemize}
 
       \item Herramientas necesarias para que el usuario entienda la informacion y de porque
- 
+ \item conocimientos multidisciplinares
     \item fuentes fiables, actualizacion periodica
 \end{itemize}
+\end{comment}
