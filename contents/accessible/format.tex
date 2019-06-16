@@ -1,81 +1,57 @@
-\subsection{Formato.}
+\subsection{Formato}
+El punto clave para que el usuario entienda lo que queremos transmitirle es crear una comunicacion fluida entre la representacion
+de los datos el usuario. Para ello  deberemos asegurarnos que hablamos el mismo idioma, con un vocabulario facil de entender y
+con proximidad, es decir,dejar la terminologia a un lado y comunicar el objetivo de la manera mas simple posible.
+Por ello la representacion de la informacion jugaran un papel fundamental para que la 
+informacion sea absorbida por el usuario de una manera natural.
 
-Los datos proporcionados por las plataformas tienen un gran volumen, ya que como comentabamos anteriormente, se recolectan
-el mayor numero de datos posibles.Este documento contara con multiples muestras para las que
-se especifica un conjunto campos. Estos conjuntos de campos son similares entre ellos, pero no tienen por que ser identicos. 
-De estos datos, se debera realizar una seleccion de las muestras relevantes, y de estas, los campos necesarios para representar
-una informacion especifica.
+\textcolor{red}{\textbf{Por Aqui voy}}
+
+El apartado anterior "Interpretabilidad", vimo que un conjunto de datos en crudo no siempre era el mas adecuado para la mayoria de los usuarios.
+Deberemos estudiar que tipo de representacion es mas adecuada, no siempre una grafica es la representacion mas adecuada, deberemos hacer un 
+estudio de tanto al publico al que va dirigido como como podemos acentuar la informacion que sea mas relevante en la manera 
+correcta.
+Si nos declinamos por realizar una representacion con graficas, deberemos estudiar los datos para saber que tipo de grafica. Por ejemplo, si hablamos de muestras y queremos saber la 
+densidad, nos inclinaremos por un grafico de densidad y si por ejemplo buscamos la diferencia entre sexos, utilizaremos un grafico de tartas.
 
 
-A continuacion podemos ver varios ejemplos el primero de ellos esta tomado del portal de datos abiertos europeo
-\footnote{\url{https://tinyurl.com/y3d76525}} y el segundo del portal de datos abiertos norte americano\footnote{\url{https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.json?accessType=DOWNLOAD}}.
 
-\begin{figure}[h]
-    \centering
-    \subfigure[EEUU Open Portal.Demographic Statistics By Zip Code]
-     {\includegraphics[width=5cm]{ExampleOpenDataEEUU}}
-    \hfill
-     \subfigure[European Open Portal. Air pollutant concentrations 2015]
-    {\includegraphics[width=7cm]{ExampleOpenDataEuropean}}
-    \caption{Open Data Examples}
-\end{figure}
-
-    
-
-    
 \subsubsection{How to solve it} 
-A traves de una serie de procesos como son  la extraccion, transformacion y 
-limpieza de los datos, se obtienen los datos que se necesitan acorde a nuestro diseno. Estos procesos pueden llegar
-a ser muy tediosos si no se automatizan.
-Veremos estos procesos en los siguientes apartados.
-\subsubsection{How we solve it. Aire Guru} 
+Este modelo debera proporcional la informacion al usario en un lenguaje o formato compresible. Si no es posible proporcionarmos las herramientas necesarias para que este pueda 
+comprender el contexto de la informacion.
+Es importante que proporcionemos la informacion en un idioma que el usuario entienda, ya sea este literal o visual.
+Hablamos de vocabulario y terminologia, deberemos huir de los tecnicismo que sumerjan al usuario en una nube de 
+imcomprensibilidad, ya que
 
-Los datos extraidos estan en formato GeoJSON, este formato proporciona un objeto JSON con subdocumentos anidados, cada uno de estos
-subdocumentos contiene un conjunto de datos en forma clave valor. 
-En la siguiente figura podemos ver el principio del documento descargado el 09 de Junio del 2019 
-\footnote{\url{https://datosabiertos.malaga.eu/recursos/ambiente/calidadaire/calidadaire.json}}\\
-\newpage
-\begin{figure}[h]
-    \centering
-   \subfigure[Primer subdocumento]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData1}}
-   \hfill
-   \subfigure[Segundo subdocumento]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData2}}
- 
-    \caption{Air quality Document [09/06/2019].Open Data Portal Malaga}
-    \end{figure}
-    
-En este extracto podemos ver los primeros dos subdocumentos. Cada subdocumento contiene las coordenadas de la estacion medidora de la calidad
-del aire, la fecha y hora cuando se registro la medida y a continuacion los valores de las mediciones. 
-En la figura siguiente podemos encontrar la descripcion proporcionada por el portal de datos abiertos.
+\subsubsection{How we solve it. Aire Guru} 
+Nuestra herramienta utiliza como componenete principal un mapa sobre el que se representa el AQI general calculado. Este es un formato 
+mas legible para los usuarios. Este indice mustra un indicador con cinco niveles: "Insalubre" "Malo" "Pobre" "Aceptable" y "Bueno" y 
+especifica un rango de colores desde el rojo hasta el celeste.\\
+Nuestra plataforma introduce ademas una iconografica para ayudar al usuario a tener una idea directa de la situacion, ya que son mas 
+explicativos que los colores. En caso de peligro, queda bien representado con el color rojo, pero en el caso del azul o verde, en nuestra cultura, no
+tenemos definido un estado para estos colores.\\
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=8cm]{geoJsonAirQualityDataDescription}
-    \caption{Air quality data description [09/06/2019].Open Data Portal Malaga}
+    \includegraphics[width=12cm]{EAQUI_Icons}
+    \caption{Iconografica Aire Guru}
 \end{figure}
 
+Ademas proporciona un glosario con las descripciones de los agentes contaminantes, complicaciones medicas, fuentes de contaminacion
+y la iconografia utilizada y una ayuda donde se puede consultar el calculo de AQI y ampliar informacion.
 
-
-Para una descripcion mas en detalle de las medidas, tenemos que recurrir a un recurso externo, en este caso nos pusimos en contacto directamente con
-la empresa que instala las estaciones de medida UrbanClouds \footnote{\url{https://urbanclouds.city/es/}} y proporciona los datos al ayuntamiento de Malaga.
-
-Despues de seleccionar los campos necesarios deacurdo a nuestro diseno, se han realizado diferentes tareas de limpieza y transformacion,
-como la eliminacion de datos no relevantes, por ejemplo el identificador de la estacion de medida, ya que el conjunto de datos
-contiene las coordenadas de la estacion y para nosotros es mucho mas interesante.
-Transformacion de campos a un formato adecuado, por ejemplo la fecha y hora en el que la medida ha sido tomada se almacena en formato fecha
-en vez de cadena como se proporciona en el conjunto de datos en crudo.
-Este conjunto de datos ofrece una o varias medidas por cada contaminante, que puede representarse por tres campos distintos, una medida 
-cuantitativa, una cualitativa de la estacion fija de medida y una cualitativa de una estacion movil. Anadiremos un campo con la medida
-mas relevante y eliminaremos las demas para minimizar el tiempo de procesado.
-
-Por seguridad, se ha implementado una segunda arquitectura totalmente independiente que recolecta los datos y almacena en crudo.
-
-
-\paragraph{Evaluation} \mbox{} 
+La herramienta Aire guru presenta la informacion en el idioma nativo de la ciudad y se utiliza un lenguaje sencillo y directo.
+Ademas se utiliza el mismo estilo, colores e iconografia en todo el diseno para que el usuario se familierize rapidamente y pueda
+prestar atencion al significado de los datos en vez de perderse en el diseno e intentar encontrar su significado.
+ 
+\elsparagraph{Evaluation}  
 \begin{itemize}
-    \done Los datos necesarios para nuestro modelo han sido extraidos de los datos en crudo
-    \done Podemos entender  que significa cada uno de los campos representados en el conjunto de dato gracias a la informacion
-    complementaria presentada en el portal de datos abiertos y por la informacion proporcionada por la empresa encargada de 
-    recolectar los datos.
+    \done El lenguaje utilizado en toda la herramienta es un lenguaje comun, huye de la terminologia cientifica pero proporciona la informacion
+    suficiente para enteder la situacion.
+    \crossed Algunos terminos especificos no se han podido sustituir como "Indice de calidad del Aire".
+    \done Se han proporcionado la herramientas necesarias para entender el concepto. Se ha utilizado la norma europea de calidad del aire para 
+    representar los valores y se ofrece al usuario recursos en la pagina para su comprension ademas de recursos extenos.
     
 \end{itemize}
+ 
+
 \newpage
