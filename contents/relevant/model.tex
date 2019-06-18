@@ -1,30 +1,53 @@
 \subsection{Diseno}
 Para realizar una buena seleccion de los datos que son relevantes o la combinacion de estos, es imprescindible unos 
 conocimientos solidos sobre la materia a tratar. Por ello, es fundamental dedicarle el tiempo necesario para enter la
-importancia de los datos y que beneficios nos puede aportar.
+importancia de los datos, que beneficios nos puede aportar o que datos nos perjudican.
 
 Los puntos que deben quedar claro en la fase de diseno son:
 
 \begin{itemize}
-    \item \textbf{Objetivo}. Conceptualmente, que problema queremos solventar o clarificar.
-    \item \textbf{Puntos importantes}. Que limites o que valores de que datos son los que nos proporcinan una informacion
+    \item \textbf{Objetivo}. Conceptualmente, que problema queremos solventar o clarificar. Es muy importante que tengamos un objetivo claro,
+    incluso si no se cuentan con conocimientos previos de la materia, tener un objetivo bien definido nos ayuda a encontrar la solucion o 
+    describirla con mas claridad al experto.
+    \item \textbf{Puntos importantes. Valores destacables}. Como mencionamos anteriormente, nuestro objetivo no es mostrar todos los datos, sino
+    que se trata de proporcionarle los datos importantes al usuario para poder descubrir los valores significativos, los que tienen influencia en
+    nosotros, ya sea positivo o negativo. A nivel mas tecnico, serian los limites o que valores de que datos son los que nos proporcinan una informacion
     de una situacion excepcional, o los valores que estamos intentando identificar mas facilmente.
-    \item \textbf{Data workflow}. Diseno del flujo de informacion, que quede claro como se llega de un valor aparentemente
-    insignificante a una informacion representativa.
+    \item \textbf{Data workflow}. Diseno del flujo de informacion, que quede claro como se llega de un punto a otros, por ejemplo de una representacion
+    simple a mas detallada o compleja. Si el usuario entiende los conceptos basicos, le sera mas facil de entender el concepto mas desarrollado.
 \end{itemize}
 
-Una vez marcada una meta, deberemos estipular cuales son los campos necesarios que necesitamos para representar la informacion
-disenada. 
-Es momento de realizar un analisis de los datos proporcionados y ver en la lista de los campos que nos ofrece la fuente, si serian
-suficientes para alcanzar el objetivo marcado, si no directamente, con la combinacion de ellos.
-
-Ademas es nuestra responsabilidad, asegurarnos de que cuentan con la suficiente calidad para poder usuarlos.
+Respecto al conjunto de datos, una vez marcada una meta, deberemos estipular cuales son los campos necesarios del conjunto de datos que necesitamos para representar la informacion
+disenada. Es momento de realizar un analisis de los datos proporcionados y ver en la lista de los campos que nos ofrece la fuente, si serian
+suficientes para alcanzar el objetivo marcado, si no directamente con sus valores, con la combinacion de ellos.
 
 \subsubsection{How to solve it} 
-
+Marcarnos un objetivo, estipulamos los campos necesarios, seleccionamos estos campos en el conjunto de datos. 
+Estipulamos los valores destacables que les proporcionen mas informacion al usuario como las Situaciones excepcionales, o lo que estamos buscando.
 
 \subsubsection{How we solve it. Aire Guru} 
- 
+Nuestro objetivo principal es crear el concienciamiento de la importancia de la polucion del aire en nuestra salud. Para ello investigamos sobre que
+medida representa el nivel de polucion en el aire, en este caso es el AQI. Investigamos sobre ello en fuentes oficiales, para la ciudad de Malaga se aplica la 
+legislacion europea, por lo que nos centramos en esta normativa.
+Buscamos informacion de como se cualcula y cuales son los niveles nocivos.
+Por otro lado tratamos de relacionar que enfermedades son afectadas por que contaminante y en que nivel les afecta. Ademas de las enfermedades, estudiamos sus 
+sintomas y como se pueden ver afectados.
+Para cada contaminante, buscamos las fuentes de polucion y vemos si se aplican a la ciudad de Malaga.
+Con toda esta informacion definimos que los contaminantes que afectan a la calidad del aire son el CO, NO2, O3 y PM (Particulated Material), diferentes medidas de particulas
+afectan de distinto modo a distintas enfermedades.
+
+Una vez seleccionados estos contaminantes, verificamos si contamos con estos datos en nuestro conjunto de datos. Como mencionamos anteriormente algunas muestras
+muestran medidas cualitativas y otras no cuentan con las medidas. En este caso se deciden los siguientes valores Bueno:0, ..... y se le indicara al usuario cuando el valor
+es cualitativo.
+
+
+Respecto al enfasi en los valores ....
+
+
+---como es de concienciacion, ofrece la informacion
+
+Investigacion del AQI, investigacion enfermedades y sintomas, fuentes de polucion y como afecta cada contaminante.
+ Color rojo, iconografia, barras, altura facil de interpretar por el usuario.
 \elsparagraph{Evaluation}  
 \begin{itemize}
     \done
