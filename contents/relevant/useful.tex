@@ -1,25 +1,33 @@
 \subsection{Util}
---Que es informcion no util
---No perdernos en definiciones o explicaciones que no son nuestra especialidad.
--No porque este en el conjunto de datos significa que hay que ponerlo.
+Usualmente cometemos el error de intentar mantener al usuario lo mas informado posible y le ofrecemos datos que
+no aportan informacion nueva, es redundate.
+Debemos centrarnos en que nuestro objetivo no es crear usuarios especializados en la materia, sino aportarles la
+informacion de una manera que la puedan aplicar a su vida diaria y asi mejorarla, por lo que huiremos de datos
+tecnicos, dificiles de interpretar.
+
 Como mencionamos anteriormente, huiremos de toda aquella informacion vana, que no haga ninguna aportacion
 al objetivo marcado. No queremos que el usuario se distraga o se pierda en medio de una piscina de datos completa
-pero compleja que para el no tenga ningun sentido.
+pero compleja que para el no tenga ningun sentido. 
 
-Toda representacion tienen que contarnos lo que significa sin tener que estar accediendo continuamente a informacion
+Respecto a la representacion, debe seguir el mismo principio, huiremos de decoraciones inecesarias que hagan al 
+usuario perderse, solo debe contener la informacion necesaria para poder ser interpretada correctamente, es decir,
+toda representacion tienen que contarnos lo que significa sin tener que estar accediendo continuamente a informacion
 extra.
+
 En caso complejos, los conceptos que no sean de uso diario para los usuario, podremos poner informacion
 complementaria a su disposicion para que el usuario pueda informarse sobre el significado de los datos 
 representados, esta practica proporcionara al usuario un mayor dominio del concepto y podra estar mas
-seguro de su lectura de los datos.
-Por otro lado, cuando dirigimos al usuario a fuentes oficiales de informacion, donde puedan obtener una explicacion veridica,
-reenforzamos la credibilidad de las representaciones que estamos realizando.
---huir de decoraciones
+seguro de su lectura de los datos, ya que cuando dirigimos al usuario a fuentes oficiales de informacion, donde puedan 
+obtener una explicacion veridica,reenforzamos la credibilidad de las representaciones que estamos realizando. En todo caso, 
+fuera de la representacion principal, porque el usuario no tendra que acceder a esta informacion continuamente.
 
 \subsubsection{How to solve it} 
+Centrarnos en el objetivo, mostrar los datos directamente relacionados con nuestra meta, no annadir los datos 
+simplemente porque aparezcan en el conjunto de datos, y no annadir detalles tecnicos irrelevantes para el usuario.
 
 
 \subsubsection{How we solve it. Aire Guru} 
+No util - identificacior de la estacion de medida
  Nos centramos en 6 contaminantes y la medida es unica para todos y el general, el AQI, los rangos son exactamente
  los mismos para todos
  No existen datos que el usuario no entienda, como coordenadas, identificador de la estacion, como se ha tomado la medida.
@@ -27,8 +35,9 @@ reenforzamos la credibilidad de las representaciones que estamos realizando.
 
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done
-    \crossed
+    \done Se ha eliminado la informacion no relevante para el usuario.
+    \crossed Se han ofrecido las mediciones exactas. Estos datos son demasiado tecnicos para el usuario. Sin embargo,
+    aporta veracidad a los datos y se han  posicionado en un lugar secundario para que no distraiga al usuario.
     
 \end{itemize}
  \newpage
