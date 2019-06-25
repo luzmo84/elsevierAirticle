@@ -1,20 +1,42 @@
 \subsection{Trustable}
-Empatizar con el usuario
---Proteccion de su intimidad
---Minimizacion de captura de datosSiempre pedir permiso
-Asegurar seguridad, integridad y confidencialidad
-Transparencia, opcion a eliminar los datos
-Explicar finalidad de los datos\\
+La confianza entre la plataforma que queramos utilizar y el usuario tiene que ser firme.
+Por ello tendremos que garantizar la proteccion de su intimidad y darle la certeza que si 
+utilizamos sus datos es solo exclusivamente para un fin en especifico y le dejaremos claro,
+cual es ese fin, es decir, transparencia. 
+Deberemos por ello minimizar el riesgo de la divulgacion de sus datos, es decir, guardar
+por su seguridad, integridad y confidencialidad. 
+Para ello deberemos seguir tanto las normas legales como una etica de buenas practicas.
+No obligar a un identificado si se puede mostrar informacion.
+Siempre pedir permiso para la captura de datos y dejar claro la finalidad de estos.
+
 
 \subsubsection{How to solve it} 
+Utilizacion de plataformas seguras, como puede ser SSL si desarrollamos una aplicacion web.
+Si utilizamos API de terceros, asegurarnos tanto de su reputacion como el nivel de seguridad que ofrece.
+Implementar un sistema que no permita relacionar los datos con un usuario.
+Dar al usuario la posibilidad de eliminar sus datos si asi lo desea.
 
 
 \subsubsection{How we solve it. Aire Guru} 
- 
+Plataforma segura SSL
+Login con API firebase
+Encriptacion del token firebase con token propio
+La recoleccion de datos de posicion no es exhaustiva, pero garantiza la precision.
+Pide permiso para leer la ubicacion
+Deja que el usuario elimine los datos si lo desea.
+Usuario debe realizar una accion para leer su localizacion.
+A la hora de mostrar el historial personal, te explica para que sirve estar identificado y es opcional.
+
+ --foto workflow identificacion
+ --foto pedir permiso
+ --foto eliminacion de datos
+ --foto explicacion de para que se quieren los datos.
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done
-    \crossed
+    \done Codigo de buenas practicas
+    \done No es posible relacionar la identificacion del usuario de firebase con nuestra base de datos
+    \crossed Algunos usuarios nos indicaron que preferirian crear una cuenta con un nombre de usuario y contrasena
+    y no utilizar su cuenta de correo por miedo al "robo de informacion"
     
 \end{itemize}
 \newpage
