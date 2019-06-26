@@ -1,50 +1,76 @@
 \subsection{User Experience}
  El sistema puede mostrar los datos de una forma precisa, optimizada, totalmente personaliza y ofrecerle
  la posibilidad al usuario de mejorar su vida considerablemente, sin embargo, si no proporcionamos una experiencia
- de usuario agradable y fluida, todos nuestros esfuerzos seran en vano.
+ de usuario agradable y que reacciona a nuestras acciones, todos nuestros esfuerzos seran en vano.
  El usuario debe sentir que el sistema le ofrece la informacion de una manera fluida, limpia, intuitiva, directa y con
  una secuencia logica.
   
 Esta secuencia le permitira al usuario la posibilidad de indagar por si mismo, como si la redaccion de una novela se tratara.
 
-La representacion debe estar fuera de toda ambiguidad, no mostrar informacion que resulte enganosa o que haya que dedicar demasiado tiempo fijandonos
-en los detalles para poder interpretarla correctamente.
-Ademas se debera buscar la manera de presentar la informacion de una manera armonica y agradable para el usuario.
-Al representar la informacion sera incluido lo basicamente necesario, huyendo siempre de graficas recargadas que solo aporten ruido a la represetacion.
+La representacion debe estar fuera de toda ambiguidad, no mostrar informacion que resulte enganosa o que haya que dedicar 
+demasiado tiempo fijandonos en los detalles para poder interpretarla correctamente. Al representar la informacion sera 
+incluido lo basicamente necesario, huyendo siempre de graficas recargadas que solo aporten ruido a la represetacion.
 
-Buscaremos crear familiaridad, que el usuario pueda enterder de una forma rapida las estructuras de los datos y 
+Buscaremos crear familiaridad, que el usuario pueda enterder de una forma rapida las estructuras utilizadas y 
 le resulte facil de moverse con el minimo tiempo de aprendizaje posible.
 
 Es importante darle al usuario un grado de flexibilidad, que sea capaz de realizar sus propias selecciones para poder ver
 los datos en los que esta interesando.
 
-Estudio de las representaciones mas adecuadas para cada tipo de datos.
-Es importante trabajar en los tiempos y no hacer esperar al usuario
-Es importante que una accion tenga una respuesta aunque esta sea de espera.
+Cuando hablamos de fluidez, nos referimos a las interacciones usuario-sistema, es importante que las interacciones
+sean como una conversacion a dos, donde uno pregunta y hace saber que esta escuchando y responde. Cuando el usuario 
+requiere informacion del sistema, este performara un cambio que permita saber al usuario que ha recibido su accion y
+con un tiempo de no mas de cinco segundos, debera de proporcionar una respuesta.
+
     
 \subsubsection{How to solve it} 
-Diseno actualizado y moderno, limpio, lejos de decoraciones innecesarias, debera seguir una logica.
-Accion-reaccion 
-Tiempo de aprendizaje minimo, familiaridad, intuitividad
-Flexibilidad
+Deberemos analizar con atencion que informacion queremos presentar y nos centraremos en este objetivo. Realizaremos un 
+diseno limpio, donde todos los elementos sean facil de reconocer.
+La estructura conllevara una secuencia logica, como si de una historia narrativa se tratara. 
+Cada accion que el usuario pueda realizar, debera implementar una indicacion clara y ofrecer resultados en un 
+periodo de menos de cinco segundos.
+Huiremos de representaciones mas complicadas del nivel del usuario, intentaremos aplicar la familiaridad e intuitividad.
+Es decir, si para la eleccion de fechas se utiliza un calendario, no tiene sentido utilizar un reloj de arena, esto confundira
+mucho mas al usuario.
+Ofrecer flexibilidad, el usuario debe ser capaz de interaccionar y elegir que quiere ver.
 
 \subsubsection{How we solve it. Aire Guru} 
-Diseno material design, colores combinados no estridentes, simple
-Workflow, del mapa a mas detalle
-Repeticion de estructuras
-respetar colores para las misma funciones
-Filtros en el mapa
-filtros en las graficas
+Nuestra herramienta utiliza una interpretacion de material design, el cual utiliza un diseno limpio, sin bordes ni decoraciones.
+Se utiliza una gama de en tonos azules en combinacion con blanco y gris buscando un entorno relajado. 
+Se ha cuidado que todos los textos tengan un nivel de contraste con su fondo, para que sea facil de leer.
+
+Las graficas estan disenadas en 2D, ya que son mas faciles de interpretar y huimos de la ambiguedad que puede
+proporcionar la profundidad como medida.
+
+
+El workflow de las distintas secciones de Aire Guru esta detalladamente estudiada.
+Aire Guru se comprende de distintas secciones. Mediante la seleccion de un punto en el mapa, nos
+mostrara informacion detallada de este punto. A continuacion, cuenta con una seccion que filtrara la informacion acorde a las preferencias del usuario
+y para concluir, muestra el historial de los contaminantes desde 2018 y el historial de la polucion al que el usuario ha estado
+expuesto. 
+
+Es de preveer que el usuario estara interesado en el nivel de polucion al que esta expuesto a tiempo real, por ello, para usuarios
+que esten identificados y accedan a compartir su ubicacion, Aire Guru mostrara directeramente la polucion en el punto en el 
+que se encuentra.
+
+Respecto a la flexibilidad, el usuario puede ver la situacion de la polucion del aire por fechas. El filtrado en la zona
+intermedia, puede realizarse tanto por condiciones medicas como por agentes contamientes. Por ultimo, en zona inferior donde tenemos
+los historicos por zona y personalizado, podemos visualizar la informacion con distinta granularidad, hora, dia, mes y ano y tambien podemos
+seleccionar la fecha que deseamos.
+
+
 Se utiliza el mismo estilo, colores e iconografia en todo el diseno para que el usuario se familierize rapidamente y pueda
 prestar atencion al significado de los datos en vez de perderse en el diseno e intentar encontrar su significado. 
+
+Debido a la gran cantidad de datos que se le ofrece al usuario, se ha implementado una rueda de espera para indicar
+que la herramienta esta procesando informacion. Cada vez que se pulsa un control en la pagina, se indica con un cambio
+de tonalidad.
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done Estetica
-    \done Logica de secuencia
+    \done Tiene una estetica relajada donde prima las graficas con la informacion
+    \done La representacion sigue una logica de secuencia
     \done Familiaridad, repeticion de estructuras y colores que representan lo mismo
-    \done Selecciones
-    \crossed Tiempos de espera
-    \crossed Mas diseno
-    
+    \done Flexibilidad. El usurio puede realizar multiples selecciones
+    \crossed Los tiempos de espera se deberian mejorar
 \end{itemize}
 \newpage
