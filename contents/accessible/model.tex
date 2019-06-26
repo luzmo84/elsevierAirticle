@@ -27,10 +27,6 @@ informacion que se desea obtener. El diseno de un sistema permitira que a partir
 Para ello sera necesario tener un conocimiento solido del conjunto de datos que se necesita, los valores,
 sus unidades y como se relacionan entre si.
 
-Asi pues, para que el usuario pueda obtener la informacion de una manera directa, requiere de conocimientos tanto 
-de programacion como especificos de la materia y los recursos para crear una infraestructura que le permita implementar 
-una representacion de los datos que le sea util.
-
 
 \subsubsection{How to solve it} 
 Estudiar el objetivo buscado y recurrar a la ayuda de expertos si fuera necesario para adquirir los conocimientos necesarios
@@ -40,7 +36,6 @@ sobre la materia. Disenar un modelo que proporcione la informacion que buscamos.
 Aire Guru tiene como objetivo aumentar el concienciamiento del nivel de polucion que nos rodea, para ello utiliza una medida llamada
 el indice de calidad del aire (AQI) concretamente el indice de calidad del aire europeo (EAQI).
 
-
 \newpage
 \begin{figure}[ht]
     \centering
@@ -48,18 +43,12 @@ el indice de calidad del aire (AQI) concretamente el indice de calidad del aire 
     \caption{Aire Guru. Landing page. Top section}
 \end{figure}
 
-Aire Guru se comprende de distintas secciones. Mediante la seleccion de un punto en el mapa, nos
-mostrara informacion detallada de este punto. A continuacion, cuenta con una seccion que filtrara la informacion acorde a las preferencias del usuario
-y para concluir, muestra el historial de los contaminantes desde 2018 y el historial de la polucion al que el usuario ha estado
-expuesto.
-
-Es de preveer que el usuario estara interesado en el nivel de polucion al que esta expuesto a tiempo real, por ello, para usuarios
-que esten identificados y accedan a compartir su ubicacion, Aire Guru mostrara directeramente la polucion en el punto en el 
-que se encuentra.
-
-El workflow de las distintas secciones de Aire Guru esta detalladamente estudiada. Como vemos en la Figura X. Aire Guru. Landing page. Top section, el punto de partida es la localizacion que nos interesa,
-a continuacion se muestra la informacion general de este punto, el AQI general, despues el AQI de cada uno de los contaminantes que componen el 
-AQI general y por ultimo los valores numericos de cada uno de los contaminantes. Como vemos vamos de menos a mas detalle.
+Muestra el AQI en toda la ciudad de Malaga por zonas, tanto el general como el AQI de cada uno de los agentes
+contaminantes de forma mas desglosada desde septiembre del 2018 hasta la actualidad. Ademas muestra la evolucion
+de estos por dias, meses y annos.
+Es capaz de hacer una discriminacion del conjunto de agentes contaminantes mas relevantes por condiciones medicas.
+Como caracteristica inovadora muestra la exposicion a nivel particular por hora, dias, meses, annos y hace la funcion de 
+glosario informativo.
 
 \elsparagraph{Evaluation}  
 
@@ -67,7 +56,7 @@ AQI general y por ultimo los valores numericos de cada uno de los contaminantes.
 \done La informacion queda centrada en un objetivo, informar al usuario el nivel de polucion que le rodea a tiempo real
 y en el pasado
 \done La informacion sigue un hilo logico. History telling
-\done El usuario encuentra la informacion mas importante con el minimo esfuerzo, simplemente con abrir la pagina
+\done La web ofrece informacion, no solo datos
 \end{itemize}
 
 \newpage
