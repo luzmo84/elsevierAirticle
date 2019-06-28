@@ -24,9 +24,48 @@ resulta atractiva al usuario e intentar mejorarlo.
 \subsubsection{How we solve it. Aire Guru} 
 Se le ofrece al usuario una plataforma que le indica su exposicion a la polucion del aire totalmente personalizada si la necesidad de acarrear
 ningun dispositivo para la lectura de los contaminantes.
-Se le presenta una descripcion detallada de como la polucion puede afectar a su vida diaria sin tener que salir de la plataforma
-Se puede ver la exposicion a la polucion del aire desde el 2018 sin tener que haber estado usando la herramienta.
- 
+
+
+
+Aire Guru previo permiso explicito de lectura de la localizacion por parte del usuario, recoge el poligono donde
+se encuentra el usuario y almacena la medida de la polucion mas reciente para ese poligono. A continuacion, el 
+usuario podra visualizar la exposicion a la contaminacion a la que ha sido sometido.
+
+\begin{figure}[ht]
+    \centering 
+    \begin{tikzpicture}[thick]
+        \node[draw,rectangle,minimum size=20] (a) {Location Permission};
+         \node[draw,circle,minimum size=6,right of= a, node distance=4cm] (b) {Change position};
+         \node[draw,circle,minimum size=5,right of= b, node distance=4cm] (c) {Minimum poll time};
+         \node[draw,rectangle,minimum size=20,below of=c, node distance=2cm] (d) {Save polygon and pollution measurements};
+         \draw[->] (a) to (b);
+         \draw[->] (b) to (b);
+        \draw[->,green] (b) to (c);
+        \draw[->] (c) to (d);
+     \draw[->] (c) to (b);
+      \end{tikzpicture}
+      \caption{Collecting user location}
+    \end{figure}
+    \newpage
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=8cm]{importedDataDecember}
+        \caption{Personal Records. December}
+    \end{figure}
+
+Se puede ver la exposicion a la polucion del aire desde el 2018 sin tener que haber estado usando la herramienta ya que
+mediante el boton importar cronologia de Google, se puede importar el historial de localizacion que proporcionara la
+contaminacion a la que se ha estado expuesto desde el 2018. En la seccion de ayuda podemos encontrar una guia de como se 
+exportar e importa este historial de localizaciones.
+\begin{comment}
+    
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=11cm]{helpImport}
+    \caption{First step Import Google Location}
+\end{figure}
+\end{comment}
 \elsparagraph{Evaluation}  
 \begin{itemize}
     \done Caracteristica unica, monitorizacion de la exposicion de la polucion completamente personalizada
