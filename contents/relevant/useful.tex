@@ -1,50 +1,43 @@
-\subsection{Util}
-Usualmente cometemos el error de intentar mantener al usuario lo mas informado posible y le ofrecemos datos que
-no aportan informacion nueva, es redundate.
-Debemos centrarnos en que nuestro objetivo no es crear usuarios especializados en la materia, sino aportarles la
-informacion de una manera que la puedan aplicar a su vida diaria y asi mejorarla, por lo que huiremos de datos
-tecnicos, dificiles de interpretar.
+\subsection{Usefull}
+Usually we make the mistake of trying to keep the user as informed as possible and we offer you data that
+They do not provide new information, it is redundant. All vain information, that does not make any contribution
+The marked objective is also outside of being useful. We do not want the user to be distracted or lost in the middle
+ of a complete but complex data pool that does not make any sense for it.
 
-Como mencionamos anteriormente, huiremos de toda aquella informacion vana, que no haga ninguna aportacion
-al objetivo marcado. No queremos que el usuario se distraga o se pierda en medio de una piscina de datos completa
-pero compleja que para el no tenga ningun sentido. 
+The objective is not to create specialized users in the field, but to provide them with the
+information in a way that they can apply to their daily life and thus improve it, show data
+technical, difficult to interpret will only make the user avoid them
 
-Respecto a la representacion, debe seguir el mismo principio, huiremos de decoraciones inecesarias que hagan al 
-usuario perderse, solo debe contener la informacion necesaria para poder ser interpretada correctamente, es decir,
-toda representacion tienen que contarnos lo que significa sin tener que estar accediendo continuamente a informacion
-extra.
-
-En caso complejos, los conceptos que no sean de uso diario para los usuario, podremos poner informacion
-complementaria a su disposicion para que el usuario pueda informarse sobre el significado de los datos 
-representados, esta practica proporcionara al usuario un mayor dominio del concepto y podra estar mas
-seguro de su lectura de los datos, ya que cuando dirigimos al usuario a fuentes oficiales de informacion, donde puedan 
-obtener una explicacion veridica,reenforzamos la credibilidad de las representaciones que estamos realizando. En todo caso, 
-fuera de la representacion principal, porque el usuario no tendra que acceder a esta informacion continuamente.
+In complex cases, the concepts that are not of daily use for the users, we can resort information
+complementary to your disposition so that the user can be informed about the meaning of the data
+represented, this practice will provide the user with a greater mastery of the concept and could be more
+sure of your reading of the data, since when we direct the user to official sources of information, where they can
+get a real explanation, reinforce the credibility of the representations we are making. In any case,
+outside of the main representation, because the user will not have to access this information continuously.
 
 \subsubsection{How to solve it} 
-Centrarnos en el objetivo, mostrar los datos directamente relacionados con nuestra meta, no annadir los datos 
-simplemente porque aparezcan en el conjunto de datos, y no annadir detalles tecnicos irrelevantes para el usuario.
-
+Focus on the objective, show the data directly related to our goal, do not annotate the data
+simply because they appear in the data set, and not add technical details irrelevant to the user.
 
 \subsubsection{How we solve it. Aire Guru} 
 
-El conjunto de datos utilizado contiene datos como el indicador de la estacion de medida, si la estacion es fija o movil
-y medidas extra especificas para una aplicacion que proporciona la misma empresa que recoge los datos. Para nuestra
-herramienta, estos datos no son utiles.
-Para nuestra herramienta solo se han utilizado las coordenadas donde se encuentra la estacion de medicion, el momento en 
-el que se realizo la medida y la medida mas relevante de los cinco contaminantes Co, No2, O3, Pm1, Pm 2.5 y Pm10.
+The data set used contains data such as the indicator of the measurement station, if the station is fixed or mobile
+and extra-specific measures for an application that is provided by the same company that collects the data. For our
+tool, these data are not useful.
+For our tool only the coordinates where the measurement station is located have been used, the moment in
+which was the measure and the most relevant value of the five pollutants Co, No2, O3, Pm1, Pm 2.5 and Pm10.
 
-Ademas, la medida es unica para todos y el general, el AQI, los rangos son exactamente los mismos para todos, asi el usuario
-solo tiene que hacer el esfuerzo de enterder un unico concepto. 
+In addition, the measurement is unique for everyone and the general, the AQI, the ranges are exactly the same for everyone, so the user
+you just have to make the effort to understand a single concept.
 
-Si la medida no existe, simplemente la obviaremos. No proporcionamos explicaciones o valores como 0 que pueden llegar a 
-error, como si no existiera polucion.
+If the measure does not exist, we will simply ignore it. We do not provide explanations or values such as 0 that can reach
+error, as if there was no pollution.
 
 
-En la figura siguiente vemos la diferencia entre el historial de zona y el personalizado, el primero de ellos no muestra
-el punto donde se tomo la medida ya que se ha seleccionado en el mapa principal. Tambien emos como para el historial de 
-zona no existe un filtro por horas, ya que las medidas son reportadas cada hora, esto significa que no encontraremos 
-medidas intermedias en el conjunto de datos.
+In the following figure we see the difference between the zone history and the personalized, the first of them does not show
+the point where the measure was taken since it has been selected in the main map. We also like for the history of
+zone there is no filter for hours, since the measurements are reported every hour, this means that we will not find
+intermediate measures in the data set.
  
 \begin{figure}[ht]
     \centering
@@ -60,12 +53,12 @@ medidas intermedias en el conjunto de datos.
 
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done Se ha eliminado la informacion no relevante para el usuario.
-    \crossed Se han ofrecido las mediciones exactas. Estos datos son demasiado tecnicos para el usuario. Sin embargo,
-    aporta veracidad a los datos y se han  posicionado en un lugar secundario para que no distraiga al usuario.
-    \crossed Se ha implementado una funcionalidad de exportar los datos, los comentarios de nuestros testers descubrieron
-    que esta funcionalidad para el usuario medio no es util, ya que no cuentan con las herramientas necesarias para
-    analizar los datos y toda la informacion esta en la herramienta representada en un mejor formato.
+    \done The information not relevant to the user has been removed.
+         \crossed Exact measurements have been offered. This data is too technical for the user. But nevertheless,
+         It contributes truthfulness to the data and has positioned itself in a secondary place so that it does not distract the user.
+         \crossed It has implemented a functionality to export the data, the comments of our testers discovered
+         that this functionality for the average user is not useful, since they do not have the necessary tools to
+         analyze the data and all the information is in the tool represented in a better format.
     
 \end{itemize}
  \newpage

@@ -1,22 +1,22 @@
-\subsection{Calidad de los datos}
+\subsection{Credibility and data quality}
+It is essential to be first of all the credibility of the data set, that is, the source must be reliable. Usually,
+in the description of the data, a section must be included where the origin of the data set is explained.
+
+Regarding the quality of the data set, it can be measured according to the following characteristics of the values of the fields: \\
  
-Una vez estipulados los campos que se requieren de la fuende de datos de origen, hay que serciorarse en primer lugar de la credibilidad
-de los datos, es decir, la fuente debe ser fiable, en la descripcion de los datos debe contar una seccion dende explique la procedencia
-de los datos. Ademas, habra que comprobar las siguientes premisas para cada unos de los campos representados en los datos de origen:\\
+\textbf{Precision}. Units of measurement in the correct scale. For example, if we are measuring the height
+of people, it would be meaningless to provide these measurements in meters, since the possible values will be 0, 1 and 2. \\
 
-\textbf{Precision}. Unidades de medida en la escala correcta. Por ejemplo, si estamos mediendo la altura
-de las personas, carecera de sentido proporcionar estas medidas en metros, ya que los posibles valores, seran 0, 1 y 2.\\
+\textbf{Consistency}. Logical values for each type of field. An example would be a date field, all should
+follow the same format. \\
 
- \textbf{Consistencia}. Valores logicos para cada tipo de campo. Un ejemplo seria un campo fecha, todos deberian
-seguir el mismo formato.\\
+\textbf{Interpretability}. Readable. The data must be clear, both in values and in units. For example, we can not
+suppose the unit or scale of the data or, if the data are dichotomous, "true" or "false", and the values represented are
+"A" or "B", we can not assume true = A and false = B without this information being described. \\
 
-\textbf{Interpretabilidad}. Legible. Los datos deber ser claros, tantos en valores como en unidades. Por ejemplo, no podemos
-suponer la unidad o la escala de los datos o, si los datos son dictonicos, "verdadero" o "falso", y los valores represetados son 
-"A" o "B", no podemos suponer verdadero= A y falso=B sin que esta informacion este descrita. \\
-
-\textbf{Complitud}. Los datos deben ser consistentes en cada uno de las muestras. Las muestras pueden diferenciarse
- unas de otras, como vemos en la Figura  a continuacion, pueden compartir algunos campos y otros no. Para un buen resultado, seria 
-conveniente un grado de complitud alto para los datos que nos interesan en nuestro diseno.
+\textbf{Complitud}. The data must be consistent in each of the samples. The samples can be differentiated
+  of each other, as we see in the Figure below, can share some fields and not others. For a good result, it would be
+convenient a high degree of compliance for the data that interests us in our design.
 
 
 \begin{figure}[ht]
@@ -36,48 +36,38 @@ Document \\
 \hspace*{10mm} \= ... 
 \end{tabbing}}%
 }
-\caption{Ejemplo documento de la fuente de origen}
+\caption{Example source source document}
 \end{figure}
-\begin{comment}
-    
-\end{co}
-\begin{itemize}
-
-    \item Informacion precisa
-    \item Datos contrastados
-\end{itemize}
-\end{comment}
-
 
 \subsubsection{How to solve it} 
-El primer paso es contrastar la informacion con la fuente de origen. Con el conjunto de datos y la definicion
-de cada uno de los campos, se ha de comprobar la escala e interpretabilidad de los campos y valores.
-A continuacion podemos realizar diferentes analisis de los datos para comprobar su consistencia y complitud. Esto 
-es posible realizando distintos graficos y ver si existen valores extremos o extranos.
-Herramientas de analisis de bases de datos podran decirnos la complitud de los campos, es decir, que porcentaje de las
-muestras contienen cada campo.
+The first step is to contrast the information with the source of origin. With the data set and the definition
+of each of the fields, the scale and interpretability of the fields and values must be checked.
+Then we can perform different analysis of the data to check its consistency and compliance. This
+It is possible to make different graphs and see if there are extreme or strange values.
+Database analysis tools can tell us the completeness of the fields, that is, what percentage of the
+Samples contain each field.
 
 \subsubsection{How we solve it. Aire Guru} 
-La fuente de dato queda verificada tanto por el CEMI (centro de informatica de Malaga) y UrbanClouds, la empresa privada
-que recoge y envia los datos al ayuntamiento de Malaga.
-Con la descripcion de los datos en el portal de datos abiertos de Malaga y la informacion recibida por UrbanClouds, 
-obtenemos toda la informacion necesaria para interpretar el conjunto de datos.\\
+The source of data is verified by both the CEMI (Malaga information center) and UrbanClouds, the private company
+that collects and sends the data to the city of Malaga.
+With the description of the data in the open data portal of Malaga and the information received by UrbanClouds,
+we obtain all the necessary information to interpret the data set. \\
 
-Para cada campo, se ha realizado un estudio grafico con la herramienta Tableau y si ha verificado que los valores de los
-campos cumplen con la escala y el rango de valores esperados. Es decir, son precisos y consistentes.
-Utilizando las herramientas de analisis de MongoDBCompas y NoSQLBooster comprobamos la complitud de los campos que nos
-interensan para nuestro modelo.
+For each field, a graphical study has been carried out with the Tableau tool and if it has verified that the values of the
+Fields meet the scale and range of expected values. That is, they are precise and consistent.
+Using the analysis tools of MongoDBCompas and NoSQLBooster we verify the completeness of the fields that we
+interensan for our model.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{noSQLBoosterAnalysis}
-    \caption{Analisis de complitud}
+    \caption{Completeness analysis}
 \end{figure}
 
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done Se han tomado las medidas necesarias para verificar y entender cada uno de los campos en el conjunto de datos
-    \done Se ha analizado los valores de cada uno de los campos comprobando escalas y rangos
-    \done Se ha analizado la complitud de los datos
+    \done The necessary measures have been taken to verify and understand each of the fields in the data set
+    \done The values of each of the fields have been analyzed by checking scales and ranges
+    \done The completeness of the data has been analyzed
     
 \end{itemize}
  \newpage

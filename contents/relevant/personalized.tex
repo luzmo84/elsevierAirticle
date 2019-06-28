@@ -1,27 +1,26 @@
 \subsection{Personalizacion}
-Hasta ahora hemos vistos diferentes parametros para considerar los datos relevantes a nivel general, en este apartado, nos
-centraremos a nivel personal.
-Cada usuario es unico al igual que su situacion personal, por eso tendremos que buscar la manera de que los datos se 
-adapten a los usuarios. Ofrecerle una informacion no solo relevante a nivel general pero a nivel particular.
-Para ello deberemos plantearnos que necesitariamos que nos dijeran los datos en mi caso, por el lugar en el que vivo, por
-mi salud, situacion familiar, algo que nos caracterize.
+So far we have seen different parameters to consider the relevant data at a general level, in this section, we
+We will focus on a personal level.
+Each user is unique as well as their personal situation, so we will have to find a way to get the data
+adapt to users. Offer you information not only relevant at a general level but at a particular level.
+Posing that we need to be told the data in my case, by the place where I live, by
+my health, family situation, something that characterizes us can help us.
+
+In many cases, we will not be able to fully customize it, but we can look for common points in subgroups of
+users, from this point you have to study the different cases that can be given and make a selection of those that are
+more common.
 
 
 \subsubsection{How to solve it} 
 
- Estudiar en que manera los datos van a ayudar al usuario y a partir de este punto, hacerlo mas especifico, de esta manera
- pasaremos de obtener datos relevantes de manera general a ser relevantes de manera personal. Hay que pensar en el 
- usuario, no en los usuarios y buscar la manera de encontrar los resultados que se le adapten especificamente a el.
-
- En muchos de los casos, no podremos personalizarlo completamente, pero podemos buscar puntos comunes en subgrupos de 
- usuarios,a partir de este punto hay que estudiar las distintas casos que se pueden dar y realizar una seleccion de los que son 
- mas comunes.
-
+Study in what way the data will help the user or the subgroups and from this point, make it more specific, in this way
+  we will go from obtaining relevant data in a general way to be relevant in a personal way. You have to think about the
+  user, not in the users and find the way to find the results that are specifically adapted to him.
  \subsubsection{How we solve it. Aire Guru} 
-A todos nos interesa la polucion que nos rodea, ya que es importate para nuestra salud, por esta razon, la herramienta
-Aire Guru se ha especializado en este area. Para aquellas personas que sean especialmente sensibles a la polucion del
-aire, Aire Guru muestra la polucion del aire respecto a las seis condiciones medicas mas comunes que 
-se ven afectadas por algun contaminante.
+ We are all interested in the pollution that surrounds us, since it is important for our health, for this reason, the tool
+ Aire Guru has specialized in this area. For those people who are especially sensitive to the pollution of the
+ Air, Air Guru shows the air pollution with respect to the six most common medical conditions that
+ they are affected by some contaminant.
  
 
 \begin{figure}[ht]
@@ -37,19 +36,20 @@ se ven afectadas por algun contaminante.
   
   \caption{Medical Condition Filter}
     \end{figure}
- Como vemos, en cada uno de los casos, nos deberemos fijar en una seleccion de componentes.
-
- Otra funcionalidad de personalizacion es la representacion de la exposicion a la polucion para cada usuario. 
- Como vemos en la figura X. Personal Records, el usuario es capaz de ver la polucion que le ha rodeado especificamente
- a el a lo largo del tiempo.
+    As we see, in each of the cases, for each medical condition, it shows a subset of pollutants,
+      those that most influence each medical condition.
+    
+      Another customization feature is the representation of the exposure to pollution for each user.
+      As we can see in figure X. Personal Records, the user is able to see the pollution that has surrounded him specifically
+      to him over time.
 
  
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done El usuario cuenta con funcionalidades especializadas 
-    \crossed La funcion del filtrado de la condicion medica no se autoselecciona, esto es debido a que la funcionalidad
-    esta disponible para todos los usuarios. Podria implementarse de manera que el mapa mostrara el AQI con respecto a los
-    contaminantes que el usuario ha preseleccionado, pero esto puede llegar a desvirtualizar la informacion si no se 
-    indica al usuario claramente, que el mapa no toma en cuenta todos los contaminantes relevantes.
+   \done The user has specialized functionalities
+        \crossed The filtering function of the medical condition is not self-selected, this is because the functionality
+        It is available to all users. It could be implemented so that the map would show the AQI with respect to the
+        contaminants that the user has preselected, but this can de-virtualize the information if it is not
+        clearly indicates to the user that the map does not take into account all relevant contaminants.
 \end{itemize}
  \newpage

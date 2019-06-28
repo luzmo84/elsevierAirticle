@@ -1,59 +1,58 @@
 \subsection{Diseno}
-Para realizar una buena seleccion de los datos que son relevantes o la combinacion de estos, es imprescindible unos 
-conocimientos solidos sobre la materia a tratar. Por ello, es fundamental dedicarle el tiempo necesario para enter la
-importancia de los datos, que beneficios nos puede aportar o que datos nos perjudican.
-Los puntos que deben quedar claro en la fase de diseno son:\\
+To make a good selection in the data set of the fields that are relevant or the combination of these, it is essential to
+solid knowledge on the subject to be treated. Therefore, it is essential to dedicate the necessary time to enter the
+importance of the concept, what benefits it can bring or what situations hurt us.
+The points that should be clear in the design phase are: \\
 
- \textbf{Objetivo}. Conceptualmente, que problema queremos solventar o clarificar. Es muy importante que tengamos un objetivo claro,
-    incluso si no se cuentan con conocimientos previos de la materia, tener un objetivo bien definido nos ayuda a encontrar la solucion o 
-    describirla con mas claridad al experto.\\
+\textbf{Objective}. Conceptually, what problem we want to solve or clarify. It is very important that we have a clear objective,
+     Even if you do not have prior knowledge of the subject, having a well-defined objective helps us find the solution or
+     describe it more clearly to the expert so that he can describe how to solve the problem. \\
 
- \textbf{Puntos importantes. Valores destacables}. Como mencionamos anteriormente, nuestro objetivo no es mostrar todos los datos, sino
-    que se trata de proporcionarle los datos importantes al usuario para poder descubrir los valores significativos, los que tienen influencia en
-    nosotros, ya sea positivo o negativo. A nivel mas tecnico, serian los limites o que valores de que datos son los que nos proporcinan una informacion
-    de una situacion excepcional, o los valores que estamos intentando identificar mas facilmente.\\
+\textbf{Important points. Notable situations}. As we mentioned earlier, our goal is not to show all the values, but
+     which is about providing the user with important information in order to discover the significant situations that influence the
+     us, either positive or negative. At a more technical level, it would be the limits or values of what data are those that provide us with information
+     of an exceptional situation, or the values that we are trying to identify more easily. \\
 
- \textbf{Data workflow}. Diseno del flujo de informacion, que quede claro como se llega de un punto a otros, por ejemplo de una representacion
-    simple a mas detallada o compleja. Si el usuario entiende los conceptos basicos, le sera mas facil de entender el concepto mas desarrollado.
-
-
-Respecto al conjunto de datos, una vez marcada una meta, deberemos estipular cuales son los campos necesarios del conjunto de datos que necesitamos para representar la informacion
-disenada. Es momento de realizar un analisis de los datos proporcionados y ver en la lista de los campos que nos ofrece la fuente, si serian
-suficientes para alcanzar el objetivo marcado, si no directamente con sus valores, con la combinacion de ellos.
+\textbf{Data workflow}. Design of the flow of information, which is clear how to get from one point to another, for example, a representation
+     simple to more detailed or complex. If the user understands the basic concepts, it will be easier to understand the most developed concept.
 
 \subsubsection{How to solve it} 
-Marcarnos un objetivo, estipulamos los campos necesarios, seleccionamos estos campos en el conjunto de datos. 
-Estipulamos los valores destacables que les proporcionen mas informacion al usuario como las Situaciones excepcionales, o lo que estamos buscando.
+Once a goal has been set, we must stipulate which are the necessary fields of the data set that we need to represent the information
+designed. That is, we make the selection of the fields that interest us. It is time to perform an analysis of the data provided and see in
+the list of fields that the source offers us, if they would be sufficient to reach the marked objective, if not directly with their values, with the combination of them.
+Below we stipulate the outstanding values that provide more information to the user as exceptional situations, or what we are looking for.
+
 
 \subsubsection{How we solve it. Aire Guru} 
-Nuestro objetivo principal es crear el concienciamiento de la importancia de la polucion del aire en nuestra salud. Para ello investigamos diferentes conceptos:
+Our main objective is to create awareness of the importance of air pollution in our health. For this we investigate different concepts:
 \begin{itemize}
-    \item Que enfermedades se ven afectadas por la polucion del aire
-    \item Que contaminantes son las que crean o influyen en enfermedades
-    \item Cuales son las fuentes de cada contaminante
-    \item Cual es la medida representativa del nivel de polucion del aire.
-    \item Como se calcula y que parametros necesitamos para su calculo
-    \item Cuales son los niveles nocivos en general y para cada contaminante
+    \item What diseases are affected by air pollution
+    \item What contaminants are those that create or influence diseases
+    \item What are the sources of each pollutant?
+    \item What is the representative measure of the level of air pollution.
+    \item How it is calculated and what parameters we need for its calculation
+    \item What are the harmful levels in general and for each pollutant
 \end{itemize}
-La medida que mejor representa el nivel de polucion en el aire, en este caso es el AQI. Investigamos sobre ello en fuentes oficiales, para la ciudad de Malaga se aplica la 
-legislacion europea, por lo que nos centramos en esta normativa.
-Buscamos las relaciones que tienen los contaminantes con distintas enfermedades, para ello recurrimos a estudios clinicos. Para cada una de las enfermedades, nos informamos
-sobre sus sintomas y como se pueden ver agravados por cada contaminante.
-Para cada contaminante, buscamos las fuentes de polucion y vemos si se aplican a la ciudad de Malaga y como.
-Con toda esta informacion definimos que los contaminantes que afectan a la calidad del aire son el CO, NO2, O3 y PM (Particulated Material), diferentes medidas de particulas
-afectan de distinto modo a distintas enfermedades.\\
+The measure that best represents the level of air pollution, in this case is the AQI. We investigate about it in official sources, for the city of Malaga the
+European legislation, so we focus on this regulation.
+We look for the relationships that pollutants have with different diseases, for this we resort to clinical studies. For each of the diseases, we inform ourselves
+about their symptoms and how they can be aggravated by each pollutant.
+For each pollutant, we look for sources of pollution and see if they apply to the city of Malaga and how.
+With all this information we define that the pollutants that affect air quality are CO, NO2, O3 and PM (Particulated Material), different measurements of particles
+they affect different diseases in different ways. \\
 
-Como el objetivo principal es la concienciacion, aportaremos todos estos datos de una manera organizada en el glosario de Aire Guru.\\
+As the main objective is awareness, we provide all these data in an organized way in the Glossary of Air Guru. \\
 
-Una vez seleccionados estos contaminantes, verificamos si contamos con estos datos en nuestro conjunto de datos. Como mencionamos anteriormente algunas muestras
-muestran medidas cualitativas y otras no cuentan con las medidas. En este caso se deciden los siguientes valores Bueno:50, Aceptable:150,Pobre:300, Malo:400, Insalubre:500
-y se le indicara al usuario cuando el valor es cualitativo.\\
+Once these contaminants are selected, we verify if we have these data in our data set. As we mentioned earlier some samples
+They show measurements of fixed and / or mobile stations and these can be quantitative or qualitative and others do not have the measurements. We will have to select the one
+provide us with the most information or the most accurate, in this case the quantitative measure will prevail to the qualitative one and in the case that there is only qualitative
+the following values are decided: Good: 50, Acceptable: 150, Poor: 300, Bad: 400, Unhealthy: 500 and the user will be informed when the value is qualitative. \\
 
 
-En este punto que sabemos como afecta la polucion del aire en nuestra salud, vamos a dejar claro en nuestras representaciones cuales son los valores indeseables,
-para ello utilizamos los colores de alerta, amarillo, naranja y rojo, estos colores se eligen en la paleta de los colores proporcionados por el EAQI.
-Se utiliza la altura en las graficas, ya que es una representacion intuitiva para el ser humano. Ademas el icono que representa una polucion insalubre, es 
-totalmente distinto y busca la sensacion de alarma, para evocar en el usuario una sensacion de peligro.\\
+At this point we know how air pollution affects our health, we will make clear in our representations what are the undesirable values,
+for this we use the alert colors, yellow, orange and red, these colors are chosen in the palette of the colors provided by the EAQI.
+Height is used in graphics, since it is an intuitive representation for the human being. In addition, the icon that represents an unhealthy pollution, is
+totally different and looks for the alarm sensation, to evoke in the user a sensation of danger. \\
 \newpage
 \begin{figure}[ht]
     \centering
@@ -66,20 +65,20 @@ totalmente distinto y busca la sensacion de alarma, para evocar en el usuario un
   \caption{Alert situation}
     \end{figure}
 
-Respecto al workflow, vamos guiando al usuario desde la seleccion de un punto en la ciudad de Malaga, ya sea por iniciativa propia 
-o automatica a los detalles de este punto a tiempo real y continuamos por mostrarle la evolucion de la polucion en ese punto.
-La logica de este desarrollo es que se prevee que el usuario estara interesado en la polucion que le rodea a tiempo real y si 
-quiere saber el desglose de los contaminantes en el punto donde se encuentra, puede continuar indagando. El mapa, ademas de mostrar
-el punto donde se encuentra el usuario sirve de verificacion, da mas realismo y confianza al usuario.
+    Regarding the workflow, we are guiding the user from the selection of a point in the city of Malaga, either on his own initiative
+    or automatic to the details of this point in real time and we continue to show you the evolution of the pollution at that point.
+    The logic of this development is that it is anticipated that the user will be interested in the pollution that surrounds him in real time and if
+    you want to know the breakdown of the pollutants at the point where you are, you can continue to inquire. The map, in addition to showing
+    the point where the user is serves as verification, gives more realism and confidence to the user.
 
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done La definicion del objetivo es clara y se ha realizado una investigacion que nos proporciona la informacion necesaria
-    para saber si podemos utilizar el conjunto de datos o no.
-    \done Los niveles preocupantes se han definido como pobre, malo e insalubre y son representados en la herramienta Aire Guru
-    claramente para que el usario sea capaz de localizarlos rapidamente.
-    \done El workflow es satisfactorio, ya que el usuario sabe de un simple vistazo donde esta y el nivel de polucion en ese punto 
-    y puede escrudinar la informacion facilmente si lo desea.
+    \done The definition of the objective is clear and an investigation has been carried out that provides us with the necessary information
+         to know if we can use the data set or not.
+    \done Worrying levels have been defined as poor, bad and unhealthy and are represented in the Air Guru tool
+         clearly so that the user is able to locate them quickly.
+     \done The workflow is satisfactory, since the user knows at a simple glance where it is and the level of pollution at that point
+         and you can scrutinize the information easily if you wish.
     
 \end{itemize}
  
