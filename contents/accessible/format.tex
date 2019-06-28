@@ -1,31 +1,31 @@
 \subsection{Formato}
-El punto clave para que el usuario entienda lo que queremos transmitirle es crear una comunicacion fluida entre la representacion
-de los datos el usuario. Para ello  deberemos asegurarnos que hablamos el mismo idioma, con un vocabulario facil de entender y
-con proximidad, es decir,dejar la terminologia a un lado y comunicar el objetivo de la manera mas simple posible.
-Por ello la representacion de la informacion jugaran un papel fundamental para que la 
-informacion sea absorbida por el usuario de una manera natural.
+The key point for the user to understand what we want to transmit is to create a fluid communication between the representation
+of the data the user. For this we must ensure that we speak the same language, with a vocabulary that is easy to understand and
+with proximity, that is, leaving the terminology aside and communicating the objective in the simplest way possible.
+Therefore, the representation of the information will play a fundamental role so that the
+information is absorbed by the user in a natural way.
 
 
 \subsubsection{How to solve it} 
-Este modelo debera proporcionar la informacion al usario en un lenguaje o formato compresible. Si no es posible proporcionaremos las 
-herramientas necesarias para que este pueda comprender el contexto de la informacion.
-Deberemos estudiar que tipo de representacion es mas adecuada, no siempre una grafica es la representacion mas adecuada, deberemos hacer un 
-estudio de tanto al publico al que va dirigido como como podemos acentuar la informacion que sea mas relevante en la manera 
-correcta.
-Si nos declinamos por realizar una representacion con graficas, deberemos estudiar los datos para saber que tipo de grafica. Por ejemplo, 
-si hablamos de muestras y queremos saber la densidad, nos inclinaremos por un grafico de densidad y si por ejemplo buscamos la diferencia 
-entre sexos, utilizaremos un grafico de tartas.
+This model should provide the information to the user in a compressible language or format. If it is not possible, we will provide the
+necessary tools so that he can understand the context of the information.
+We must study what type of representation is more appropriate, not always a graph is the most appropriate representation, we should make a
+study of both the target audience and how we can accentuate the information that is most relevant in the way
+correct
+If we decline to make a representation with graphics, we must study the data to know what type of graph. For example,
+if we talk about samples and we want to know the density, we will lean towards a density graph and if for example we look for the difference
+between sexes, we will use a pie chart.
 
 \subsubsection{How we solve it. Aire Guru} 
-La herramienta Aire guru presenta la informacion en el idioma nativo de la ciudad y se utiliza un lenguaje sencillo y directo.
-See utiliza el mismo estilo, colores e iconografia en todo el diseno para que el usuario se familierize rapidamente y pueda
-prestar atencion al significado de los datos en vez de perderse en el diseno e intentar encontrar su significado.//
+The Air Guru tool presents the information in the native language of the city and uses a simple and direct language.
+Colors and graphic resources are used as icons. In addition, a structure has been chosen to represent the data and is repeated in disks
+parts instead of creating a different visualization, so the user should only assimilate a single formula.
 
-Unos de los objetivos es representa la contaminacion por zonas de la ciudad, por lo que se ha utilizado un mapa sobre el que se representa
- el AQI general calculado. Este es un formato mas legible para los usuarios ya que no tiene que trabajar para realizar una imagen visual
- de los distintos lugares de la ciudad. Este indice mustra un indicador con cinco niveles representados por una escala de colores desde el 
- turquesa hasta el rojo ("Bueno" "Aceptable""Pobre" "Malo" e "Insalubre"). La razon de esta eleccion es porqu eson los colores oficiales y 
- asi se evita crear confusion al usuario.
+One of the objectives is to represent pollution by areas of the city, which is why a map has been used.
+ the general AQI calculated. This is a more readable format for users since it does not have to work to make a visual image
+ of the different places in the city. This index shows an indicator with five levels represented by a color scale from the
+ turquoise to red ("Good" "Fair" "Poor" "Bad" and "Unhealthy"). The reason for this choice is because of the official colors and
+ this avoids creating confusion for the user if he consults official sources.
  \newpage
  \begin{figure}[ht]
     \centering
@@ -33,18 +33,18 @@ Unos de los objetivos es representa la contaminacion por zonas de la ciudad, por
     \caption{EAQI Levels}
 \end{figure}
 
-Nuestra plataforma introduce ademas una iconografica para ayudar al usuario a tener una idea directa de la situacion, ya que son mas 
-explicativos que los colores. En caso de peligro, queda bien representado con el color rojo, pero en el caso del azul o verde, en nuestra cultura, no
-tenemos definido un estado para estos colores.\\
+The iconographic used to help the user to have a direct idea of the situation, since they are more
+Explanatory than colors. In case of danger, it is well represented with the color red, but in the case of blue or green, in our culture, not
+we have defined a state for these colors. \\
 \begin{figure}[ht]
     \centering
     \includegraphics[width=10cm]{EAQI_Icons}
     \caption{Iconografica Aire Guru}
 \end{figure}
 
-Para las graficas que muestran variaciones en el tiempo, se han utilizado graficos de lineas, que son las mas apropiadas para este tipo de datos,
-ya que muestran la continua evolucion durante un periodo de tiempo. Para representar los distintos componentes del AQI se ha utilizado un
-grafico de barras apiladas, ya que se ve que proporcion del AQI total esta formada por que contaminante.\\
+For the graphs that show variations in time, line graphs have been used, which are the most appropriate for this type of data,
+since they show the continuous evolution during a period of time. To represent the different components of the AQI, a
+graph of stacked bars, since it is seen that proportion of the total AQI is formed by what pollutant. \\
 \begin{figure}[ht]
     \centering
     \subfigure[AQI Evolution]
@@ -56,20 +56,19 @@ grafico de barras apiladas, ya que se ve que proporcion del AQI total esta forma
     \caption{Charts}
 \end{figure}
 
-Ademas, para explicar el concepto de AQI y crear un awarnes sobre la influencia que tiene en nosotros la polucion del aire, Aire Guru proporciona un 
-glosario y una ayuda con las descripciones de los agentes contaminantes, complicaciones medicas, fuentes de contaminacion, la iconografia utilizada y
-una explicacion sobre que es y como se calcula el AQI.\\
+In addition, to explain the concept of AQI and create an awarnes about the influence that air pollution has on us, Air Guru provides a
+glossary and an aid with the descriptions of the polluting agents, medical complications, sources of contamination, the iconography used and
+an explanation of what is and how the AQI is calculated. \\
 
  
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done El lenguaje utilizado en toda la herramienta es un lenguaje comun, huye de la terminologia cientifica pero proporciona la informacion
-    suficiente para enteder la situacion.
-    \done Se han estudiado y utilizado las graficas mas apropiadas para cada tipo de datos.
-    \crossed Algunos terminos especificos no se han podido sustituir como "Indice de calidad del Aire".
-    \done Se han proporcionado la herramientas necesarias para entender el concepto. Se ha utilizado la norma europea de calidad del aire para 
-    representar los valores y se ofrece al usuario recursos en la pagina para su comprension ademas de recursos extenos.
-    
+    \done The language used in the whole tool is a common language, it avoids the scientific terminology but it provides the information
+         enough to understand the situation.
+    \done The most appropriate graphs for each type of data have been studied and used.
+    \crossed Some specific terms could not be substituted as "Air Quality Index".
+    \done The necessary tools have been provided to understand the concept. The European standard of air quality has been used to
+         represent the values and offer the user resources on the page for their comprehension in addition to external resources.
 \end{itemize}
  
 

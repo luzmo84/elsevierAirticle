@@ -1,37 +1,36 @@
 \subsection{Convenience}
-Como mencionamos anteriormente, nuestro objetivo es que el usuario tenga un acceso a los datos directos sin tener que lidiar con ninguno
-de los procesos tecnicos que conlleva el implementar un sistema. Los puntos que deberemos cubrir para alcanzar este objetivo son:\\
+As we mentioned earlier, our goal is for the user to have access to the direct data without having to deal with any
+of the technical processes involved in implementing a system. The points we must cover to achieve this goal are: \\
 
-\textbf{Infraestructura}. Recoleccion de datos, procesado, almacenamiento y visualizacion. Por ejemplo, en la mayoria de los casos, los datos son 
-publicados periodicamente, pero el conjunto de datos publicados solo contien las muestras mas recientes, por lo que no hay manera de obtener 
-un historico de los datos si no son recolectados, procesados y almacenados periodicamente. \\
+\textbf{Infrastructure}. Data collection, processing, storage and visualization. For example, in most cases, the data is
+published periodically, but the set of published data only contains the most recent samples, so there is no way to obtain
+a history of the data if they are not collected, processed and stored periodically. \\
 
-\textbf{Automatizacion}. Como comentabamos en el punto anterior, esta tareas son repetitivas y ademas tienden a ser procesos arduos, por lo que sera
-necesario automatizarlo, de otra forma el esfuerzo requerido por el usuario para extraer la informacion no le compensara. \\
+\textbf{Automation}. As we commented in the previous point, these tasks are repetitive and also tend to be arduous processes, so it will be
+necessary to automate it, otherwise the effort required by the user to extract the information will not compensate. \\
 
-\textbf{Disponibilidad} Para ofrecer los datos a los usuarios de una manera directa, es recomendable utilizar una plataforma a la que el usuario
-este familiarizado. Por ejemplo, es mas factible que el usuario se sienta mas atraido a acceder a los datos si no requiere
-ninguna instalacion en sus dispositivos.\\
+\textbf{Availability} To offer data to users in a direct way, it is recommended to use a platform to which the user
+be familiar For example, it is more feasible that the user feels more attracted to access the data if it does not require
+no installation on your devices. \\
 
 \subsubsection{How to solve it} 
-Tendremos que proporcionar toda la infraestructura mencionada para poder realizar todos los pasos para completar el camino de la obtencion de los
-datos en crudo hasta ofrecerselos al usuario de una manera accesible, relevante e irresistible.
-Intentaremos liberar al usuario de acciones repetitivas, automatizaremos todos los procesos posibles, para ofrecer al usuario la informacion lo mas
-directamente posible.
-Deberemos ofrecer la informacion mediante una plataforma con que el usuario este familiarizado, hoy en dia el uso de pagina webs o aplicaciones moviles es muy comun.
-Es recomendable ofrecer toda la informacion posible sin necesidad de hacer que el usuario realize acciones complicadas y no requiera de ningun software o hardware adicional.
-Deberemos velar por la seguridad, por lo que la plataforma debe ser segura.
+We will have to provide all the mentioned infrastructure to be able to carry out all the steps to complete the path of obtaining the
+raw data until offering them to the user in an accessible, relevant and irresistible way.
+We will try to free the user from repetitive actions, we will automate all the possible processes, to offer the user the information as soon as possible.
+directly possible.
+We must offer the information through a platform with which the user is familiar, nowadays the use of websites or mobile applications is very common.
+It is advisable to offer all the possible information without having to make the user perform complicated actions and do not require any additional software or hardware.
 
 \subsubsection{How we solve it. Aire Guru} 
-El conjunto de datos de la calidad del aire de Malaga se actualiza cada hora, Aire Guru automatiza el proceso de recoleccion de los 
-datos mediante un trabajo CRON que ejecuta un script implementado en JavaScript periodicamente. Este lee los datos de la url, los procesa,
-limpia y almacena en una base de datos MongoDB. Es decir, implementa toda la estructura necesaria.
+Malaga's air quality data set is updated every hour, Aire Guru automates the process of collecting the
+data through a CRON job that executes a script implemented in JavaScript periodically. This reads the data from the url, processes them,
+clean and store in a MongoDB database. That is to say, it implements all the necessary structure.
 
-Gracias a esta infraestructura el usuario es capaz de visualizar la evolucion de los contaminantes desde el 2018. Ademas puede ver la exposicion
-personal a estos contaminante durante el mismo periodo de tiempo.
+Thanks to this infrastructure, the user is able to visualize the evolution of pollutants since 2018. You can also see the exhibition
+personal to these pollutant during the same period of time.
 
-Ademas, con la automatizacion de procesos, el usuario es capaz de visualizar la polucion a tiempo de real de la ciudad de Malaga y concretamente en el punto
-en el que se encuentra.\\
+In addition, with the automation of processes, the user is able to visualize the pollution in real time of the city of Malaga and specifically in the point
+in which it is found. \\
 
 \begin{figure}[ht]
     \centering
@@ -47,20 +46,21 @@ Mediante una interfaz web, muestra los datos al usuarios.\\
     \caption{Aire Guru. Web Interface}
 \end{figure}
 
-Para garantizar el alcance a la mayoria de la poblacion, Aire Guru esta disponible en las direcciones webs https://www.aire.guru y https://www.airquality.guru.
-Usa SSL que garantiza la encriptacion de los datos atraves de la red, ademas, cada vez mas navegadores intentan proteger a los usuarios y
-solo muestran paginas que utilizar un metodo seguro. 
+To guarantee the reach of the majority of the population, Aire Guru is available at the web addresses https://www.aire.guru and https://www.airquality.guru.
+Use SSL that guarantees the encryption of data through the network, more and more browsers try to protect users and
+They only show pages that use a secure method.
 
-Como comentabamos anteriormente, todos los usuarios pueden ver la informacion basica sin necesidad de aportar ningun dato o identificarse, sin la necesidad de 
-realizar ninguna descarga o instalacion y hoy en dia, casi todo el mundo esta familiarizado con la navegacion web. 
-Cuando no forzamos al usuario a realizar acciones extras, como una descarga o identificacion, el usuario se sentira menos forzado a darnos una oportunidad.
+As we commented previously, all users can see the basic information without having to provide any data or identify themselves, without the need to
+perform no download or installation and today, almost everyone is familiar with web browsing.
+When we do not force the user to perform extra actions, such as a download or identification, the user will feel less forced to give us an opportunity.
+
 
 \elsparagraph{Evaluation}  
 \begin{itemize}
-\done Los datos necesarios para nuestro modelo han sido extraidos de los datos en crudo. 
-\done Infraestructura. Implementa toda la arquitectura necesaria tanto de almacenaje, procesado como visualizacion para que el usuario solo tenga que consultar 
-los datos.
-\done Automatiza los procesos de recoleccion de datos y los calculos necesarios para mostrar la informacion al usuario. 
-\done Ofrecerles a los usuarios una pagina web libre de cargos, facilita que el usuario acceda directamente a la informacion
+\done The data necessary for our model have been extracted from the raw data.
+\done Infrastructure. It implements all the necessary architecture of storage, processing and visualization so that the user only has to consult
+the data.
+\done It automates the processes of data collection and the necessary calculations to show the information to the user.
+\done Offering users a free web page, facilitates the user to access information directly
 \end{itemize}
 

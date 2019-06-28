@@ -1,43 +1,42 @@
 \subsection{Disponibilidad}
     
-Como mencionamos en la introduccion de este capitulo, los conjuntos de datos pueden estar disponibles en la fuente original, pero no por
-ello significa que estos sean accesibles.
-Los retos a los que nos encontramos con los datos crudos, directos de la fuente de origen, son los siguientes:\\
-    
+As we mentioned in the introduction to this chapter, the data sets may be available in the original source, but not by
+This means that they are accessible.
+The challenges that we encounter with the raw data, direct from the source of origin, are the following: \\   
  
-\textbf{Localizacion}. Los conjuntos de datos se encuentran disponibles en portales de datos abiertos organizados 
-y estructurados, normalmente se necesita una tarea de busqueda y seleccion
-a veces complicada. Aunque las empresas ponen cada vez mas de su parte en ofrecer una interfaz 
-agradable y funcional a los usuarios, esta tarea requiere de un trabajo de investigacion por parte del usuario,
-ya que posiblemente, debera buscar en distintos portales.\\
+\textbf{Location}. Data sets are available in organized open data portals
+and structured, you usually need a search and selection task
+sometimes complicated. Although companies put more and more of their part in offering an interface
+pleasant and functional to users, this task requires a research work by the user,
+Since possibly, you should look in different portals. \\
 
-\textbf{Extraccion}. Los conjuntos de datos suelen estan disponibles a traves de una interfaz de programacion 
-de aplicaciones (API) no facilmente interpretable por el usuario medio. Normalmente cuenta con 
-un documento que describe cada uno de los campos y valores que se presentan en el documento y como utilizar la API.\\
+\textbf{Extraction}. Data sets are usually available through a programming interface
+of applications (API) not easily interpretable by the average user. Normally has
+a document that describes each of the fields and values that are presented in the document and how to use the API. \\
 
-\textbf{Legibilidad}. Usualmente los conjuntos de datos estan representados en un formato para ser procesado por 
-algun software, por lo que su lectura resulta complicada por el usuario medio, en el mejor de los casos, 
-estaran representados en una tabla y aun asi, sera muy dificil de extraer informacion. 
+\textbf{Readability}. Usually the data sets are represented in a format to be processed by
+some software, so its reading is complicated by the average user, at best,
+they will be represented in a table and even then, it will be very difficult to extract information.
 
-Por lo tanto, no podemos decir que estos datos sean accesibles de una forma util para el usuario medio.\\
+Therefore, we can not say that these data are accessible in a useful way for the average user. \\
 
 \subsubsection{How to solve it.} 
 
-Deberemos proporcionar la informacion requerida por el usuario de forma directa, facil de leer e interpretar. En un formato
-que sea facil y rapido de asimilar.
+We must provide the information required by the user directly, easy to read and interpret. In a format
+that is easy and fast to assimilate.
 
-Para la correcta utilizacion de de los datos deberemos realizar procesos tales como  la extraccion, transformacion y 
-limpieza de los datos, asi se obtienen los datos que se necesitan para mostrar la informacion util. 
+For the correct use of the data we will have to carry out processes such as extraction, transformation and
+data cleaning, so you get the data you need to show the useful information.
  
 \subsubsection{How we solve it. Aire Guru.} 
 
-Nuestra herramienta utiliza los datos de calidad del aire proporcionados por el ayuntamiento de Malaga en su portal de datos abiertos.\footnote{\url{https://datosabiertos.malaga.eu/}}\\
+Our tool uses the air quality data provided by the city of Malaga in its open data portal.\footnote{\url{https://datosabiertos.malaga.eu/}}\\
 \begin{figure}[ht]
     \centering
-   \subfigure[Pagina principal]
+   \subfigure[Main page]
     {\includegraphics[width=5.5cm  ]{OpenDataPortal}}
     \hfill
-    \subfigure [Categoria medio ambiente]
+    \subfigure [Category environment]
        { \includegraphics[width=5.5cm]{openDataPortalEnviromentCategory}}
     \vfill
      \subfigure[GeoJson Document]
@@ -46,26 +45,26 @@ Nuestra herramienta utiliza los datos de calidad del aire proporcionados por el 
   \caption{Open Data Portal Malaga}
     \end{figure}
 
-    Este portal de datos ofrece una oferta de categorias representados por iconos, por lo que es necesario saber en que categoria se clasifica el conjunto
-de datos, una vez que se accede a la categoria, tenemos una barra buscadora que nos permite insertar las palabras claves para buscar el conjunto de datos
-deseado.\\
+    This data portal offers an offer of categories represented by icons, so it is necessary to know in which category the set is classified
+    of data, once the category is accessed, we have a search bar that allows us to insert the keywords to search the data set
+    wanted.\\
+    
+    In this case you can click on the link and this will open the data in a new tab, so the use of a computer system
+    for downloading the data is not strictly necessary, but we can see that the format is not readable, at least from the point
+    of human sight.
 
-En este caso puede pulsarse sobre el enlace y este abrira los datos en una nueva pestana, por lo que la utilizacion de un sistema informatico
-para la descarga de los datos no es extrictamente necesario, pero podemos ver que ver que el formato no es legible, al menos desde el punto
-de vista humano. 
-
-AireGuru \footnote{\url{https:\\aire.guru}} ofrece toda la informacion necesaria en una plataforma web con una visualizacion adaptada
-a la comprension humana.
+AireGuru \footnote{\url{https:\\aire.guru}} offers all the necessary information on a web platform with an adapted visualization
+to human understanding.
 \newpage
 \elsparagraph{Evaluation}  
 
 \begin{itemize}
-    \done Localizacion. La localizacion de los datos es directa, ya que ofrece informacion desde el primer momento en que se accede a la web. En la pagina principal
-    presenta los niveles de polucion en todas las zonas sin necesidad de realizar ninguna seleccion.
-    \done Extraccion. No es necesario ningun software o conocimientos informaticos para acceder la informacion.
-    \done Legibilidad. Contiene un mapa donde los niveles de polucion se presentan por colores. Estos colores estan definidos por una leyenda justo
-    debajo del mapa. Cuenta con un glosario donde se explica los conceptos expuesto en la pagina web, el significado de cada seccion y como
-    navegar por la pagina web.
+    \done Location. The location of the data is direct, since it offers information from the first moment in which the web is accessed. On the main page
+         presents the levels of pollution in all areas without the need to make any selection.
+    \done Extraction. No software or computer knowledge is necessary to access the information.
+    \done Readability. It contains a map where the pollution levels are presented by colors. These colors are defined by a fair legend
+         below the map. It has a glossary that explains the concepts presented on the website, the meaning of each section and how
+         browse the web page.
  
 
 \end{itemize}

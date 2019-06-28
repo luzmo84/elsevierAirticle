@@ -1,21 +1,21 @@
 \subsection{Interpretabilidad}
 
-Los datos proporcionados por las plataformas tienen un gran volumen, ya que como comentabamos anteriormente, se recolectan
-el mayor numero de datos posibles.Este documento contara con multiples muestras para las que
-se especifica un conjunto campos. Estos conjuntos de campos son similares entre ellos, pero no tienen por que ser identicos. 
-De estos datos, se debera realizar una seleccion de las muestras relevantes, y de estas, los campos necesarios para representar
-una informacion especifica.
+The data provided by the platforms have a large volume, because as we mentioned earlier, they are collected
+as many data as possible. This document will have multiple samples for which
+A set of fields is specified. These sets of fields are similar to each other, but they do not have to be identical.
+From these data, a selection of the relevant samples should be made, and of these, the fields necessary to represent
+a specific information.
 
 
-A continuacion podemos ver varios ejemplos el primero de ellos esta tomado del portal de datos abiertos europeo
-\footnote{\url{https://tinyurl.com/y3d76525}} y el segundo del portal de datos abiertos norte americano\footnote{\url{https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.json?accessType=DOWNLOAD}}.
+Below we can see several examples the first one is taken from the European open data portal
+\footnote{\url{https://tinyurl.com/y3d76525}} and the second of the North American open data portal\footnote{\url{https://data.cityofnewyork.us/api/views/kku6-nxdu/rows.json?accessType=DOWNLOAD}}.
 
 \begin{figure}[h]
     \centering
     \subfigure[EEUU Open Portal.Demographic Statistics By Zip Code]
      {\includegraphics[width=5cm]{ExampleOpenDataEEUU}}
     \hfill
-     \subfigure[European Open Portal. Air pollutant concentrations 2015]
+     \subfigure[European Open Data Portal. Air pollutant concentrations 2015]
     {\includegraphics[width=7cm]{ExampleOpenDataEuropean}}
     \caption{Open Data Examples}
 \end{figure}
@@ -24,29 +24,29 @@ A continuacion podemos ver varios ejemplos el primero de ellos esta tomado del p
 
     
 \subsubsection{How to solve it} 
-A traves de una serie de procesos como son  la extraccion, transformacion y 
-limpieza de los datos, se obtienen los datos que se necesitan acorde a nuestro diseno. Estos procesos pueden llegar
-a ser muy tediosos si no se automatizan.
+Through a series of processes such as extraction, transformation and
+cleaning of the data, we obtain the data that is needed according to our design. These processes can arrive
+to be very tedious if you do not automate.
 
 \subsubsection{How we solve it. Aire Guru} 
 
-Los datos extraidos estan en formato GeoJSON, este formato proporciona un objeto JSON con subdocumentos anidados, cada uno de estos
-subdocumentos contiene un conjunto de datos en forma clave valor. 
-En la siguiente figura podemos ver el principio del documento descargado el 09 de Junio del 2019 
+The extracted data is in GeoJSON format, this format provides a JSON object with nested subdocuments, each of these
+subdocuments contains a set of data in key form value.
+In the following figure we can see the beginning of the document downloaded on June 9, 2019
 \footnote{\url{https://datosabiertos.malaga.eu/recursos/ambiente/calidadaire/calidadaire.json}}\\
 \newpage
 \begin{figure}[h]
     \centering
-   \subfigure[Primer subdocumento]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData1}}
+   \subfigure[First subdocument]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData1}}
    \hfill
-   \subfigure[Segundo subdocumento]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData2}}
+   \subfigure[Second subdocument]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData2}}
  
     \caption{Air quality Document [09/06/2019].Open Data Portal Malaga}
     \end{figure}
     
-En este extracto podemos ver los primeros dos subdocumentos. Cada subdocumento contiene las coordenadas de la estacion medidora de la calidad
-del aire, la fecha y hora cuando se registro la medida y a continuacion los valores de las mediciones. 
-En la figura siguiente podemos encontrar la descripcion proporcionada por el portal de datos abiertos.
+    In this excerpt we can see the first two subdocuments. Each subdocument contains the coordinates of the quality measuring station
+    of the air, the date and time when the measurement was recorded and then the values of the measurements.
+    In the following figure we can find the description provided by the open data portal.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{geoJsonAirQualityDataDescription}
@@ -54,30 +54,30 @@ En la figura siguiente podemos encontrar la descripcion proporcionada por el por
 \end{figure}
 
 
-Para una descripcion mas en detalle de las medidas, tenemos que recurrir a un recurso externo, en este caso nos pusimos en contacto directamente con
-la empresa que instala las estaciones de medida UrbanClouds \footnote{\url{https://urbanclouds.city/es/}} y proporciona los datos al ayuntamiento de Malaga.
+For a more detailed description of the measures, we have to resort to an external resource, in this case we contacted directly with
+the company that installs the UrbanClouds\footnote{\url{https://urbanclouds.city/es/}} measuring stations and provides the data to the Malaga city council.
 
-Despues de seleccionar los campos necesarios deacurdo a nuestro diseno, se han realizado diferentes tareas de limpieza, transformacion y extraccion.\\
+After selecting the necessary fields according to our design, different cleaning, transformation and extraction tasks have been carried out. \\
 
-\textbf{Limpieza}.  Eliminacion de campos repetidos o no relevantes,por ejemplo el identificador de la estacion de medida, ya que el conjunto de datos
-contiene las coordenadas de la estacion y para nosotros es mucho mas interesante.\\
 
-\textbf{Transformacion}. Los valores deben tener un formato adecuado a los campos que representan, por ejemplo la fecha y hora en el que la medida ha sido tomada se almacena en formato fecha
-en vez de cadena como se proporciona en el conjunto de datos en crudo.\\
+\textbf{Cleaning}. Elimination of repeated or non-relevant fields, for example the identifier of the measurement station, since the data set
+it contains the coordinates of the station and for us it is much more interesting. \\
 
-\textbf{Extraccion}. Seleccion de los campos relevantes. Este conjunto de datos ofrece una o varias medidas por cada contaminante, que puede representarse por tres campos distintos, una medida 
-cuantitativa, una cualitativa de la estacion fija de medida y una cualitativa de una estacion movil. Anadiremos un campo con la medida
-mas relevante y eliminaremos las demas para minimizar el tiempo de procesado.\\
+\textbf{Transformation}. The values must have an appropriate format to the fields that they represent, for example the date and time in which the measurement has been taken is stored in date format
+instead of string as it is provided in the raw data set. \\
 
-Por seguridad, se ha implementado una segunda arquitectura totalmente independiente que recolecta los datos y almacena en crudo.
+\textbf{Extraction}. Selection of the relevant fields. This data set offers one or more measurements for each pollutant, which can be represented by three different fields, a measure
+quantitative, a qualitative of the fixed station of measurement and a qualitative station of a mobile station. We will add a field with the measure
+more relevant and we will eliminate the others to minimize the processing time. \\
 
+For security, a second totally independent architecture has been implemented that collects the data and stores it raw.
 
 \paragraph{Evaluation} \mbox{} 
 \begin{itemize}
-    \done Podemos entender  que significa cada uno de los campos representados en el conjunto de dato gracias a la informacion
-    complementaria presentada en el portal de datos abiertos y por la informacion proporcionada por la empresa encargada de 
-    recolectar los datos.
-    \done Los datos necesarios para nuestro modelo han sido extraidos de los datos en crudo
+    \done We can understand what each one of the fields represented in the data set means thanks to the information
+         complementary information presented in the open data portal and by the information provided by the company in charge of
+         collect the data.
+    \done The data needed for our model has been extracted from the raw data
     
 \end{itemize}
 \newpage
