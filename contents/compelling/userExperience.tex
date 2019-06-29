@@ -1,49 +1,106 @@
 \subsection{User Experience}
- El sistema puede mostrar los datos de una forma precisa, optimizada, totalmente personaliza y ofrecerle
- la posibilidad al usuario de mejorar su vida considerablemente, sin embargo, si no proporcionamos una experiencia
- de usuario agradable y fluida, todos nuestros esfuerzos seran en vano.
- El usuario debe sentir que el sistema le ofrece la informacion de una manera fluida, limpia, intuitiva, directa y con
- una secuencia logica.
-  
-Esta secuencia le permitira al usuario la posibilidad de indagar por si mismo, como si la redaccion de una novela se tratara.
+The system can display the data in a precise, optimized, fully customized way and offer you
+ the possibility for the user to improve his life considerably, however, if we do not provide an experience
+ user friendly and reacting to our actions, all our efforts will be in vain.
+ The user should feel that the system offers information in a fluid, clean, intuitive, direct and with
+ a logical sequence.
+  
+This sequence will allow the user the possibility of investigating by itself, as if the writing of a novel was about.
 
-La representacion debe estar fuera de toda ambiguidad, no mostrar informacion que resulte enganosa o que haya que dedicar demasiado tiempo fijandonos
-en los detalles para poder interpretarla correctamente.
-Ademas se debera buscar la manera de presentar la informacion de una manera armonica y agradable para el usuario.
-Al representar la informacion sera incluido lo basicamente necesario, huyendo siempre de graficas recargadas que solo aporten ruido a la represetacion.
+The representation must be out of all ambiguity, not show information that is deceptive or that has to be dedicated
+too much time fixing on the details to be able to interpret it correctly. When representing the information it will be
+including what is basically necessary, always fleeing from ornate graphics that only contribute noise to the represetation.
 
-Buscaremos crear familiaridad, que el usuario pueda enterder de una forma rapida las estructuras de los datos y 
-le resulte facil de moverse con el minimo tiempo de aprendizaje posible.
+We will seek to create familiarity, that the user can quickly understand the structures used and
+It is easy for you to move with the minimum possible learning time.
 
-Es importante darle al usuario un grado de flexibilidad, que sea capaz de realizar sus propias selecciones para poder ver
-los datos en los que esta interesando.
+It is important to give the user a degree of flexibility, that is able to make their own selections to be able to see
+the data you are interested in
 
-Estudio de las representaciones mas adecuadas para cada tipo de datos.
-Es importante trabajar en los tiempos y no hacer esperar al usuario
-Es importante que una accion tenga una respuesta aunque esta sea de espera.
+When we speak of fluency, we refer to user-system interactions, it is important that interactions
+Be like a two-way conversation, where you ask and let them know you are listening and responding. When the user
+requires information from the system, this will make a change that allows the user to know that he has received his action and
+with a time of no more than five seconds, it must provide an answer.
     
 \subsubsection{How to solve it} 
-Diseno actualizado y moderno, limpio, lejos de decoraciones innecesarias, debera seguir una logica.
-Accion-reaccion 
-Tiempo de aprendizaje minimo, familiaridad, intuitividad
-Flexibilidad
+We must analyze carefully what information we want to present and we will focus on this objective. We will make a
+clean design, where all the elements are easy to recognize.
+The structure will entail a logical sequence, as if it were a narrative history.
+Each action that the user can perform, must implement a clear indication and offer results in a
+period of less than five seconds.
+We will flee from more complicated representations of the user level, we will try to apply familiarity and intuitiveness.
+That is, if a calendar is used for the election of dates, it does not make sense to use an hourglass, this will confuse
+much more to the user.
+Offer flexibility, the user must be able to interact and choose what they want to see.
 
 \subsubsection{How we solve it. Aire Guru} 
-Diseno material design, colores combinados no estridentes, simple
-Workflow, del mapa a mas detalle
-Repeticion de estructuras
-respetar colores para las misma funciones
-Filtros en el mapa
-filtros en las graficas
- 
+Our tool uses an interpretation of material design, which uses a clean design, without borders or decorations.
+A range of blue shades in combination with white and gray is used looking for a relaxed environment.
+Care has been taken that all texts have a level of contrast with their background, so that it is easy to read.
+
+The graphics are designed in 2D, since they are easier to interpret and we escape from the ambiguity that can
+provide depth as a measure.
+
+
+The workflow of the different sections of Aire Guru is studied in detail.
+Air Guru is comprised of different sections. By selecting a point on the map, we
+will show detailed information on this point. Then, it has a section that will filter the information according to the preferences of the user
+and to conclude, it shows the history of pollutants since 2018 and the history of the pollution to which the user has been
+exposed.
+
+It is expected that the user will be interested in the level of pollution to which is exposed in real time, therefore, for users
+that are identified and agree to share their location, Air Guru will directly show the pollution at the point where
+found.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=12cm]{myLocation}
+    \caption{My Location}
+\end{figure}
+
+Regarding flexibility, the user can see the situation of the air pollution by dates. Filtering in the area
+intermediate, can be done both by medical conditions and by contamientes agents. Finally, in the lower area where we have
+the historical by area and personalized, we can visualize the information with different granularity, time, day, month and year and we can also
+select the date we want.
+
+\begin{figure}[ht]
+    \centering
+   \subfigure[Date filter]
+    {\includegraphics[width=5.5cm  ]{dateFilter}}
+    \hfill
+    \subfigure [Medical conditions filter]
+       { \includegraphics[width=5.5cm]{MedicalConditionFilter}}
+    \vfill
+     \subfigure[Pollutans filter]
+     { \centering \includegraphics[width=6cm]{pollutansFilter}}
+  
+  \caption{Filters}
+    \end{figure}
+    The same style, colors and iconography are used throughout the design so that the user can get familiar quickly and can
+    Pay attention to the meaning of the data instead of getting lost in the design and trying to find its meaning.
+    
+    Due to the large amount of data that is offered to the user, a waiting wheel has been implemented to indicate
+    that the tool is processing information. Each time a control is pressed on the page, it is indicated with a change
+    of tonality. Also progressive transitions are used, when the graphics have to represent new information it does not
+    at once, as this could produce a guide that can be interpreted as an error on the part of the user.
+    
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=12cm]{waitingSymbol}
+        \caption{Waiting symbol}
+    \end{figure}  
+
+
+
+
+
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done Estetica
-    \done Logica de secuencia
-    \done Familiaridad, repeticion de estructuras y colores que representan lo mismo
-    \done Selecciones
-    \crossed Tiempos de espera
-    \crossed Mas diseno
+    \done Has a relaxed aesthetic where graphics with information prevail
+   \done The representation follows a sequence logic
+    \done Familiarity, repetition of structures and colors that represent the same
+    \done Flexibility. The user can make multiple selections
+    \crossed Waiting times should be improved
     
 \end{itemize}
 \newpage

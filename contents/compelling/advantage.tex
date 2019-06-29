@@ -1,37 +1,65 @@
 \subsection{Advantage}
-Una vez demostrada la relevancia, nos planteamos que beneficios y ventajas que nos puede traer la utilizacion de los datos como usuario. 
-Este objetivo requiere de trabajo minucioso tanto para descubrirlo como para transmitir estos conceptos al usuario de forma clara, 
-sencilla y directa y asi lograr un vinculo que haga crecer la curiosidad del usuario de profundizar en la materia y
-mantenerse informado.
+Once the relevance has been demonstrated, we consider the benefits and advantages that the use of the data as a user can bring us.
+This objective requires meticulous work both to discover it and to transmit these concepts to the user in a clear way,
+simple and direct and thus achieve a link that increases the curiosity of the user to deepen the subject and
+stay informed.
 
-Es muy importante pornerse en el lugar del usuario y descubrir que es realmente necesario para el. Solo si el usuario entiende la relevancia de 
-los datos y la influencia que estos tienen en su vida diaria, sera posible un compromiso por parte de este.
+It is very important to stay in the user's place and discover what is really necessary for him. Only if the user understands the relevance of
+the data and the influence that these have in their daily life, a commitment on the part of this will be possible.
 
-Es decir, la informacion debera cubrir una necesidad del usuario, aunque el usuario no sepa a priori que tiene esta necesidad. Quizas sea 
-nuestro objetivo dejarle ver lo util y ventajoso que puede ser la utilizacion de estos datos.
+That is, the information should cover a need of the user, even if the user does not know a priori that he has this need. Maybe it's
+Our goal is to let you see how useful and advantageous this data usage can be.
 
-Cuando tengamos unos datos que se actualizen periodicamente, deberemos de pensar en que manera puedan interesarnos las fluctuacion o que ciertos
-cambios. Aqui entra en juego la representacion de la informacion de una manera que despierte la necesidad de monitorizacion de los datos por parte
-del usuario.
+When we have some data that is updated periodically, we must think in what way the fluctuation may interest us or that certain
+changes Here comes the representation of the information in a way that awakens the need for data monitoring by
+of the user.
 
 \subsubsection{How to solve it} 
-En primer lugar descubrir de que manera los datos pueden ayudar a los usuarios. A continuacion se ha de buscar la manera de dejarle ver
-porque son importantes para el y como puede beneficiar el uso de ellos en su vida diaria.
-Si los datos se actualizan periodicamente, hay que analizar que tipo de variaciones son importantes en la vida cotidiana del usuario.
-Realizar un estudio de mercado y ver si ya existen productos que ofrezcan esta informacion. Si este es el caso, se analizara porque no
-resulta atractiva al usuario e intentar mejorarlo.
+First of all discover in what way the data can help users. Next you have to find a way to let him see
+because they are important to him and how he can benefit from using them in his daily life.
+If the data is updated periodically, it is necessary to analyze what type of variations are important in the user's daily life.
+Conduct a market study and see if there are already products that offer this information. If this is the case, it will be analyzed because
+It is attractive to the user and try to improve it.
 
 \subsubsection{How we solve it. Aire Guru} 
-Se le ofrece al usuario una plataforma que le indica su exposicion a la polucion del aire totalmente personalizada si la necesidad de acarrear
-ningun dispositivo para la lectura de los contaminantes.
-Se le presenta una descripcion detallada de como la polucion puede afectar a su vida diaria sin tener que salir de la plataforma
-Se puede ver la exposicion a la polucion del aire desde el 2018 sin tener que haber estado usando la herramienta.
- 
+The user is offered a platform that indicates his exposure to totally customized air pollution if the need to carry
+no device for reading contaminants.
+
+
+
+Air Guru with explicit permission to read the location by the user, pick up the polygon where
+the user is found and stores the most recent pollution measure for that polygon. Next, the
+user can view the exposure to the pollution to which he has been subjected.
+\begin{figure}[ht]
+    \centering 
+    \begin{tikzpicture}[thick]
+        \node[draw,rectangle,minimum size=20] (a) {Location Permission};
+         \node[draw,circle,minimum size=6,right of= a, node distance=4cm] (b) {Change position};
+         \node[draw,circle,minimum size=5,right of= b, node distance=4cm] (c) {Minimum poll time};
+         \node[draw,rectangle,minimum size=20,below of=c, node distance=2cm] (d) {Save polygon and pollution measurements};
+         \draw[->] (a) to (b);
+         \draw[->] (b) to (b);
+        \draw[->,green] (b) to (c);
+        \draw[->] (c) to (d);
+     \draw[->] (c) to (b);
+      \end{tikzpicture}
+      \caption{Collecting user location}
+    \end{figure}
+    \newpage
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=8cm]{importedDataDecember}
+        \caption{Personal Records. December}
+    \end{figure}
+    You can see the exposure to air pollution since 2018 without having to have been using the tool since
+    Using the import Google chronology button, you can import the location history provided by the
+    pollution that has been exposed since 2018. In the help section we can find a guide how to
+    export and import this history of locations.
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done Caracteristica unica, monitorizacion de la exposicion de la polucion completamente personalizada
-    \done Descripcion de los efectos, fuentes contaminantes, descripcion de los contaminantes en una unica plataforma
-    \crossed Presentar como se puede reducir la exposicion a la polucion mas especificamente
+    \done Unique feature, fully customized pollution exposure monitoring
+    \done Description of the effects, polluting sources, description of the contaminants in a single platform
+    \crossed Presenting how exposure to pollution can be reduced more specifically
     
 \end{itemize}
 \newpage
