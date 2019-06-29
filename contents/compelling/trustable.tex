@@ -18,19 +18,50 @@ Dar al usuario la posibilidad de eliminar sus datos si asi lo desea.
 
 
 \subsubsection{How we solve it. Aire Guru} 
-Plataforma segura SSL
-Login con API firebase
-Encriptacion del token firebase con token propio
-La recoleccion de datos de posicion no es exhaustiva, pero garantiza la precision.
-Pide permiso para leer la ubicacion
-Deja que el usuario elimine los datos si lo desea.
-Usuario debe realizar una accion para leer su localizacion.
-A la hora de mostrar el historial personal, te explica para que sirve estar identificado y es opcional.
+En nuestro caso la seguridad es primordiarl ya que para nuestra funcion estrella, el historial personal
+de la exposicion a la contaminancion, no es imprescindible recolectar la posicion del usuario.
+Para alcanzar un nivel de seguridad competente se ha utilizado SSL, que garantiza la encriptacion de 
+la informacion enviada atravez de la red.
+Para la identificacion del usuario se ha utilizado un API segura y probada, utilizamos la identificacion
+que nos proporciona Firebase. Esta API nos proporciona un identificador, el cual puede ser encriptado o no.
+Nosotros hemos utilizado por supuesto el encriptado. Cuando los datos alcanzan nuestra base de datos, 
+comprobarmos el usuario y si es correcto volvermos a encriptar el usuario con nuestra propia clave para
+asi evitar que se pueda relacionar la base de datos de firebase con nuestra base de datos.
 
- --foto workflow identificacion
- --foto pedir permiso
- --foto eliminacion de datos
- --foto explicacion de para que se quieren los datos.
+Respecto a la posicion del usuario, nunca almacenamos su posicion exacta, solo el poligono en el que se encuentra
+y tambien implementamos un minimo de tiempo. Esto nos permite tener la precision necesaria para mostrarle su 
+exposicion a los contaminantes pero no un seguimiento del usuario.
+
+Siguiendo el codigo de buenas practicas, nunca se empieza a recolectar la posicion del usuario sin su permiso,
+para ello necesitamos una accion explicita. En nuestro caso, el propio usuario tendra que seleccionar "Mi 
+ubicacion" y acceptar que leamos su posicion. Por supuesto el usuario puede siempre revocar este permiso y 
+eliminar sus datos en cualquier momento desde la seccion de configuracion.\\
+
+\newpage
+\begin{figure}[ht]
+    \centering
+   \subfigure[Location Access]
+    {\includegraphics[width=5.5cm  ]{locationAccess}}
+    \hfill
+    \subfigure [Settings]
+       { \includegraphics[width=5.5cm]{settings}}
+   
+  \caption{Filters}
+    \end{figure}
+
+La recoleccion de datos de posicion no es exhaustiva, pero garantiza la precision.\\
+
+Como queremos una herrmienta transparente, le explicamos al usuario para que necesitamos sus datos antes
+de identificarse, y por supuesto, la identificacion es opcional.\\
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{loginInfo}
+    \caption{Info before login}
+\end{figure}
+
+
 \elsparagraph{Evaluation}  
 \begin{itemize}
     \done Codigo de buenas practicas

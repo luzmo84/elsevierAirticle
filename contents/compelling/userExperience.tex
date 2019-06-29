@@ -3,16 +3,24 @@
  la posibilidad al usuario de mejorar su vida considerablemente, sin embargo, si no proporcionamos una experiencia
  de usuario agradable y que reacciona a nuestras acciones, todos nuestros esfuerzos seran en vano.
  El usuario debe sentir que el sistema le ofrece la informacion de una manera fluida, limpia, intuitiva, directa y con
- una secuencia logica.
+ una secuencia logica.\\
   
 Esta secuencia le permitira al usuario la posibilidad de indagar por si mismo, como si la redaccion de una novela se tratara.
+
+Buscamos simplicdad ya que el objetivo es representar la informacion, huiremos de toda decoracion innecesaria que emborrene
+el objetivo principal. Recordemos que menos es mas. Un diseno complicado, con muchos colores y diferentes formas abstractas
+sera mas dificil de interpretar por el usuario.
 
 La representacion debe estar fuera de toda ambiguidad, no mostrar informacion que resulte enganosa o que haya que dedicar 
 demasiado tiempo fijandonos en los detalles para poder interpretarla correctamente. Al representar la informacion sera 
 incluido lo basicamente necesario, huyendo siempre de graficas recargadas que solo aporten ruido a la represetacion.
 
 Buscaremos crear familiaridad, que el usuario pueda enterder de una forma rapida las estructuras utilizadas y 
-le resulte facil de moverse con el minimo tiempo de aprendizaje posible.
+le resulte facil de moverse con el minimo tiempo de aprendizaje posible. 
+
+Ademas, en el mercado existen varios estandares a los que el usuario esta acostumbrado y sabe lo que esperar.
+Por ejemplo una lupa, lo relacionamos con la accion de buscar, si utilizamos este icono, el usuario sabra rapidamente que
+funcion realiza, sin embargo, si utilizamos uno completamente nuevo, puede incluso confundir al usuario\\
 
 Es importante darle al usuario un grado de flexibilidad, que sea capaz de realizar sus propias selecciones para poder ver
 los datos en los que esta interesando.
@@ -93,15 +101,38 @@ de golpe, ya que esto podria producir un guino que puede ser interpretado como u
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=12cm]{waitingSymbol}
+
     \caption{Waiting symbol}
 \end{figure}
-\newpage
+
+\begin{figure}[ht]
+    \centering
+   \subfigure[Searching bar]
+    {\includegraphics[width=5.5cm  ]{searchingBar}}
+    \hfill
+    \subfigure [Tabs]
+       { \includegraphics[width=5.5cm]{tabs}}
+    \vfill
+     \subfigure[Link]
+     { \includegraphics[width=6cm]{link}}
+     \hfill
+     \subfigure [Waiting symbol]
+        { \includegraphics[width=5.5cm]{waitingSymbol}}
+  
+  \caption{Standard widgets}
+    \end{figure}
+
+    Los elementos que nos aportan familiaridad son la iconografia que utilizamos para mostrar el AQI. Utilizamos nubes, por representacion
+    del aire, el entorno, se acompana de un corazon si la calidad es buena, de un simbolo de exclamacion si es pobre, de una cruz si es 
+    mala y cambiamos a una mascara de gas si el estado es insalubre.
+    
+    Hoy en dia todos estamos acostumbrados a los mapas de GoogleMaps, por ello se ha integrado para representar el mapa y no otro,
+    ya que los usuarios estan familiarizados por como se ven y en su manejo.
 \elsparagraph{Evaluation}  
 \begin{itemize}
     \done Tiene una estetica relajada donde prima las graficas con la informacion
     \done La representacion sigue una logica de secuencia
-    \done Familiaridad, repeticion de estructuras y colores que representan lo mismo
+    \done Familiaridad, repeticion de estructuras y colores que representan lo mismo y estandares
     \done Flexibilidad. El usurio puede realizar multiples selecciones
     \crossed Los tiempos de espera se deberian mejorar
 \end{itemize}
