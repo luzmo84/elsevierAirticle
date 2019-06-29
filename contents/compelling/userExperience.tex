@@ -52,11 +52,33 @@ expuesto.
 Es de preveer que el usuario estara interesado en el nivel de polucion al que esta expuesto a tiempo real, por ello, para usuarios
 que esten identificados y accedan a compartir su ubicacion, Aire Guru mostrara directeramente la polucion en el punto en el 
 que se encuentra.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=12cm]{myLocation}
+    \caption{My Location}
+\end{figure}
+
+
 
 Respecto a la flexibilidad, el usuario puede ver la situacion de la polucion del aire por fechas. El filtrado en la zona
 intermedia, puede realizarse tanto por condiciones medicas como por agentes contamientes. Por ultimo, en zona inferior donde tenemos
 los historicos por zona y personalizado, podemos visualizar la informacion con distinta granularidad, hora, dia, mes y ano y tambien podemos
 seleccionar la fecha que deseamos.
+
+
+\begin{figure}[ht]
+    \centering
+   \subfigure[Date filter]
+    {\includegraphics[width=5.5cm  ]{dateFilter}}
+    \hfill
+    \subfigure [Medical conditions filter]
+       { \includegraphics[width=5.5cm]{MedicalConditionFilter}}
+    \vfill
+     \subfigure[Pollutans filter]
+     { \centering \includegraphics[width=6cm]{pollutansFilter}}
+  
+  \caption{Filters}
+    \end{figure}
 
 
 Se utiliza el mismo estilo, colores e iconografia en todo el diseno para que el usuario se familierize rapidamente y pueda
@@ -68,6 +90,13 @@ de tonalidad. Ademas se utilizan transiciones progresivas, cuando las graficas t
 de golpe, ya que esto podria producir un guino que puede ser interpretado como un error por parte del usuario.
 
 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=12cm]{waitingSymbol}
+    \caption{Waiting symbol}
+\end{figure}
+\newpage
 \elsparagraph{Evaluation}  
 \begin{itemize}
     \done Tiene una estetica relajada donde prima las graficas con la informacion
