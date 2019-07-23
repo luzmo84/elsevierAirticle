@@ -1,33 +1,29 @@
 \subsection{Convenience}
-As we mentioned earlier, our goal is for the user to have access to the direct data without having to deal with any
-of the technical processes involved in implementing a system. The points we must cover to achieve this goal are: \\
+As we mentioned earlier, our goal is for the user to have direct access to the data without having to deal with any
+of the technical processes involved in implementing a collection system. The points we must cover to achieve this goal are: \\
 
 \textbf{Infrastructure}. Data collection, processing, storage and visualization. For example, in most cases, the data is
-published periodically, but the set of published data only contains the most recent samples, so there is no way to obtain
-a history of the data if they are not collected, processed and stored periodically. \\
+published periodically, but the set of published data only contains the most recent samples. There is no way to obtain
+a history of the data if it is not collected, processed and stored periodically. \\
 
-\textbf{Automation}. As we commented in the previous point, these tasks are repetitive and also tend to be arduous processes, so it will be
-necessary to automate it, otherwise the effort required by the user to extract the information will not compensate. \\
+\textbf{Automation}. As we commented in the previous point, these tasks are repetitive and arduous processes, so it will be
+necessary to automate, otherwise the effort required by the user to extract the information is not worthwhile. \\
 
-\textbf{Availability} To offer data to users in a direct way, it is recommended to use a platform to which the user
-be familiar For example, it is more feasible that the user feels more attracted to access the data if it does not require
-no installation on your devices. \\
+\textbf{Availability} To offer data to users in a direct way, we should use a platform with which the user is already familiar. For example, it is more likely that the user will want to access the data if there are no extra obstacles such as needing to install new software on their devices. \\
 
 \subsubsection{How to solve it} 
-We will have to provide all the mentioned infrastructure to be able to carry out all the steps to complete the path of obtaining the
-raw data until offering them to the user in an accessible, relevant and irresistible way.
-We will try to free the user from repetitive actions, we will automate all the possible processes, to offer the user the information as soon as possible.
-directly possible.
+We will have to provide all the afore-mentioned infrastructure which can collect the data and offer it to the user in an accessible, relevant and irresistible way.
+We will try to free the user from repetitive actions, we will automate all possible processes, to make the information available immediately.
 We must offer the information through a platform with which the user is familiar, nowadays the use of websites or mobile applications is very common.
-It is advisable to offer all the possible information without having to make the user perform complicated actions and do not require any additional software or hardware.
+We must not make the user perform complicated steps, or require them to add extra software or hardware.
 
 \subsubsection{How we solve it. Aire Guru} 
 Malaga's air quality data set is updated every hour, Aire Guru automates the process of collecting the
-data through a CRON job that executes a script implemented in JavaScript periodically. This reads the data from the url, processes them,
-clean and store in a MongoDB database. That is to say, it implements all the necessary structure.
+data through a CRON job that executes a script implemented in JavaScript periodically. This reads the data from the url, processes it,
+cleans and stores it in a MongoDB database. That is to say, Aire Guru implements all the necessary collection processes.
 
-Thanks to this infrastructure, the user is able to visualize the evolution of pollutants since 2018. You can also see the exhibition
-personal to these pollutant during the same period of time.
+Thanks to this infrastructure, the user is able to visualize the evolution of pollutants since 2018. The user can also track their personal exposure
+ to these pollutants over the same period of time.
 
 In addition, with the automation of processes, the user is able to visualize the pollution in real time of the city of Malaga and specifically in the point
 in which it is found. \\
