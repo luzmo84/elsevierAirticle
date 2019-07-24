@@ -1,22 +1,20 @@
 \subsection{Credibility and data quality}
-It is essential to be first of all the credibility of the data set, that is, the source must be reliable. Usually,
-in the description of the data, a section must be included where the origin of the data set is explained.
+It is essential that the credibility of the data set be impeccable. The source of the data must be reliable. In the description of the data, a section must be included where the origin of the data set is explained.
 
-Regarding the quality of the data set, it can be measured according to the following characteristics of the values of the fields: \\
+The quality of the data set can be measured according to the following characteristics of the values of the fields: \\
  
-\textbf{Precision}. Units of measurement in the correct scale. For example, if we are measuring the height
-of people, it would be meaningless to provide these measurements in meters, since the possible values will be 0, 1 and 2. \\
+\textbf{Precision}. Units of measurement in the correct scale. For example, if we are measuring people's height, it would be meaningless to provide these measurements in meters, since the possible values will be 0, 1 and 2. \\
 
 \textbf{Consistency}. Logical values for each type of field. An example would be a date field, all should
 follow the same format. \\
 
 \textbf{Interpretability}. Readable. The data must be clear, both in values and in units. For example, we can not
-suppose the unit or scale of the data or, if the data are dichotomous, "true" or "false", and the values represented are
+suppose the unit or scale of the data or, if the data set is dichotomous, "true" or "false", and the values represented are
 "A" or "B", we can not assume true = A and false = B without this information being described. \\
 
 \textbf{Complitud}. The data must be consistent in each of the samples. The samples can be differentiated
-  of each other, as we see in the Figure below, can share some fields and not others. For a good result, it would be
-convenient a high degree of compliance for the data that interests us in our design.
+  from each other, as we see in the Figure below, can share some fields and not others. It would be
+better to have a high degree of compliance for the data that interests us in our design.
 
 
 \begin{figure}[ht]
@@ -40,12 +38,12 @@ Document \\
 \end{figure}
 
 \subsubsection{How to solve it} 
-The first step is to contrast the information with the source of origin. With the data set and the definition
+The first step is to compare the information with the source of origin. With the data set and the definition
 of each of the fields, the scale and interpretability of the fields and values must be checked.
-Then we can perform different analysis of the data to check its consistency and compliance. This
-It is possible to make different graphs and see if there are extreme or strange values.
+Then we can perform different analysis of the data to check its consistency and compliance.
+It is possible to use different graphs and see if there are extreme or strange values.
 Database analysis tools can tell us the completeness of the fields, that is, what percentage of the
-Samples contain each field.
+samples contain each field.
 
 \subsubsection{How we solve it. Aire Guru} 
 The source of data is verified by both the CEMI (Malaga information center) and UrbanClouds, the private company
@@ -53,10 +51,9 @@ that collects and sends the data to the city of Malaga.
 With the description of the data in the open data portal of Malaga and the information received by UrbanClouds,
 we obtain all the necessary information to interpret the data set. \\
 
-For each field, a graphical study has been carried out with the Tableau tool and if it has verified that the values of the
-Fields meet the scale and range of expected values. That is, they are precise and consistent.
-Using the analysis tools of MongoDBCompas and NoSQLBooster we verify the completeness of the fields that we
-interensan for our model.
+For each field, a graphical study has been carried out with the Tableau tool and has verified that the values of the
+fields meet the scale and range of expected values, that is, they are precise and consistent.
+Using the analysis tools of MongoDBCompas and NoSQLBooster we verify the completeness of the fields needed for our model.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{noSQLBoosterAnalysis}
@@ -65,9 +62,9 @@ interensan for our model.
 
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done The necessary measures have been taken to verify and understand each of the fields in the data set
-    \done The values of each of the fields have been analyzed by checking scales and ranges
-    \done The completeness of the data has been analyzed
+    \done The necessary measures have been taken to verify and understand each of the fields in the data set.
+    \done The values of each of the fields have been analyzed by checking scales and ranges.
+    \done The completeness of the data has been analyzed.
     
 \end{itemize}
  \newpage

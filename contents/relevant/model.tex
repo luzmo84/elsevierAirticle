@@ -4,24 +4,20 @@ solid knowledge on the subject to be treated. Therefore, it is essential to dedi
 importance of the concept, what benefits it can bring or what situations hurt us.
 The points that should be clear in the design phase are: \\
 
-\textbf{Objective}. Conceptually, what problem we want to solve or clarify. It is very important that we have a clear objective,
-     Even if you do not have prior knowledge of the subject, having a well-defined objective helps us find the solution or
-     describe it more clearly to the expert so that he can describe how to solve the problem. \\
+\textbf{Objective}. Conceptually, what problems do we want to solve or clarify. It is very important that we have a clear objective,
+     Even if you do not have prior expertise in the subject, having a well-defined objective helps us find the solution, or
+     at least enables us to describe it more clearly to the expert who can solve the problem. \\
 
 \textbf{Important points. Notable situations}. As we mentioned earlier, our goal is not to show all the values, but
      which is about providing the user with important information in order to discover the significant situations that influence the
      us, either positive or negative. At a more technical level, it would be the limits or values of what data are those that provide us with information
      of an exceptional situation, or the values that we are trying to identify more easily. \\
 
-\textbf{Data workflow}. Design of the flow of information, which is clear how to get from one point to another, for example, a representation
-     simple to more detailed or complex. If the user understands the basic concepts, it will be easier to understand the most developed concept.
+\textbf{Data workflow}. When planning the flow of information, it must be clear how to get from one point to another. For example, we should start simple and move to more complex representations.
 
 \subsubsection{How to solve it} 
-Once a goal has been set, we must stipulate which are the necessary fields of the data set that we need to represent the information
-designed. That is, we make the selection of the fields that interest us. It is time to perform an analysis of the data provided and see in
-the list of fields that the source offers us, if they would be sufficient to reach the marked objective, if not directly with their values, with the combination of them.
-Below we stipulate the outstanding values that provide more information to the user as exceptional situations, or what we are looking for.
-
+Once a goal has been set, we must stipulate the necessary fields of the data set that we need. That is, we select the fields that interest us. Following this, we need to analyze the data provided and see if the list of fields that the source offers us is sufficient to rech the chosen objective.
+Then, we could stipulate any remaining values that could provide more information to users as exceptional situations.
 
 \subsubsection{How we solve it. Aire Guru} 
 Our main objective is to create awareness of the importance of air pollution in our health. For this we investigate different concepts:
@@ -33,26 +29,22 @@ Our main objective is to create awareness of the importance of air pollution in 
     \item How it is calculated and what parameters we need for its calculation
     \item What are the harmful levels in general and for each pollutant
 \end{itemize}
-The measure that best represents the level of air pollution, in this case is the AQI. We investigate about it in official sources, for the city of Malaga the
-European legislation, so we focus on this regulation.
-We look for the relationships that pollutants have with different diseases, for this we resort to clinical studies. For each of the diseases, we inform ourselves
-about their symptoms and how they can be aggravated by each pollutant.
-For each pollutant, we look for sources of pollution and see if they apply to the city of Malaga and how.
-With all this information we define that the pollutants that affect air quality are CO, NO2, O3 and PM (Particulated Material), different measurements of particles
-they affect different diseases in different ways. \\
+The measure that best represents the level of air pollution, in this case is the AQI. The city of Malaga is covered by the European legislation, so we focus investigations of official sources in this regulation.
+We look for the relationships that pollutants have with different diseases, for this we resort to clinical studies. For each of the diseases, we look at the symptoms and how they can be aggravated by each pollutant.
+For each pollutant, we look for sources of pollution and see if they occur in the city of Malaga and in what concentrations.
+With all this information we define that the pollutants that affect air quality are CO, NO2, O3 and PM (Particulated Material). Dfferent levels of particles
+affect different diseases in different ways. \\
 
-As the main objective is awareness, we provide all these data in an organized way in the Glossary of Air Guru. \\
+As the main objective is awareness, we provide all the data in an organized way in the Glossary of Air Guru. \\
 
-Once these contaminants are selected, we verify if we have these data in our data set. As we mentioned earlier some samples
-They show measurements of fixed and / or mobile stations and these can be quantitative or qualitative and others do not have the measurements. We will have to select the one
-provide us with the most information or the most accurate, in this case the quantitative measure will prevail to the qualitative one and in the case that there is only qualitative
+Once these contaminants are selected, we verify if we have the particular data in our data set. As we mentioned earlier, some samples show measurements from fixed and / or mobile stations and these can be quantitative or qualitative and others can be incomplete. We will have to select the
+samples to provide us with the most complete information or the most accurate, in this case the quantitative measure will prevail to the qualitative one and in the case that there is only qualitative
 the following values are decided: Good: 50, Acceptable: 150, Poor: 300, Bad: 400, Unhealthy: 500 and the user will be informed when the value is qualitative. \\
 
 
-At this point we know how air pollution affects our health, we will make clear in our representations what are the undesirable values,
-for this we use the alert colors, yellow, orange and red, these colors are chosen in the palette of the colors provided by the EAQI.
-Height is used in graphics, since it is an intuitive representation for the human being. In addition, the icon that represents an unhealthy pollution, is
-totally different and looks for the alarm sensation, to evoke in the user a sensation of danger. \\
+At this point we know how air pollution affects our health, We make very clear which are the undesirable values by using the alert colors, yellow, orange and red. These colors are chosen in the palette of the colors provided by the EAQI.
+Height is used in graphics, since it is an intuitive representation for humans. In addition, the icon that represents unhealthy levels of pollution, is
+totally different, designed to clearly convey danger. \\
 \newpage
 \begin{figure}[ht]
     \centering
@@ -73,13 +65,10 @@ totally different and looks for the alarm sensation, to evoke in the user a sens
 
 \elsparagraph{Evaluation}  
 \begin{itemize}
-    \done The definition of the objective is clear and an investigation has been carried out that provides us with the necessary information
-         to know if we can use the data set or not.
-    \done Worrying levels have been defined as poor, bad and unhealthy and are represented in the Air Guru tool
-         clearly so that the user is able to locate them quickly.
-     \done The workflow is satisfactory, since the user knows at a simple glance where it is and the level of pollution at that point
-         and you can scrutinize the information easily if you wish.
-    
+    \done The objective has been clearly defined and an investigation has been carried out, determining if the data set is appropriate.
+    \done Worrying levels have been defined as poor, bad and unhealthy and are represented in the Air Guru tool. They stand out clearly so that the user is able to locate them quickly.
+     \done The workflow is satisfactory, since the user knows the level of pollution at any location, at a simple glance. It is easy to explore the information further, if the user wishes.
+         
 \end{itemize}
  
 

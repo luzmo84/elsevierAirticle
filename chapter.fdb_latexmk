@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1563707645 "/Users/marie-louise/Development/elsevierChapter/chapter.tex" "/Users/marie-louise/Development/elsevierChapter/chapter.pdf" "chapter" 1563745655
+["pdflatex"] 1563707645 "/Users/marie-louise/Development/elsevierChapter/chapter.tex" "/Users/marie-louise/Development/elsevierChapter/chapter.pdf" "chapter" 1563922621
   "/Users/marie-louise/Development/elsevierChapter/chapter.aux" 1563707646 1015 eb07a2007ce780d23d45f5a3d1f83660 ""
   "/Users/marie-louise/Development/elsevierChapter/chapter.tex" 1563627746 1259 d798d89ac366658f5e267e64f8982a84 ""
   "/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -165,7 +165,7 @@
   "chapter.out" 1563707646 90 65835adbdbdb5b7f86ec8516c3e00838 ""
   "chapter.spl" 1563707645 0 d41d8cd98f00b204e9800998ecf8427e ""
   "chapter.tex" 1563627746 1259 d798d89ac366658f5e267e64f8982a84 ""
-  "contents/accessible" 1563627746 306 0 ""
+  "contents/accessible" 1563901392 306 0 ""
   "contents/compelling" 1563627746 306 0 ""
   "contents/conclusion.tex" 1563627746 441 c84e43d3fca5578aa3f262c190e20ba5 ""
   "contents/evaluation.tex" 1563627746 1555 a8b6e50596325aa20d29429d7fb792b5 ""
@@ -174,10 +174,10 @@
   "elsarticle.cls" 1563627733 26095 ad44f4892f75e6e05dca57a3581f78d1 ""
   "images/enqueteResults.png" 1563627733 50866 d9de2b17313eb24f6d1c9d7285b86b8b ""
   (generated)
-  "chapter.out"
-  "/Users/marie-louise/Development/elsevierChapter/chapter.log"
   "chapter.pdf"
-  "chapter.spl"
-  "/Users/marie-louise/Development/elsevierChapter/chapter.pdf"
   "chapter.log"
+  "chapter.spl"
+  "chapter.out"
+  "/Users/marie-louise/Development/elsevierChapter/chapter.pdf"
+  "/Users/marie-louise/Development/elsevierChapter/chapter.log"
   "chapter.aux"
