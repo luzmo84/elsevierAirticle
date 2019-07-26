@@ -9,24 +9,27 @@ a history of the data if it is not collected, processed and stored periodically.
 \textbf{Automation}. As we commented in the previous point, these tasks are repetitive and arduous processes, so it will be
 necessary to automate, otherwise the effort required by the user to extract the information is not worthwhile. \\
 
-\textbf{Availability} To offer data to users in a direct way, we should use a platform with which the user is already familiar. For example, it is more likely that the user will want to access the data if there are no extra obstacles such as needing to install new software on their devices. \\
+\textbf{Availability} To offer the information to users in a direct way, we should use a platform with which the user is already 
+familiar. For example, it is more likely that the user will want to access the data if there are no extra obstacles such as needing 
+to install new software on their devices. \\
 
 \subsubsection{How to solve it} 
-We will have to provide all the afore-mentioned infrastructure which can collect the data and offer it to the user in an accessible, relevant and irresistible way.
+We will have to provide all the afore-mentioned infrastructure which can collect the data and offer it to the user in an accessible, relevant and compelling way.
 We will try to free the user from repetitive actions, we will automate all possible processes, to make the information available immediately.
 We must offer the information through a platform with which the user is familiar, nowadays the use of websites or mobile applications is very common.
 We must not make the user perform complicated steps, or require them to add extra software or hardware.
 
 \subsubsection{How we solve it. Aire Guru} 
-Malaga's air quality data set is updated every hour, Aire Guru automates the process of collecting the
+Malaga's air quality dataSet is updated every hour, Aire Guru automates the process of collecting the
 data through a CRON job that executes a script implemented in JavaScript periodically. This reads the data from the url, processes it,
 cleans and stores it in a MongoDB database. That is to say, Aire Guru implements all the necessary collection processes.
 
 Thanks to this infrastructure, the user is able to visualize the evolution of pollutants since 2018. The user can also track their personal exposure
  to these pollutants over the same period of time.
 
-In addition, this automation allows the user to visualize the pollution in the city of Malaga in real time, and see specifically the location where it is 
+In addition, this automation allows the user to visualize the pollution in the city of Malaga in real time, and see specifically the location where he is 
 occurring. \\
+\newpage
 
 \begin{figure}[ht]
     \centering
@@ -43,10 +46,12 @@ The data to the users through a web interface. \\
 \end{figure}
 
 To enable access by the majority of the population, Aire Guru is available at the web addresses https://www.aire.guru and https://www.airquality.guru.
-We use SSL that guarantees the encryption of data through the network, as more and more browsers try to protect users by only showing pages that use a secure method.
+We use SSL that guarantees the encryption of data through the network and ensure the user has access to it since, as more and more browsers try to protect 
+users by only showing pages that use a secure method.
 
 As we commented previously, all users can see the basic information without having to provide any data or identify themselves, without the need to
-perform downloads or installations. Today, almost everyone is familiar with web browsing, but we do not want to deter people from using our site by requiring them to sign in or install extra software. 
+perform downloads or installations. Today, almost everyone is familiar with web browsing and if we do not force the user to realize extra taks, as 
+requiring them to sign in or install extra software, the probability the user uses our platform will be higher. 
 
 
 \elsparagraph{Evaluation}  

@@ -21,14 +21,15 @@ the information sent through the network.
 For the identification of the user a secure and proven API has been used. We use the identification
 that Firebase provides. This API provides us with an identifier, which may be encrypted.
 We have of course used encryption. When the data reaches our database,
-we check the user and then we re-encrypt the user with our own password to
+we check the user and then we re-encrypt the user with our own salt to
 avoid linking firebase with our database.
 
 We never store the users exact location, only the polygon where he is.
-We have also implemented a time limit, which allows us to have the necessary precision to show exposure to contaminants, but doen't allow user tracking.
+We have also implemented a time limit, which allows us to have the necessary precision to show exposure to pollutans, but doen't allow user tracking.
 
 As per the code of good practice, never collect the user's position without their permission.
-To get this permission, one should require an explicit action. In our case, the user will have to select "My" and accept that we may determine their position. Of course the user can always revoke this permission and
+To get this permission, one should require an explicit action. In our case, the user will have to select "Mi ubicacion" (My location) and accept 
+that we may determine their position. Of course the user can always revoke this permission and
 delete their data at any time. \\
 
 \newpage

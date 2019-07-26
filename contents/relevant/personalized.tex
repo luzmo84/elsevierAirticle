@@ -5,7 +5,7 @@ For example, if I was the user, my defining characteristics such as where I live
 my health status, family situation, etc can help us.
 
 In many cases, we will not be able to fully customize, but we can look for common points in subgroups of
-user. From this point you have to study the different cases that can be given and make a selection of those that are
+user. From this point we have to study the different cases that can be given and make a selection of those that are
 more common.
 
 The key question we need to consider in order to be able to personalize the information, is how can the data be related at a specific time, in a specific place to meet specific needs of the
@@ -13,15 +13,15 @@ user as an individual.
 
 \subsubsection{How to solve it} 
 
-Study how the data will help the user and from this point, break it down into sub-groups to make it more specific. In this way
-  we go from obtaining relevant data in a general way to be relevant in a personal way. You have to think about the
+We should study how the data will help the user or user-subgroups and from this point, make it more specific. In this way
+  we go from obtaining relevant data in a general way to be relevant in a personal way. We have to think about the
   particular user, and find a way to extract the results that are specifically adapted to them in a particular
   moment and place.
 
 \subsubsection{How we solve it. Aire Guru} 
  We are all interested in the pollution that surrounds us, since it affects our health. The tool
  Aire Guru has been designed to specialize in this area. For those people who are especially sensitive to air pollution, Aire Guru shows the air pollution with respect to the six most common medical conditions that
- are affected by air contaminants.
+ are affected by air pollutans.
  
 
 \begin{figure}[ht]
@@ -39,11 +39,11 @@ Study how the data will help the user and from this point, break it down into su
     \end{figure}
   Here we see, in each case, for each medical condition, a subset of pollutants which most influence each condition is shown.
     
-    The answer to the key question, how can the data be related to a specific time and place, does not lead to
-    implementation of a personal history of exposure to pollution. That is, to know at all times what pollution
-    a user is subject to and where the exposure happened.
-    For this, it is essential to calculate the user's position. By matching the users location and the coordinates provided by the original dataset, we can find the level of exposure to contaminants.
-    If the user gives us his permission to store this data, we can show them their personalized history.
+  The answer to the key question, how can the data be related to a specific time and place, leads us to
+  implementation of a personal history of exposure to pollution. That is, to know at all times what pollution
+  a user is subject to and where the exposure happened.
+  For this, it is essential to read the user's position. By matching the users location and the coordinates provided by the original dataset, we can find the level of exposure to pollutans.
+  If the user gives us his permission to store this data, we can show them their personalized history.
     \begin{figure}[ht]
       \centering 
       \begin{tikzpicture}[thick]
@@ -59,7 +59,7 @@ Study how the data will help the user and from this point, break it down into su
         \caption{Collecting user location}
       \end{figure}
 
-      This functionality is Aire Gurus most powerful tool. Other platforms require user-level measurement devices, ie the user must carry
+      This functionality is Aire Guru most powerful tool. Other platforms require user-level measurement devices, ie the user must carry
       a portable measurement station that monitors the different pollutants. \\
       \begin{figure}[ht]
          \centering
@@ -68,7 +68,7 @@ Study how the data will help the user and from this point, break it down into su
      \end{figure}
      It is possible that the user may have started to use the application and not yet have any available data.
    To deal with this, we offer the possibility of importing the Google location history, enabling the user to be able to visualize
-    exposure to pollution since the beginning of 2018 even if they have not been using the toolfor  all of that period.
+    exposure to pollution since the beginning of 2018 even if they have not been using the tool for  all of that period.
      
      We will have to take into account that in order to read the user's position and store their data, we must
      have their explicit permission. We must implement mechanisms that provide us with the necessary security to safeguard our users data. The measures taken will be explained later.
@@ -82,7 +82,7 @@ Study how the data will help the user and from this point, break it down into su
      \done Unique functionality, the user is able to see the pollution to which he has been exposed since 2018 even if they have not been using the tool since that time.
      \crossed The filtering function of the medical condition is not self-selected, because the functionality
      is available to all users. The map could show the AQI with respect to the
-     contaminants that the user has preselected, but this can de-visualize the information if it is not
-     clearly indicated to the user that the map does not take into account all relevant contaminants.
+     pollutans that the user has preselected, but this can de-visualize the information if it is not
+     clearly indicated to the user that the map does not take into account all relevant pollutans.
 \end{itemize}
  \newpage
