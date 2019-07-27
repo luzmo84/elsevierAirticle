@@ -17,11 +17,11 @@ outside of the main representation, because the user will not have to access thi
 
 \subsubsection{How to solve it} 
 Focus on the objective, show only the data directly related to our goal, do not annotate the data
-simply because it appears in the dataSet, and don't include distracting technical details irrelevant to the user.
+simply because it appears in the dataset, and don't include distracting technical details irrelevant to the user.
 
 \subsubsection{How we solve it. Aire Guru} 
 
-The dataSet used contains data such as the identifier of the measurement station, whether the station is fixed or mobile
+The dataset used contains data such as the identifier of the measurement station, whether the station is fixed or mobile
 and extra-specific measures for an application that is provided by the same company that collects the data. This data is not useful for us.
 For our tool, only the coordinates of the measurement station have been used, as well as the time at which the measurement was recorded, and the most relevant value of the five pollutants Co, No2, O3, Pm1, Pm 2.5 and Pm10.
 
@@ -33,7 +33,7 @@ If the measure does not exist, we simply ignore it. We do not provide explanatio
 In the following figure we see the difference between the zone history and the personalized, the first of them does not show
 the point where the measure was taken since it has been selected in the main map. We also like for the history of
 zone there is no filter for hours, since the measurements are reported every hour, this means that we will not find
-intermediate measures in the dataSet.
+intermediate measures in the dataset.
  \newpage
 \begin{figure}[ht]
     \centering
