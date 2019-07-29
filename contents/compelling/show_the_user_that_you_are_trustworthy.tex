@@ -25,7 +25,7 @@ we check the user and then we re-encrypt the user with our own salt to
 avoid linking firebase with our database.
 
 We never store the users exact location, only the polygon where he is.
-We have also implemented a time limit, which allows us to have the necessary precision to show exposure to pollutans, but doen't allow user tracking.
+We have also implemented a time limit, which allows us to have the necessary precision to show exposure to pollutants, but doesn't allow user tracking.
 
 As per the code of good practice, never collect the user's position without their permission.
 To get this permission, one should require an explicit action. In our case, the user will have to select "Mi ubicacion" (My location) and accept 
@@ -54,11 +54,11 @@ delete their data at any time. \\
         \caption{Info before login}
     \end{figure}
 
-\elsparagraph{Evaluation}  
+\subsubsection*{Evaluation}  
+
 \begin{itemize}
     \done Code of good practices
     \done It is not possible to relate the identification of the firebase user with our database
     \crossed Some users indicated that they would prefer to create an account with a username and password
          rather than use their email accounts, for fear of "information theft"
-    
 \end{itemize}

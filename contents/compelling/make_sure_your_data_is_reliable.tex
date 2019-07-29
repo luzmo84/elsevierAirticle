@@ -1,4 +1,5 @@
 \subsection{Make sure your data is reliable}
+
 It is essential that the credibility of the dataset be impeccable. The source of the data must be reliable.
 Usually, in the description of the data, a section must be included where the origin of the dataset is explained.
 
@@ -40,6 +41,7 @@ Document \\
 \end{figure}
 
 \subsubsection*{Suggested strategies} 
+
 The first step is to compare the information with the source of origin. With the dataset and the definition
 of each of the fields, the scale and interpretability of the fields and values must be checked.
 Then we can perform different analysis of the data to check its consistency and compliance.
@@ -48,6 +50,7 @@ Database analysis tools can tell us the completeness of the fields, that is, wha
 samples contain each field.
 
 \subsubsection*{In the context of Aire Guru \ldots} 
+
 The source of data is verified by both the CEMI (Málaga information center) and UrbanClouds, the private company
 that collects and sends the data to the city of Málaga.
 With the description of the data in the open data portal of Málaga and the information received by UrbanClouds,
@@ -56,16 +59,17 @@ we obtain all the necessary information to interpret the dataset. \\
 For each field, a graphical study has been carried out with the Tableau tool and has verified that the values of the
 fields meet the scale and range of expected values, that is, they are precise and consistent.
 Using the analysis tools of MongoDBCompas and NoSQLBooster we verify the completeness of the fields needed for our model.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{noSQLBoosterAnalysis}
     \caption{Completeness analysis}
 \end{figure}
 
-\elsparagraph{Evaluation}  
+\subsubsection*{Evaluation}  
+
 \begin{itemize}
     \done The necessary measures have been taken to verify and understand each of the fields in the dataset.
     \done The values of each of the fields have been analyzed by checking scales and ranges.
     \done The completeness of the data has been analyzed.
-    
 \end{itemize}
