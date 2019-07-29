@@ -13,13 +13,13 @@ necessary to automate, otherwise the effort required by the user to extract the 
 familiar. For example, it is more likely that the user will want to access the data if there are no extra obstacles such as needing 
 to install new software on their devices. \\
 
-\subsubsection*{How to solve it} 
+\subsubsection*{Suggested strategies} 
 We will have to provide all the afore-mentioned infrastructure which can collect the data and offer it to the user in an accessible, relevant and compelling way.
 We will try to free the user from repetitive actions, we will automate all possible processes, to make the information available immediately.
 We must offer the information through a platform with which the user is familiar, nowadays the use of websites or mobile applications is very common.
 We must not make the user perform complicated steps, or require them to add extra software or hardware.
 
-\subsubsection*{How we solve it. Aire Guru} 
+\subsubsection*{In the context of Aire Guru \ldots} 
 Malaga's air quality dataset is updated every hour, Aire Guru automates the process of collecting the
 data through a CRON job that executes a script implemented in JavaScript periodically. This reads the data from the url, processes it,
 cleans and stores it in a MongoDB database. That is to say, Aire Guru implements all the necessary collection processes.
