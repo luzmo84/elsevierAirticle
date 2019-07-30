@@ -50,27 +50,25 @@ If the user gives us his permission to store this data, we can show them their p
 \begin{figure}[ht]
   \centering 
   \begin{tikzpicture}[thick]
-      \node[draw,rectangle,minimum size=20] (a) {Read user location};
-        \node[draw,rectangle,minimum size=6,right of= a, node distance=4cm] (b) {Find polygon};
-        \node[draw,rectangle,minimum size=5,below of= a, node distance=2cm] (c) {Store information};
-        \node[draw,rectangle,minimum size=20,right of=c, node distance=4cm] (d) {Show records};
-        \draw[->] (a) to (b);
-      \draw[->,] (b) to (c);
-      \draw[->] (c) to (d);
-  
-    \end{tikzpicture}
-    \caption{Collecting user location}
-  \end{figure}
+    \node[draw,rectangle,minimum size=20] (a) {Read user location};
+    \node[draw,rectangle,minimum size=6,right of= a, node distance=4cm] (b) {Find polygon};
+    \node[draw,rectangle,minimum size=5,below of= a, node distance=2cm] (c) {Store information};
+    \node[draw,rectangle,minimum size=20,right of=c, node distance=4cm] (d) {Show records};
+    \draw[->] (a) to (b);
+    \draw[->,] (b) to (c);
+    \draw[->] (c) to (d);
+  \end{tikzpicture}
+  \caption{Collecting user location}
+\end{figure}
 
-  This functionality is Aire Guru most powerful tool. Other platforms require user-level measurement devices, ie the user must carry
-  a portable measurement station that monitors the different pollutants. \\
+This functionality is Aire Guru most powerful tool. Other platforms require user-level measurement devices, ie the user must carry
+a portable measurement station that monitors the different pollutants. \\
 
-  \newpage
-  \begin{figure}[ht]
-      \centering
-      \includegraphics[width=8cm]{importedDataDecember}
-      \caption{Personal Records. December}
-  \end{figure}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=8cm]{importedDataDecember}
+  \caption{Personal Records. December}
+\end{figure}
 
 It is possible that the user may have started to use the application and not yet have any available data.
 To deal with this, we offer the possibility of importing the Google location history, enabling the user to be able to visualize
@@ -79,13 +77,11 @@ exposure to pollution since the beginning of 2018 even if they have not been usi
 We will have to take into account that in order to read the user's position and store their data, we must
 have their explicit permission. We must implement mechanisms that provide us with the necessary security to safeguard our users data. The measures taken will be explained later.
 
-\subsubsection*{Evaluation}
-
 \begin{itemize}
-  \done The user has specialized functionalities
-     \done Unique functionality, the user is able to see the pollution to which he has been exposed since 2018 even if they have not been using the tool since that time.
-     \crossed The filtering function of the medical condition is not self-selected, because the functionality
-     is available to all users. The map could show the AQI with respect to the
-     pollutants that the user has preselected, but this can de-visualize the information if it is not
-     clearly indicated to the user that the map does not take into account all relevant pollutants.
+  \item The user has specialized functionalities
+  \item Unique functionality, the user is able to see the pollution to which he has been exposed since 2018 even if they have not been using the tool since that time.
+  \item The filtering function of the medical condition is not self-selected, because the functionality
+        is available to all users. The map could show the AQI with respect to the
+        pollutants that the user has preselected, but this can de-visualize the information if it is not
+        clearly indicated to the user that the map does not take into account all relevant pollutants.
 \end{itemize}

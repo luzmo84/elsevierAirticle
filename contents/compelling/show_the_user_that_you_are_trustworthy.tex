@@ -1,4 +1,5 @@
 \subsection{Show the user that you are trustworthy}
+
 Trust between the platform we want to use and the user is essential.
 Therefore we will have to guarantee the protection of user privacy and promise that user data will be used only for specific purposes that the user clearly agrees to.
 We must minimize the risk of disclosing user data, and maintain user safety, confidentiality and integrity of information.
@@ -7,13 +8,14 @@ Do not require user identification merely to show general information.
 Always ask for permission to capture data and make clear what it will be used for.
 
 \subsubsection*{Suggested strategies} 
+
 Use secure platforms, such as SSL if we develop a web application.
 If we use third-party APIs, make sure to check the level of security they offer.
 Implement a system that does not allow linking the data with a user.
 Give the user the possibility to delete their data if they wish.
 
-
 \subsubsection*{In the context of Aire Guru \ldots} 
+
 In our case, security is high, since for our main purpose, personal history
 of exposure to contamination, it is not essential to collect the user's details.
 SSL has been used to achieve a level of competent security, which guarantees the encryption of
@@ -35,31 +37,28 @@ delete their data at any time. \\
 
 \begin{figure}[ht]
     \centering
-   \subfigure[Location Access]
-    {\includegraphics[width=5.5cm  ]{locationAccess}}
+    \subfigure[Location Access]
+        {\includegraphics[width=5.5cm  ]{locationAccess}}
     \hfill
     \subfigure [Settings]
-       { \includegraphics[width=5.5cm]{settings}}
-   
-  \caption{Filters}
-    \end{figure}
+        {\includegraphics[width=5.5cm]{settings}}
+    \caption{Filters}
+\end{figure}
 
-    The collection of locational data is not exhaustive, but guarantees accuracy. \\
+The collection of locational data is not exhaustive, but guarantees accuracy. \\
 
-    As we want a transparent webtool, we explain to the user that we need their data before
-    they are identified, and of course, the identification is optional. \\
+As we want a transparent webtool, we explain to the user that we need their data before
+they are identified, and of course, the identification is optional. \\
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=8cm]{loginInfo}
-        \caption{Info before login}
-    \end{figure}
-
-\subsubsection*{Evaluation}  
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{loginInfo}
+    \caption{Info before login}
+\end{figure}
 
 \begin{itemize}
-    \done Code of good practices
-    \done It is not possible to relate the identification of the firebase user with our database
-    \crossed Some users indicated that they would prefer to create an account with a username and password
-         rather than use their email accounts, for fear of "information theft"
+    \item Code of good practices
+    \item It is not possible to relate the identification of the firebase user with our database
+    \item Some users indicated that they would prefer to create an account with a username and password
+          rather than use their email accounts, for fear of "information theft"
 \end{itemize}

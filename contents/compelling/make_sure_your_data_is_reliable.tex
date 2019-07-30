@@ -11,33 +11,32 @@ would be meaningless to provide these measurements in meters, since the possible
 \textbf{Consistency}. Logical values for each type of field. An example would be a date field, all should
 follow the same format. \\
 
-\textbf{Interpretability}. Readable. The data must be clear, both in values and in units. For example, we can not
+\textbf{Interpretability}. The data must be clear, both in values and in units. For example, we can not
 suppose the unit or scale of the data or, if the dataset is dichotomous, "true" or "false", and the values represented are
 "A" or "B", we can not assume true = A and false = B without this information being described. \\
 
 \textbf{Complitud}. The data must be consistent in each of the samples. The samples can be differentiated
-  from each other, as we see in the Figure below, can share some fields and not others. It would be
+from each other, as we see in the Figure below, can share some fields and not others. It would be
 better to have a high degree of compliance for the data that interests us in our design.
 
-
 \begin{figure}[ht]
-\centering
-\framebox{
-\vbox{\begin{tabbing} 
-Document \\
-\hspace*{5mm} \= Sample 1 \\
-\hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
-\hspace*{10mm}\textit{Field B:} \hspace*{5mm} \= value B \\
-\hspace*{5mm} \= Sample 2 \\
-\hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
-\hspace*{10mm}\textit{Field C:} \hspace*{5mm} \= value C \\
-\hspace*{10mm}\textit{Field D:} \hspace*{5mm} \= value D \\
-\hspace*{5mm} \= ... 
-\hspace*{5mm} \= Sample n \\
-\hspace*{10mm} \= ... 
-\end{tabbing}}%
-}
-\caption{Example source source document}
+    \centering
+    \framebox{
+        \vbox{\begin{tabbing} 
+            Document \\
+            \hspace*{5mm} \= Sample 1 \\
+            \hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
+            \hspace*{10mm}\textit{Field B:} \hspace*{5mm} \= value B \\
+            \hspace*{5mm} \= Sample 2 \\
+            \hspace*{10mm}\textit{Field A:} \hspace*{5mm} \= value A \\
+            \hspace*{10mm}\textit{Field C:} \hspace*{5mm} \= value C \\
+            \hspace*{10mm}\textit{Field D:} \hspace*{5mm} \= value D \\
+            \hspace*{5mm} \= ... 
+            \hspace*{5mm} \= Sample n \\
+            \hspace*{10mm} \= ... 
+        \end{tabbing}}%
+    }
+    \caption{Example source source document}
 \end{figure}
 
 \subsubsection*{Suggested strategies} 
@@ -52,7 +51,8 @@ samples contain each field.
 \subsubsection*{In the context of Aire Guru \ldots} 
 
 The source of data is verified by both the CEMI (Málaga information center) and UrbanClouds, the private company
-that collects and sends the data to the city of Málaga.
+that collects and sends the data to the city of Málaga. \\
+
 With the description of the data in the open data portal of Málaga and the information received by UrbanClouds,
 we obtain all the necessary information to interpret the dataset. \\
 
@@ -66,10 +66,8 @@ Using the analysis tools of MongoDBCompas and NoSQLBooster we verify the complet
     \caption{Completeness analysis}
 \end{figure}
 
-\subsubsection*{Evaluation}  
-
 \begin{itemize}
-    \done The necessary measures have been taken to verify and understand each of the fields in the dataset.
-    \done The values of each of the fields have been analyzed by checking scales and ranges.
-    \done The completeness of the data has been analyzed.
+    \item The necessary measures have been taken to verify and understand each of the fields in the dataset.
+    \item The values of each of the fields have been analyzed by checking scales and ranges.
+    \item The completeness of the data has been analyzed.
 \end{itemize}

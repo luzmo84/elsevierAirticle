@@ -8,9 +8,9 @@ information to gain useful knowledge. \\
     \centering 
     \begin{tikzpicture}[thick]
         \node[draw,rectangle,minimum size=20] (a) {Data};
-         \node[draw,rectangle,minimum size=20,right of= a, node distance=2.5cm] (b) {Information};
-         \node[draw,rectangle,minimum size=20,right of=b, node distance=3cm] (c) {Knowledge};
-         \draw[->] (a) to (b);
+        \node[draw,rectangle,minimum size=20,right of= a, node distance=2.5cm] (b) {Information};
+        \node[draw,rectangle,minimum size=20,right of=b, node distance=3cm] (c) {Knowledge};
+        \draw[->] (a) to (b);
         \draw[->] (b) to (c);
     \end{tikzpicture}
     \caption{Diagrama. De datos a conocimiento}
@@ -29,7 +29,6 @@ The platforms provide a huge volume of data, since, probably they will provide m
 These field sets may be similar to each other but don't need to be identical.
 From this data, we need to select the relevant fields necessary to represent specific model.\\
 
-
 \subsubsection*{Suggested strategies} 
 
 Study the objective sought and resort to the help of experts if necessary to acquire the necessary knowledge
@@ -43,7 +42,7 @@ implement this automatization.
 
 Aire Guru aims to increase the awareness of the level of pollution that surrounds us. To do this, it uses a measure called
 the air quality index (AQI), specifically the European air quality index (EAQI).
-\newpage
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=10cm]{mapAireGuru}
@@ -62,19 +61,19 @@ subdocuments contains a set of data in key-value form.
 In the following figure we can see the beginning of the document downloaded on June 9, 2019
 (https://datosabiertos.malaga.eu/recursos/ambiente/calidadaire/calidadaire.json) \\
 
-\newpage
 \begin{figure}[ht]
     \centering
-   \subfigure[First subdocument]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData1}}
-   \hfill
-   \subfigure[Second subdocument]{ \centering \includegraphics[width=4.75cm]{geoJsonAirQualityData2}}
- 
+    \subfigure[First subdocument]
+        {\centering \includegraphics[width=4.75cm]{geoJsonAirQualityData1}}
+    \hfill
+    \subfigure[Second subdocument]
+        {\centering \includegraphics[width=4.75cm]{geoJsonAirQualityData2}}
     \caption{Air quality Document [09/06/2019]. Open Data Portal Málaga}
-    \end{figure}
+\end{figure}
     
-    In this excerpt we can see the first two subdocuments. Each subdocument contains the coordinates of the air quality 
-    measuring station, the date and time when the measurement was recorded, and the values of the measurements.
-    In the following figure we can find the description provided by the open data portal.\\
+In this excerpt we can see the first two subdocuments. Each subdocument contains the coordinates of the air quality 
+measuring station, the date and time when the measurement was recorded, and the values of the measurements.
+In the following figure we can find the description provided by the open data portal.\\
     
 \begin{figure}[ht]
     \centering
@@ -102,12 +101,8 @@ field containing the measurement which is most relevant for our purposes, and el
 
 For security, a second totally independent architecture has been implemented that collects and stores the raw data.
 
-
-\subsubsection*{Evaluation}  
-
 \begin{itemize}
-    \done The information is focused on an objective, informing the user of the level of pollution that surrounds them, both  in real time
-    and in the past.
-    \done The information follows a logical thread; it tells a story.
-    \done The web offers understandable, useable information, not just raw data.
+    \item The information is focused on an objective, informing the user of the level of pollution that surrounds them, both  in real time and in the past.
+    \item The information follows a logical thread; it tells a story.
+    \item The web offers understandable, useable information, not just raw data.
 \end{itemize}
