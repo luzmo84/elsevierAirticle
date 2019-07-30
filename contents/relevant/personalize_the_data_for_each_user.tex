@@ -1,32 +1,30 @@
 \subsection{Personalize the data for each user}
 
-So far we have seen different parameters to evaluate the relevant data at a general level. In this section, we will focus on the specific personal level.
-Each user has a unique personal situation, so we have to find a way to adapt and personalize the data, to provide both general and individually specific information.
-For example, if I was the user, my defining characteristics such as where I live,
-my health status, family situation, etc can help us.\\
+The most powerful technique to ensure that your data is relevent to your users, is to customize it 
+for each user. Obviously there is a tradeoff here because you need some information about the user,
+but if the information is transient i.e. not stored on your server, but only on the browser, then this
+is not an issue. A good example of this transient customisation is filtering - when the user enters
+their details, you can filter the data to show information specific to those details.\\
 
-In many cases, we will not be able to fully customize, but we can look for common points in subgroups of
-user. From this point we have to study the different cases that can be given and make a selection of those that are
-more common.\\
+It is possible to do very sophisticated customisation using a single page web application, and it is
+even possible to store data between visits, on the browser, avoiding security and information collection issues that
+we discuss elsewhere. \\
 
-The key question we need to consider in order to be able to personalize the information, is how can the data be related at a specific time, in a specific place to meet specific needs of the
-user as an individual.
+Even when it is not possible to fully customize the data, you can look for common points in subgroups of
+users. You have to know these in advance, and hence you must have demographic information. \\
 
 \subsubsection*{Suggested strategies} 
 
 \begin{itemize}
-  \item We should study how the data will help the user or user-subgroups as we mention in the section \textit{3.3 Know your user} and from this point, make it more specific. In this way
-    we go from obtaining relevant data in a general way to be relevant in a personal way.
-  \item We have to think about the
-    particular user, and find a way to extract the results that are specifically adapted to them in a particular
-    moment and place.
+  \item Consider the particular user, and find a way to filter the results that are specifically adapted to their particular moment and place.
 \end{itemize}
 
 \subsubsection*{In the context of Aire Guru \ldots}
 
- We are all interested in the pollution that surrounds us, since it affects our health. The webtool
- Aire Guru has been designed to specialize in this area. For those people who are especially sensitive to air pollution, Aire Guru shows the air pollution with respect to the six most common medical conditions that
- are affected by air pollutants.
+We are all interested in the pollution that surrounds us, since it affects our health. The webtool
+Aire Guru has been designed to specialize in this area. For those people who are especially sensitive to air pollution,
+Aire Guru shows the air pollution with respect to the six most common medical conditions that
+are affected by air pollutants.\\
  
 \begin{figure}[ht]
   \centering
@@ -47,8 +45,9 @@ The answer to the key question, how can the data be related to a specific time a
 implementation of a personal history of exposure to pollution. That is, to know at all times what pollution
 a user is subject to and where the exposure happened.\\
 
-For this, it is essential to read the user's position. By matching the users location and the coordinates provided by the original dataset, we can find the level of exposure to pollutants.
-If the user gives us his permission to store this data, we can show them their personalized history.
+For this, it is essential to read the user's position. By matching the users location and the coordinates provided by the original dataset,
+we can find the level of exposure to pollutants. If the user gives us his permission to store this data, we can show them their personalized history.
+We implement mechanisms that provide us with the necessary security to safeguard our users data.\\
 
 \begin{figure}[ht]
   \centering 
@@ -64,8 +63,8 @@ If the user gives us his permission to store this data, we can show them their p
   \caption{Collecting user location}
 \end{figure}
 
-This functionality is Aire Guru most powerful tool. Other platforms require user-level measurement devices, ie the user must carry
-a portable measurement station that monitors the different pollutants. \\
+This functionality is the most powerful tool in Aire Guru. Other platforms require user-level measurement devices, ie the user must carry
+a portable measurement station that monitors the different pollutants.\\
 
 \begin{figure}[ht]
   \centering
@@ -74,17 +73,11 @@ a portable measurement station that monitors the different pollutants. \\
 \end{figure}
 
 It is possible that the user may have started to use the application and not yet have any available data.
-To deal with this, we offer the possibility of importing the Google location history, enabling the user to be able to visualize
-exposure to pollution since the beginning of 2018 even if they have not been using the webtool for  all of that period.\\
+To deal with this, we have a facility to import a user's Google location history, enabling the user to visualize
+exposure to pollution since the beginning of 2018 even if they have not been using the webtool during that period.\\
 
-We will have to take into account that in order to read the user's position and store their data, we must
-have their explicit permission. We must implement mechanisms that provide us with the necessary security to safeguard our users data. The measures taken will be explained later.
-
-\begin{itemize}
-  \item The user has specialized functionalities
-  \item Unique functionality, the user is able to see the pollution to which he has been exposed since 2018 even if they have not been using the tool since that time.
-  \item The filtering function of the medical condition is not self-selected, because the functionality
-        is available to all users. The map could show the AQI with respect to the
-        pollutants that the user has preselected, but this can de-visualize the information if it is not
-        clearly indicated to the user that the map does not take into account all relevant pollutants.
-\end{itemize}
+% TODO: not sure what this means
+% The filtering function of the medical condition is not self-selected, because the functionality
+% is available to all users. The map could show the AQI with respect to the
+% pollutants that the user has preselected, but this can de-visualize the information if it is not
+% clearly indicated to the user that the map does not take into account all relevant pollutants.
