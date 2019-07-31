@@ -1,8 +1,8 @@
 \subsection{Don't just publish the raw data}
 
-Recall that the main objective of accessing the data is to obtain knowledge, to understand and make sense of it. Of course, 
-pure data by itself has no value until we can understand it and apply it. We must contextualize, process, and analyze the 
-information to gain useful knowledge. \\ 
+Recall that the main objective of accessing the data is to obtain knowledge, to understand and make sense of it.
+Of course, pure data by itself has no value until we can understand it and apply it.
+We must contextualize, process, and analyze the information to gain useful knowledge. \\ 
     
 \begin{figure}[ht]
     \centering 
@@ -16,12 +16,12 @@ information to gain useful knowledge. \\
     \caption{Diagrama. De datos a conocimiento}
 \end{figure}
  
-In order to obtain this knowledge, the user must correctly interpret the data. It's not enough to know what the values and 
-units individually represent, but what they mean in the big picture. For that the user must already have expertise in the 
-area, or must engage in further research allowing them to understand the data that has been extracted.\\
+In order to obtain this knowledge, the user must correctly interpret the data.
+It's not enough to know what the values and units individually represent, but what they mean in the big picture.
+For that the user must already have expertise in the area, or must engage in further research allowing them to understand the data that has been extracted.\\
     
-In order to build a system that makes data accessible, it is essential to design a model to specify the
-information that we want to obtain. The design of a system will allow that, based on given values, provide some results.\\
+In order to build a system that makes data accessible, it is essential to design a model to specify the information that we want to obtain.
+The design of a system will allow that, based on given values, provide some results.\\
 
 For this it will be necessary to have a solid knowledge of the dataset that is needed, the values, their units and how they relate to each other.
 
@@ -32,18 +32,18 @@ From this data, we need to select the relevant fields necessary to represent spe
 \subsubsection*{Suggested strategies} 
 
 \begin{itemize}
-    \item Study the objective sought and resort to the help of experts if necessary to acquire the necessary knowledge
-    on the subject. Design a model that provides the information we are looking for.
+    \item Study the objective sought and resort to the help of experts if necessary to acquire the necessary knowledge on the subject.
+    Design a model that provides the information we are looking for.
 
-    \item We obtain our required data through a series of processes such as extraction, transformation and
-    cleaning of the data. Without automation, these processes are tedious and time consuming. It is advisable to 
-    implement this automatization.
+    \item We obtain our required data through a series of processes such as extraction, transformation and cleaning of the data.
+    Without automation, these processes are tedious and time consuming.
+    It is advisable to implement this automatization.
 \end{itemize}
 
 \subsubsection*{In the context of Aire Guru \ldots} 
 
-Aire Guru aims to increase the awareness of the level of pollution that surrounds us. To do this, it uses a measure called
-the air quality index (AQI), specifically the European air quality index (EAQI).
+Aire Guru aims to increase the awareness of the level of pollution that surrounds us.
+To do this, it uses a measure called the air quality index (AQI), specifically the European air quality index (EAQI).
 
 \begin{figure}[ht]
     \centering
@@ -51,17 +51,15 @@ the air quality index (AQI), specifically the European air quality index (EAQI).
     \caption{Aire Guru. Landing page. Top section}
 \end{figure}
 
-It shows the AQI in the whole city of Málaga by zones, both the general and the AQI of each of the 
-pollutants in a more disaggregated form from September 2018 to the present. It also shows the evolution
-of these for days, months and years.
+It shows the AQI in the whole city of Málaga by zones, both the general and the AQI of each of the pollutants in a more disaggregated form from September 2018 to the present.
+It also shows the evolution of these for days, months and years.
 
-It is capable of creating a set of the most relevant pollutants by medical condition. An innovative feature is the capacity 
-to display levels of any particular pollutant by hour, day, month, or year. 
+It is capable of creating a set of the most relevant pollutants by medical condition.
+An innovative feature is the capacity to display levels of any particular pollutant by hour, day, month, or year. 
 
-The extracted data is in GeoJSON format, a format which provides a JSON object with nested subdocuments. Each of these
-subdocuments contains a set of data in key-value form.
-In the following figure we can see the beginning of the document downloaded on June 9, 2019
-(https://datosabiertos.malaga.eu/recursos/ambiente/calidadaire/calidadaire.json) \\
+The extracted data is in GeoJSON format, a format which provides a JSON object with nested subdocuments.
+Each of these subdocuments contains a set of data in key-value form.
+In the following figure we can see the beginning of the document downloaded on June 9, 2019 (https://datosabiertos.malaga.eu/recursos/ambiente/calidadaire/calidadaire.json) \\
 
 \begin{figure}[ht]
     \centering
@@ -73,8 +71,8 @@ In the following figure we can see the beginning of the document downloaded on J
     \caption{Air quality Document [09/06/2019]. Open Data Portal Málaga}
 \end{figure}
     
-In this excerpt we can see the first two subdocuments. Each subdocument contains the coordinates of the air quality 
-measuring station, the date and time when the measurement was recorded, and the values of the measurements.
+In this excerpt we can see the first two subdocuments.
+Each subdocument contains the coordinates of the air quality measuring station, the date and time when the measurement was recorded, and the values of the measurements.
 In the following figure we can find the description provided by the open data portal.\\
     
 \begin{figure}[ht]
@@ -83,28 +81,18 @@ In the following figure we can find the description provided by the open data po
     \caption{Air quality data description [09/06/2019]. Open Data Portal Málaga}
 \end{figure}
 
-For a more detailed description of the measures, we have to resort to an external resource. In this case we directly contacted 
-the company that installs the UrbanClouds (https://urbanclouds.city/es/) measuring stations and provides the data 
-to the Málaga city council.
-
+For a more detailed description of the measures, we have to resort to an external resource.
+In this case we directly contacted the company that installs the UrbanClouds (https://urbanclouds.city/es/) measuring stations and provides the data to the Málaga city council.
 After selecting the necessary fields according to our design plan, we carried out different cleaning, transformation and extraction tasks. \\
 
-\textbf{Cleaning}. We need to eliminate the repeated or non-relevant fields. For example, the identifier of the measuring station is 
-unneccessary as the  already contains the coordinates of the station, and coordinate representation is more interesting for our purposes. \\
+\textbf{Cleaning}. We need to eliminate the repeated or non-relevant fields.
+For example, the identifier of the measuring station is unneccessary as the  already contains the coordinates of the station, and coordinate representation is more interesting for our purposes. \\
 
-\textbf{Transformation}. We need the values to have a format appropriate to the fields that they represent. For example, the date and time 
-of the measurement is stored in date format
-instead of the string provided in the raw dataset. \\
+\textbf{Transformation}. We need the values to have a format appropriate to the fields that they represent.
+For example, the date and time of the measurement is stored in date format instead of the string provided in the raw dataset. \\
 
-\textbf{Extraction}. We need to select the relevant fields. This dataset offers one or more measurements for each pollutant, which can be 
-represented by three different fields, a
-quantitative measurement, a qualitative of the fixed station of measurement and a qualitative station of a mobile station. We will add a 
-field containing the measurement which is most relevant for our purposes, and eliminate the non-relevant measurerments to minimize processing time. \\
+\textbf{Extraction}. We need to select the relevant fields.
+This dataset offers one or more measurements for each pollutant, which can be represented by three different fields, a quantitative measurement, a qualitative of the fixed station of measurement and a qualitative station of a mobile station.
+We will add a field containing the measurement which is most relevant for our purposes, and eliminate the non-relevant measurerments to minimize processing time. \\
 
 For security, a second totally independent architecture has been implemented that collects and stores the raw data.
-
-\begin{itemize}
-    \item The information is focused on an objective, informing the user of the level of pollution that surrounds them, both  in real time and in the past.
-    \item The information follows a logical thread; it tells a story.
-    \item The web offers understandable, useable information, not just raw data.
-\end{itemize}
