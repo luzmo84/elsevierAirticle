@@ -29,15 +29,21 @@ are affected by air pollutants.\\
 \begin{figure}[ht]
   \centering
   \subfigure[EPOC]
-    {\includegraphics[width=3.5cm  ]{filter_epoc}}
+    {\includegraphics[width=3.5cm  ]{Filter_5_3_1_a_filter_epoc}}
   \hfill
   \subfigure [Asthma]
-      {\includegraphics[width=3.5cm]{filter_asthma}}
+      {\includegraphics[width=3.5cm]{Filter_5_3_1_b_filter_asthma}}
   \hfill
   \subfigure[Allergies]
-    {\includegraphics[width=3.5cm]{filter_allergies}}
+    {\includegraphics[width=3.5cm]{Filter_5_3_1_c_filter_allergies}}
   \caption{Medical Condition Filter}
 \end{figure}
+
+\begin{center}
+  \bf{ (a)EPOC (b) Asthma (c) Allergies\\
+  
+  Figure 5.3.1. Medical Condition Filter}
+\end{center} 
 
 In the \textit{Figure X.X} we see, in each case, for each medical condition, a subset of pollutants which most influence each condition is shown.\\
   
@@ -49,28 +55,19 @@ For this, it is essential to read the user's position. By matching the users loc
 we can find the level of exposure to pollutants. If the user gives us his permission to store this data, we can show them their personalized history.
 We implement mechanisms that provide us with the necessary security to safeguard our users data.\\
 
-\begin{figure}[ht]
-  \centering 
-  \begin{tikzpicture}[thick]
-    \node[draw,rectangle,minimum size=20] (a) {Read user location};
-    \node[draw,rectangle,minimum size=6,right of= a, node distance=4cm] (b) {Find polygon};
-    \node[draw,rectangle,minimum size=5,below of= a, node distance=2cm] (c) {Store information};
-    \node[draw,rectangle,minimum size=20,right of=c, node distance=4cm] (d) {Show records};
-    \draw[->] (a) to (b);
-    \draw[->,] (b) to (c);
-    \draw[->] (c) to (d);
-  \end{tikzpicture}
-  \caption{Collecting user location}
-\end{figure}
-
 This functionality is the most powerful tool in Aire Guru. Other platforms require user-level measurement devices, ie the user must carry
 a portable measurement station that monitors the different pollutants.\\
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=8cm]{importedDataDecember}
+  \includegraphics[width=8cm]{Figure_5_3_2_importedDataDecember}
   \caption{Personal Records. December}
 \end{figure}
+
+\begin{center}
+  \bf{ 
+  Figure 5.3.2. Personal Records. December}
+\end{center} 
 
 It is possible that the user may have started to use the application and not yet have any available data.
 To deal with this, we have a facility to import a user's Google location history, enabling the user to visualize
