@@ -5,16 +5,15 @@ Of course, pure data by itself has no value until we can understand it and apply
 We must contextualize, process, and analyze the information to gain useful knowledge. \\ 
     
 \begin{figure}[ht]
-    \centering 
-    \begin{tikzpicture}[thick]
-        \node[draw,rectangle,minimum size=20] (a) {Data};
-        \node[draw,rectangle,minimum size=20,right of= a, node distance=2.5cm] (b) {Information};
-        \node[draw,rectangle,minimum size=20,right of=b, node distance=3cm] (c) {Knowledge};
-        \draw[->] (a) to (b);
-        \draw[->] (b) to (c);
-    \end{tikzpicture}
-    \caption{Diagrama. De datos a conocimiento}
-\end{figure}
+    \centering
+    \includegraphics[width=12cm]{Figure_4_3_1_fromDataToInformationDiagram}
+    \caption{From Data to Information Diagram}
+ \end{figure}
+ 
+\begin{center}
+    \bf{        
+    Figure 4.3.1. From Data to Information Diagram}
+\end{center}
  
 In order to obtain this knowledge, the user must correctly interpret the data.
 It's not enough to know what the values and units individually represent, but what they mean in the big picture.
@@ -47,9 +46,13 @@ To do this, it uses a measure called the air quality index (AQI), specifically t
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=10cm]{mapAireGuru}
+    \includegraphics[width=10cm]{Figure_4_3_2_aireGuru_landingPage_topSection}
     \caption{Aire Guru. Landing page. Top section}
 \end{figure}
+\begin{center}
+    \bf{        
+    Figure 4.3.2. Aire Guru. Landing page. Top section}
+\end{center}
 
 It shows the AQI in the whole city of Málaga by zones, both the general and the AQI of each of the pollutants in a more disaggregated form from September 2018 to the present.
 It also shows the evolution of these for days, months and years.
@@ -64,23 +67,30 @@ In the following figure we can see the beginning of the document downloaded on J
 \begin{figure}[ht]
     \centering
     \subfigure[First subdocument]
-        {\centering \includegraphics[width=4.75cm]{geoJsonAirQualityData1}}
+        {\centering \includegraphics[width=4.75cm]{Figure_4_3_3_a_geoJsonAirQualityData1}}
     \hfill
     \subfigure[Second subdocument]
-        {\centering \includegraphics[width=4.75cm]{geoJsonAirQualityData2}}
+        {\centering \includegraphics[width=4.75cm]{Figure_4_3_3_b_geoJsonAirQualityData2}}
     \caption{Air quality Document [09/06/2019]. Open Data Portal Málaga}
 \end{figure}
     
+\begin{center}
+    \bf{        (a) First subdocument (b)Second subdocument \\
+    Figure 4.3.3. Air quality Document [09/06/2019]. Open Data Portal Málaga}
+\end{center}
 In this excerpt we can see the first two subdocuments.
 Each subdocument contains the coordinates of the air quality measuring station, the date and time when the measurement was recorded, and the values of the measurements.
 In the following figure we can find the description provided by the open data portal.\\
     
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=8cm]{geoJsonAirQualityDataDescription}
+    \includegraphics[width=8cm]{Figure_4_3_4_geoJsonAirQualityDataDescription}
     \caption{Air quality data description [09/06/2019]. Open Data Portal Málaga}
 \end{figure}
-
+\begin{center}
+    \bf{        
+    Figure 4.3.4. Air quality data description [09/06/2019]. Open Data Portal Málaga}
+\end{center}
 For a more detailed description of the measures, we have to resort to an external resource.
 In this case we directly contacted the company that installs the UrbanClouds (https://urbanclouds.city/es/) measuring stations and provides the data to the Málaga city council.
 After selecting the necessary fields according to our design plan, we carried out different cleaning, transformation and extraction tasks. \\
