@@ -1,2 +1,3 @@
+*.log
 chapter.*
 !chapter.tex
