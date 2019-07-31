@@ -28,7 +28,9 @@ we should start simple and move to more complex representations.
 
 \subsubsection*{In the context of Aire Guru \ldots}
 
-Our main objective is to create awareness of the importance of air pollution in our health. For this we investigate different concepts:
+Our main objective is to create awareness of the importance of air pollution in our health.
+So we were not interested in the air pollution levels per se, but rather in showing how air pollution affects health.
+To accomplish this we considered the following questions:
 
 \begin{itemize}
     \item What diseases are affected by air pollution.
@@ -40,25 +42,26 @@ Our main objective is to create awareness of the importance of air pollution in 
 \end{itemize}
 
 The measure that best represents the level of air pollution, in this case is the AQI. The city of Málaga is covered by the European legislation, 
-so we focus investigations of official sources in this regulation.
-We look for the relationships that pollutants have with different diseases, for this we resort to clinical studies. For each of the diseases, we 
-research at the symptoms and how they can be aggravated by each pollutant.
-For each pollutant, we look for sources of pollution and see if they occur in the city of Málaga and in what concentrations.
-With all this information we define that the pollutants that affect air quality are CO, NO2, O3 and PM (Particulated Material). Dfferent levels of particles
-affect different diseases in different ways. \\
+so we focussed on official sources in this legislative region.
+We looked for the relationships that pollutants have with different diseases.
+For this we used clinical studies.
+For each of the diseases, we researched the symptoms and how they can be aggravated by each pollutant.
+For each pollutant, we looked for typical sources of pollution, to see if they occur in the city of Málaga and in what concentrations.
+With all this information we determined that the pollutants that have common medical outcomes are CO, NO2, O3 and PM (Particulated Material).
+Dfferent levels of particles affect different diseases in different ways.
+We provide the information we used to justify our derived conclusion in the Glossary of Aire Guru. \\
 
-As the main objective is awareness, we provide all the data in an organized way in the Glossary of Air Guru. \\
+Once these pollutants were selected, we determined if we have the appropriate data in our dataset.
+As mentioned earlier, some samples show measurements from fixed and / or mobile stations and these can be quantitative or qualitative and others can be incomplete.
+We have to select the samples to provide either the most complete information or the most accurate.
+We prioritize quantitative measures over qualitative ones and in the case that there is only qualitative measures, we map as follows:
+Good -> 50, Acceptable -> 150, Poor -> 300, Bad -> 400, Unhealthy -> 500, and we inform the user that the value is approximated.\\
 
-Once these pollutants are selected, we verify if we have the particular data in our dataset. As we mentioned earlier, some samples show measurements 
-from fixed and / or mobile stations and these can be quantitative or qualitative and others can be incomplete. We will have to select the
-samples to provide us with the most complete information or the most accurate, in this case the quantitative measure will prevail to the qualitative 
-one and in the case that there is only qualitative
-the following values are decided: Good: 50, Acceptable: 150, Poor: 300, Bad: 400, Unhealthy: 500 and the user will be informed when the value is qualitative. \\
-
-At this point we know how air pollution affects our health, We make very clear which are the undesirable values by using the alert colors, yellow, orange and 
-red. These colors are chosen in the palette of the colors provided by the EAQI.
-Height is used in graphics, since it is an intuitive representation for humans. In addition, the icon that represents unhealthy levels of pollution, is
-totally different, designed to clearly convey danger. \\
+At this point we know how air pollution affects our health.
+We make very clear which are the undesirable values by using the alert colors, yellow, orange and red.
+These colors are chosen in the palette of the colors provided by the EAQI.
+Height is used in graphics, since it is an familar representation.
+In addition, the icon that represents unhealthy levels of pollution, is totally different, designed to clearly convey danger. \\
 
 \begin{figure}[ht]
     \centering
@@ -70,14 +73,8 @@ totally different, designed to clearly convey danger. \\
     \caption{Alert situation}
 \end{figure}
 
-Regarding the workflow, we are guiding the user from the selection of a point in the city of Málaga, either on his own initiative
-or automatic to the details of this point in real time and we continue to show  the evolution of the pollution at that point.
-The logic of this development is that it is anticipated that the user will be interested in the pollution that surrounds him in real time and if
-he wanta to know the breakdown of the pollutants at the point where he is, he can continue to inquire. The map, in addition to showing
-the point where the user is, serves as verification, gives more realism and confidence to the user.
-
-\begin{itemize}
-    \item The objective has been clearly defined and an investigation has been carried out, determining if the dataset is appropriate.
-    \item Worrying levels have been defined as poor, bad and unhealthy and are represented in the Air Guru website. They stand out clearly so that the user is able to locate them quickly.
-    \item The workflow is satisfactory, since the user knows the level of pollution at any location, at a simple glance. It is easy to explore the information further, if the user wishes.
-\end{itemize}
+We guide the user from the selection of a point in the city of Málaga, either on his own initiative
+or automatically, to the details of this point in real time and we continue to show the evolution of the pollution at that point.
+The logic of this development is that it is anticipated that the user will be interested in the pollution that surrounds them in real time and if
+they want to know the breakdown of the pollutants at the point where they are, they can continue to inquire.
+The map, in addition to showing the point where the user is, serves as verification, gives more realism and confidence to the user.
