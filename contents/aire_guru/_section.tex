@@ -1,32 +1,24 @@
 \section{Aire Guru}
 
-Urban residents are surrounded by many sources of air pollution, and it is the direct cause of many different symptoms,
-ranging from simple eye irritation 
-to, in extreme cases, death. Particularly for high-risk groups like children and the elderly.
-The WHO (World Health Organization) estimates 4.2 million deaths
-(https://www.who.int/
-airpollution/ambient/en/) per year due to air pollution.
-Air pollution has a significant affect on people with asthma, cardiopathies, allergies, and neurological pathologies.\\
+Urban residents are surrounded by many sources of air pollution, and it is the direct cause of many different symptoms, ranging from simple eye irritation to, in extreme cases, death.
+This is particularly true for high-risk groups like children and the elderly.
+The WHO (World Health Organization) estimates that there are 4.2 million deaths (https://www.who.int/airpollution/ambient/en/) per year due to air pollution.\\
 
-Air pollution not only aggravates existing diseases, but can also be an initial cause of them, such as in the case of foetal brain
-damage (https://www.cronicabalear.es/2018/07/la-contaminacion-ambiental-causa-enfermedades-neurologicas-y-envejecimiento-del-cerebro)
+Air pollution has a significant affect on people with asthma, cardiopathies, allergies, and neurological pathologies.
+Air pollution not only aggravates existing diseases, but can also be an initial cause of them, such as in the case of foetal brain damage
+(https://www.cronicabalear.es/2018/07/la-contaminacion-ambiental-causa-enfermedades-neurologicas-y-envejecimiento-del-cerebro)
 caused by the mother's exposure to air pollution.\\
 
-To be able to control the level of exposure we need to know the levels
-in the specific locations that we frequent, and the variation during specific times.
-To make this information as accessible as possible, it should be freely and publicly available, and the presentation
-must be simple enough to be understandable by the average citizen.\\
+To be able to control the level of exposure we need to know the levels in the specific locations that we frequent, and the variation during specific times.
+To make this information as accessible as possible, it should be freely and publicly available, and the presentation must be simple enough to be understandable by the average citizen.\\
 
+We have created a website - Aire Guru - which collects hourly air pollution measures, stores them for historical use, 
+processes them to extract relevant information, personalizes them to engage the user with regard to their individual
+circumstance, visualizes them in an easy to understand format, and provides them online to facilitate its accessibility, free of charge.
+Furthermore, descriptions of all the data and how it has been processed are also provided to raise public awareness of the value of this data.
+Aire Guru has been successfully tested, using the Air Quality data provided by the Málaga open data portal(https://datosabiertos.malaga.eu/) in the Spanish city of Málaga.\\
 
-We have created a website - Aire Guru - which collects air pollution data periodically, stores it for historical use, 
-processes it to extract relevant information, personalizes it to engage the user with regard to their individual
-circumstance, visualizes it in an easy to understand format, and provides it online to facilitate its accessibility free of charge. Furthermore,
-descriptions of all the data and how it has been processed are also provided to raise public awareness of the value
-of this data. Aire Guru has been successfully tested, using the Air Quality data provided
-by the Málaga open data portal(https://datosabiertos.malaga.eu/) in the Spanish city of Málaga.\\
-
-There are already many tools available, however they have various failings.
-
+There are some online data sources already available, however they have various failings.
 The most common problems are:
 
 \begin{itemize}
@@ -50,77 +42,56 @@ Our website solves the deficiencies described above.\\
 Measurements are published hourly and come from measurement stations placed throughout the 
 city of Málaga, covering entire urban region at a granularity of $100m^2$.\\
 
-The information is presented in a clear and simple manner, making it possible to see the most polluted regions,
-and allowing the user to make comparisons both geographically and historically. It provides personalised information, such as the most relevant 
-pollutants for a user's particular medical conditions, and can track
+The information is presented in a clear and simple manner, making it possible to see the most polluted regions, and allowing the user to make comparisons both geographically and historically.
+It provides personalised information, such as the most relevant pollutants for a user's particular medical conditions, and can track
 the pollution they are exposed to both in real time and over a historical period, by linking with location data from their mobile device. \\
 
-To achieve our goals we have fronted the following challenges:\\
+While building Aire Guru we were confronted with the following challenges:\\
 
-As we mentioned it before, the data is provided on the Malaga's open data portal.This is not a intuitive place to search the
-air pollution information for the averange user. Even if the user find it, it is not 
-easierly located. Aire Guru needs to provide the information in a way that it is easier for the user and preferably, direct.
-This means, Aire Guru shows the information without the need for the user to perform any extra action, just opening the
-website in a browser.\\
+As mentioned before, the data is provided on the Malaga's open data portal.
+This is not a intuitive place to search for air pollution information for the average user.
+Aire Guru provides the information in a way that is easier for the user - in a browser.\\
 
-The data offered in the open data portal is in GeoJson format. This format is highly structured and using specific software could be
-processed i a relatively easy way, even though, it is not really interpretable for humans. Aire Guru translate all the 
-data in usefull information in a format more understandable for the users, like graphs, icons, colors and text.\\
+The data offered in the open data portal is in GeoJson format.
+This format is highly structured and easy to process given the appropriate software expertise. It is not usable by the general public in this form however.
+The data model contains multiple readings of different kinds, such as qualitative and quantitive measurements from fixed and mobile sensors.
+Different sensors provide different sets of fields.
+Aire Guru is able to proccess all of them and offer the user an unified vision of the measurements offered by all the stations.\\
 
-It also intruduce interactibity, making possible to navigate throuw the data.\\
-
-Coming back to the data provided on the origin source, we should notice that each sample, measurements of an station, offers a different
-set of fields. Aire Guru is able to proccess all of them and offer the user an unified vision of the measurements offered by
-all the stations.\\
-
-It also allow the user to visualize the pollution in an specific area in an specific time with the less amount of effort.
-As we mention, the data is structured by mesuarement stations, the range of action is defined by the coordenates of 
-a polygon. To be able to get this data, the user should manually interpolate a location with the polygons defined in the dataset.
-This is not a really duable task if we would like to monitor the pollution around us or in an specific area. Aire guru
-automatize all these proccess and offer an intuitive interface to perform theses actions.\\
-
-We should notice that the data provided contain a set of values will help us to calculate the level of pullution. Aire guru
-does this for us. It offers the values but it also offer the information, that means, if we are in a safe enviroment or not.\\
-
-These data is not static, it is published every hour, so, to obtain the most updated value, Aire guru implements an structure
-which allows it to obtein and represent the data with the same periodicity.
-
-Malaga's air quality dataset is updated every hour, Aire Guru automates the process of collecting the
-data through a CRON job that executes a script implemented in JavaScript periodically. This reads the data from the url, processes it,
-cleans and stores it in a MongoDB database. That is to say, Aire Guru implements all the necessary collection processes.\\
-
-Thanks to this infrastructure, the user is able to visualize the evolution of pollutants since 2018. The user can also track their personal exposure
- to these pollutants over the same period of time.\\
-
-In addition, this automation allows the user to visualize the pollution in the city of Málaga in real time, and see specifically the location where he is 
-occurring. \\
+The Aire Guru data collection and transformation pipeline is fully automated, and runs without any human intervention or management.
+The senors provide hourly data, and the Aire Guru interface reflects this granularity, represent the data with the same periodicity.
+Aire Guru translate the raw sensor data into understandable, useful, actionable information, using graphs, icons, colors and text. 
+It enables the user to easily visualize the pollution in a specific area, both at the current time and historically. We maintain
+a historical log of data, so that the user is able to visualize the evolution of pollutants since 2018. The user can also track their personal exposure
+to these pollutants over the same period of time either by enabling location tracking on their mobile device, or by importing their own location
+data. Finally, Aire Guru presents information about the health consequences of pollution exposure, and all data can be viewed through this lens.\\
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=12cm]{Figure_2_1_aireGuruArquitecture}
-    \caption{Arquitecture Aire Guru}
-
+    \caption{Architecture of Aire Guru}
 \end{figure}
 
 \begin{center}
-\bf Figure 2.1. Arquitecture Aire Guru\\
+    \bf Figure 2.1. Arquitecture Aire Guru\\
 \end{center}
-The data to the users through a web interface. \\
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=9cm]{Figure_2_2_aireGuru_webInterface}
-    \caption{Aire Guru. Web Interface}
+    \caption{Aire Guru Web Interface}
 \end{figure}
+
 \begin{center}
     \bf Figure 2.2. Aire Guru. Web Interface\\
-    \end{center}
-To enable access by the majority of the population, Aire Guru is available at the web addresses https://www.aire.guru and https://www.airquality.guru.
-We use SSL that guarantees the encryption of data through the network and ensure the user has access to it since, as more and more browsers try to protect 
-users by only showing pages that use a secure method.\\
+\end{center}
 
-As we commented previously, all users can see the basic information without having to provide any data or identify themselves, without the need to
-perform downloads or installations. Today, almost everyone is familiar with web browsing and if we do not force the user to realize extra taks, as 
-requiring them to sign in or install extra software, the probability the user uses our platform will be higher. 
+To enable access by the majority of the population, Aire Guru is available at the web addresses https://www.aire.guru and https://www.airquality.guru.
+We use SSL that guarantees the encryption of data through the network and guarantees access as more and more browsers protect 
+users by only showing pages that use a secure transport.\\
+
+As previously mentioned, all users can see the basic information without having to provide any data or identify themselves, and without the need to
+perform downloads or installations. Today, almost everyone is familiar with web browsing and we do not force the user to perform extra steps, such as 
+requiring them to sign in or install extra software.\\
 
 \input{contents/aire_guru/evaluation}
