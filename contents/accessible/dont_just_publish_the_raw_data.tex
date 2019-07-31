@@ -2,7 +2,7 @@
 
 Recall that the main objective of accessing the data is to obtain knowledge, to understand and make sense of it.
 Of course, pure data by itself has no value until we can understand it and apply it.
-We must contextualize, process, and analyze the information to gain useful knowledge. \\ 
+We must contextualize, process, and analyse the information to gain useful knowledge. \\ 
     
 \begin{figure}[ht]
     \centering
@@ -50,11 +50,12 @@ To do this, it uses a measure called the air quality index (AQI), specifically t
 \end{center}
 
 Aire Guru shows the AQI values for the city of Málaga, organized into zones, showing the levels of both the overall pollution and individual pollutants, from September 2018 to the present.
-It also shows the evolution of these values in selectable timescales of days, months and years.It is capable of creating a set of the most relevant pollutants for a given medical condition.
+It also shows the evolution of these values in selectable timescales of days, months and years.
+It is capable of creating a set of the most relevant pollutants for a given medical condition.
 An innovative feature is the capacity to display levels of any particular pollutant by hour, day, month, or year. \\
 
 The original source data is in GeoJSON format, a format which provides a JSON object with nested subdocuments.
-Each of these subdocuments contains data in key-value form.
+Each of these subdocuments contains data in key\-value form.
 In the following figure we can see the beginning of the document downloaded on June 9, 2019 (https://datosabiertos.malaga.eu/recursos/ambiente/calidadaire/calidadaire.json) \\
 
 \begin{figure}[ht]
@@ -92,7 +93,7 @@ After selecting the necessary fields according to our design plan, we carried ou
 
 \begin{itemize}
     \item \textbf{Cleaning}. We need to eliminate the repeated or non-relevant fields.
-        For example, the identifier of the measuring station is unneccessary as the data already contains the coordinates of the station, and coordinate representation is more interesting for our purposes.
+        For example, the identifier of the measuring station is unnecessary as the data already contains the coordinates of the station, and coordinate representation is more interesting for our purposes.
 
     \item \textbf{Transformation}. We need the values to have a format appropriate to the fields that they represent.
         For example, the date and time of the measurement is stored in date format instead of the string provided in the raw dataset.
