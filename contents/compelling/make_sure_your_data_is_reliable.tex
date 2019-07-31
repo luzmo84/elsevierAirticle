@@ -1,23 +1,25 @@
 \subsection{Make sure your data is reliable}
 
-It is essential that the credibility of the dataset be impeccable. The source of the data must be reliable.
-Usually, in the description of the data, a section must be included where the origin of the dataset is explained.\\
+It is essential that the credibility of your dataset be impeccable. The source of the data must be reliable.
+Usually, in the description of the data, a section should be included where the origin of the dataset is explained.
+This allows interested users, and third parties, to verify you data integrity to their own satisfaction. \\
 
-The quality of the dataset can be measured according to the following characteristics of the values of the fields: \\
- 
-\textbf{Precision}. Units of measurement in the correct scale. For example, if we are measuring people's height, it 
-would be meaningless to provide these measurements in meters, since the possible values will be 0, 1 and 2. \\
+The quality of the dataset can be measured according to the following characteristics of the values of the fields:
 
-\textbf{Consistency}. Logical values for each type of field. An example would be a date field, all should
-follow the same format. \\
+\begin{itemized}
+    \item \textbf{Precision}. Units of measurement in the correct scale. For example, if we are measuring people's height, it 
+    would be meaningless to provide these measurements in integral meters, since the possible values will be 0, 1 and 2. \\
 
-\textbf{Interpretability}. The data must be clear, both in values and in units. For example, we can not
-suppose the unit or scale of the data or, if the dataset is dichotomous, "true" or "false", and the values represented are
-"A" or "B", we can not assume true = A and false = B without this information being described. \\
+    \item \textbf{Consistency}. Logical values for each type of field. An example is date field, which should all should
+    follow the same format and use the same timezone. Don't confuse metric and imperial units!\\
 
-\textbf{Complitud}. The data must be consistent in each of the samples. The samples can be differentiated
-from each other, as we see in the Figure below, can share some fields and not others. It would be
-better to have a high degree of compliance for the data that interests us in our design.
+    \item \textbf{Interpretability}. The data must be clear, both in values and in units. For example, we can not
+    suppose the unit or scale of the data.
+
+    \item \textbf{Completeness}. The data must be consistent in each of the samples. The samples can be differentiated
+    from each other, as we see in the Figure below, can share some fields and not others. It would be
+    better to have a high degree of compliance for the data that interests us in our design.
+\end{itemized}
 
 \begin{figure}[ht]
     \centering
@@ -42,20 +44,16 @@ better to have a high degree of compliance for the data that interests us in our
 \subsubsection*{Suggested strategies} 
 
 \begin{itemize}
-    \item The first step is to compare the information with the source of origin. With the dataset and the definition
+    \item Validate your data against its origin. With the dataset and the definition
     of each of the fields, the scale and interpretability of the fields and values must be checked.
-    \item perform different analysis of the data to check its consistency and compliance.
-    \item use different graphs and see if there are extreme or strange values.
-    \item Database analysis tools can tell us the completeness of the fields, that is, what percentage of the
-    samples contain each field.
+    \item Check for extreme or strange values.
+    \item Use database analysis tools to check the completeness of the fields.
 \end{itemize}
 
 \subsubsection*{In the context of Aire Guru \ldots} 
 
 The source of data is verified by both the CEMI (Málaga information center) and UrbanClouds, the private company
-that collects and sends the data to the city of Málaga. \\
-
-With the description of the data in the open data portal of Málaga and the information received by UrbanClouds,
+that collects and sends the data to the city of Málaga. With the description of the data in the open data portal of Málaga and the information received by UrbanClouds,
 we obtain all the necessary information to interpret the dataset. \\
 
 For each field, a graphical study has been carried out with the Tableau tool and has verified that the values of the
@@ -67,9 +65,3 @@ Using the analysis tools of MongoDBCompas and NoSQLBooster we verify the complet
     \includegraphics[width=12cm]{noSQLBoosterAnalysis}
     \caption{Completeness analysis}
 \end{figure}
-
-\begin{itemize}
-    \item The necessary measures have been taken to verify and understand each of the fields in the dataset.
-    \item The values of each of the fields have been analyzed by checking scales and ranges.
-    \item The completeness of the data has been analyzed.
-\end{itemize}
